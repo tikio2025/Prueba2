@@ -1,1 +1,288 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>TIKIO | Portafolio Premium</title><style>body{margin:0;background:#020617;color:#fff;font-family:Arial}header{padding:90px 20px;text-align:center;background:linear-gradient(135deg,#2563eb,#7c3aed,#06b6d4)}section{max-width:1200px;margin:auto;padding:50px 20px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}.card{background:#111827;border:1px solid #334155;border-radius:16px;padding:20px;transition:.3s}.card:hover{transform:translateY(-6px)}.hero{font-size:3em;font-weight:bold}.btn{display:inline-block;background:#2563eb;color:#fff;padding:14px 22px;border-radius:10px;text-decoration:none}footer{text-align:center;padding:30px;color:#94a3b8}</style></head><body><header><div class='hero'>TIKIO</div><p>Innovación • IA • Desarrollo • Contenido</p><a class='btn' href='#proyectos'>Ver proyectos</a></header><section><h2>🚀 Proyectos destacados</h2><div class='cards'><div class='card'>🤖 Agentes IA</div><div class='card'>💻 Aplicaciones</div><div class='card'>🎬 Videos IA</div><div class='card'>🪵 Carpintería</div><div class='card'>🍢 Restaurante</div><div class='card'>📖 Contenido Cristiano</div></div></section><section><h2>🛠 Tecnologías</h2><p>ChatGPT • GitHub • HTML • CSS • JavaScript • Python • Flutter • Gemini • Canva • Veo • Sora</p></section><section><h2>📈 Próximamente</h2><p>Blog, galería, estadísticas de GitHub, asistente IA, modo oscuro, animaciones y más.</p></section><footer>© 2026 TIKIO</footer></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TIKIO | Portafolio Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #141414;
+      --primary: #ccff00; /* Amarillo Neón Deportivo */
+      --primary-hover: #b3e600;
+      --text: #ffffff;
+      --text-muted: #888888;
+    }
+    
+    body {
+      margin: 0; 
+      background: var(--bg); 
+      color: var(--text);
+      font-family: 'Oswald', sans-serif; /* Fuente agresiva y condensada */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    header {
+      padding: 120px 20px; 
+      text-align: center;
+      background: linear-gradient(180deg, #1f1f1f 0%, #050505 100%);
+      border-bottom: 5px solid var(--primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Líneas diagonales de fondo para dar velocidad */
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.02) 10px,
+        rgba(255,255,255,0.02) 20px
+      );
+      z-index: 0;
+    }
+
+    .hero, .subtitle, .btn {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      font-size: 5em; 
+      font-weight: 700; 
+      margin-bottom: 5px;
+      color: #ffffff;
+      font-style: italic;
+      text-shadow: 4px 4px 0px var(--primary);
+      line-height: 1;
+    }
+
+    .subtitle { 
+      font-size: 1.2em; 
+      color: var(--primary); 
+      margin-bottom: 40px; 
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    /* Botón inclinado estilo deportivo */
+    .btn {
+      display: inline-block; 
+      background: var(--primary);
+      color: #000; 
+      padding: 14px 35px; 
+      text-decoration: none; 
+      font-weight: 700;
+      font-size: 1.2em;
+      font-style: italic;
+      transform: skewX(-15deg);
+      transition: all 0.3s ease;
+      border: 2px solid var(--primary);
+    }
+
+    .btn span {
+      display: inline-block;
+      transform: skewX(15deg); /* Endereza el texto adentro */
+    }
+
+    .btn:hover { 
+      background: transparent; 
+      color: var(--primary);
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.4); 
+    }
+
+    section { 
+      max-width: 1200px; 
+      margin: auto; 
+      padding: 70px 20px; 
+    }
+
+    h2 { 
+      font-size: 2.5em; 
+      margin-bottom: 40px; 
+      text-align: center; 
+      font-weight: 700; 
+      font-style: italic;
+      border-left: 8px solid var(--primary);
+      padding-left: 15px;
+      display: inline-block;
+    }
+
+    .section-title-wrapper {
+      text-align: center;
+    }
+
+    .cards { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 25px; 
+    }
+
+    .card {
+      background: var(--surface); 
+      border-top: 4px solid transparent;
+      padding: 35px 20px; 
+      text-align: center; 
+      transition: all 0.3s ease; 
+      cursor: pointer;
+      position: relative;
+    }
+
+    .card:hover { 
+      transform: translateY(-10px) skewX(-2deg); 
+      border-top: 4px solid var(--primary); 
+      background: #1a1a1a;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.8); 
+    }
+
+    /* ESTILOS DE LA IMAGEN DENTRO DE LA TARJETA */
+    .card img {
+      width: 100%; /* Para que ocupe todo el ancho de la tarjeta */
+      height: 200px; /* Altura fija para consistencia */
+      object-fit: cover; /* Mantener relación de aspecto, recortar si es necesario */
+      border-bottom: 3px solid #333; /* Borde inferior deportivo */
+      margin-bottom: 15px; /* Espaciado con el título */
+      transition: all 0.3s ease; /* Transición suave */
+      filter: grayscale(80%); /* Estado 'apagado' deportivo */
+    }
+
+    /* EFECTO HOVER PARA LA IMAGEN */
+    .card:hover img {
+      filter: grayscale(0%); /* Recuperar color al pasar el mouse */
+      border-color: var(--primary); /* Borde de neón en hover */
+    }
+
+    .card h3 { 
+      margin: 0 0 10px; 
+      font-size: 1.5em; 
+      color: #fff;
+      font-style: italic; 
+    }
+
+    .card p { 
+      color: var(--text-muted); 
+      font-size: 0.9em; 
+      margin: 0; 
+      letter-spacing: 1px;
+    }
+
+    .tags { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 15px; 
+      justify-content: center; 
+    }
+
+    .tag {
+      background: transparent; 
+      padding: 10px 20px; 
+      font-size: 1em; 
+      border: 2px solid #333; 
+      color: var(--text);
+      font-style: italic;
+      transition: all 0.3s ease;
+    }
+
+    .tag:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: scale(1.1);
+    }
+
+    .coming-soon-text {
+      text-align: center; 
+      color: var(--text-muted); 
+      max-width: 700px; 
+      margin: auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    footer { 
+      text-align: center; 
+      padding: 40px; 
+      color: #444; 
+      background: #000;
+      border-top: 2px solid #111;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">TIKIO</div>
+    <p class="subtitle">Innovación • IA • Desarrollo • Contenido</p>
+    <a class="btn" href="#proyectos"><span>Ver proyectos</span></a>
+  </header>
+  
+  <section id="proyectos">
+    <div class="section-title-wrapper">
+      <h2>🚀 Proyectos destacados</h2>
+    </div>
+    <div class="cards">
+      <!-- EJEMPLO DE TARJETA CON TU IMAGEN -->
+      <div class="card">
+        <img src="image_0.png" alt="Imagen de proyecto">
+        <h3>🤖 Agentes IA</h3>
+        <p>Automatización inteligente</p>
+      </div>
+      <div class="card">
+        <img src="image_0.png" alt="Imagen de proyecto">
+        <h3>💻 Aplicaciones</h3>
+        <p>Desarrollo web y móvil</p>
+      </div>
+      <div class="card">
+        <img src="image_0.png" alt="Imagen de proyecto">
+        <h3>🎬 Videos IA</h3>
+        <p>Producción cinematográfica</p>
+      </div>
+      <div class="card">
+        <img src="image_0.png" alt="Imagen de proyecto">
+        <h3>🪵 Carpintería</h3>
+        <p>Diseño y construcción</p>
+      </div>
+      <div class="card">
+        <img src="image_0.png" alt="Imagen de proyecto">
+        <h3>🍢 Restaurante</h3>
+        <p>Gestión comercial</p>
+      </div>
+      <div class="card">
+        <img src="image_0.png" alt="Imagen de proyecto">
+        <h3>📖 Contenido</h3>
+        <p>Valores y comunidad</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title-wrapper">
+      <h2>🛠 Tecnologías</h2>
+    </div>
+    <div class="tags">
+      <span class="tag">ChatGPT</span> <span class="tag">GitHub</span> <span class="tag">HTML/CSS</span>
+      <span class="tag">JavaScript</span> <span class="tag">Python</span> <span class="tag">Flutter</span>
+      <span class="tag">Gemini</span> <span class="tag">Canva</span> <span class="tag">Veo 3.1</span>
+      <span class="tag">Sora</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title-wrapper">
+      <h2>📈 Próximamente</h2>
+    </div>
+    <p class="coming-soon-text">
+      Blog interactivo, galería visual, estadísticas de GitHub, asistente IA, modo oscuro dinámico y animaciones.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 TIKIO | SANTA CRUZ DE LA SIERRA
+  </footer>
+</body>
+</html>
