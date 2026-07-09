@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Vitrina digital de Vendedor SCZ para venta online de grasita de res, ropa americana, peluches, pinturas y bisutería en Santa Cruz, con atención previa coordinación por WhatsApp.">
+  <meta name="description" content="Vitrina digital de Vendedor SCZ para venta online de grasita de res, poleras americanas, pinturas y bisutería en Santa Cruz, con atención previa coordinación por WhatsApp.">
   <title>Vendedor SCZ | Venta online en Santa Cruz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,15 +11,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" aria-label="Navegación principal">
     <a class="brand" href="index.html">Vendedor <span>SCZ</span></a>
     <div class="links">
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
-      <a href="ramificaciones.html">Ramificaciones</a>
-      <a href="contenido-ia.html">Contenido IA</a>
       <a href="contacto.html">Contacto</a>
     </div>
+    <form class="site-search" action="catalogo.html" method="get" role="search">
+      <label class="sr-only" for="buscar-inicio">Buscar productos</label>
+      <span aria-hidden="true">🔎</span>
+      <input id="buscar-inicio" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
+      <button type="submit">Buscar</button>
+    </form>
   </nav>
 
   <main>
@@ -27,7 +31,7 @@
       <section>
         <span class="eyebrow">📍 Santa Cruz de la Sierra · Venta online</span>
         <h1>Vende claro. Coordina fácil. Entrega seguro.</h1>
-        <p class="lead">Vitrina digital para vender grasita de res, ropa americana, peluches, pinturas y bisutería. El cliente entra, revisa las categorías reales y escribe por WhatsApp para coordinar disponibilidad, horario y entrega.</p>
+        <p class="lead">Vitrina digital para vender grasita de res, poleras americanas, pinturas y bisutería. El cliente entra, busca lo que necesita y escribe por WhatsApp para confirmar disponibilidad, precio, horario y entrega.</p>
         <div class="actions">
           <a class="btn primary" href="catalogo.html">🛒 Ver catálogo real</a>
           <a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles%20y%20coordinar%20entrega.">💬 Coordinar por WhatsApp</a>
@@ -36,9 +40,9 @@
         </div>
       </section>
       <aside class="panel">
-        <div class="media"><img src="assets/showcase-pacumuto.svg" alt="Ilustración de productos para catálogo online" loading="eager"></div>
+        <div class="media"><img src="assets/catalogo-grasita-bw.svg" alt="Ilustración de productos para catálogo online" loading="eager"></div>
         <div class="stats">
-          <div class="stat"><strong>5</strong><span>categorías reales</span></div>
+          <div class="stat"><strong>4</strong><span>líneas reales</span></div>
           <div class="stat"><strong>Online</strong><span>sin tienda física</span></div>
           <div class="stat"><strong>1 clic</strong><span>a WhatsApp</span></div>
           <div class="stat"><strong>Coord.</strong><span>horario acordado</span></div>
@@ -51,6 +55,22 @@
         <span class="tag">Operación actual</span>
         <strong>Venta solo en línea por el momento.</strong>
         <p>No hay tienda física activa. Toda consulta, reserva, horario, punto de entrega y disponibilidad se confirma previamente por WhatsApp para evitar vueltas innecesarias.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="head">
+        <div>
+          <span class="tag">Catálogo real</span>
+          <h2>Productos actuales de Vendedor SCZ.</h2>
+        </div>
+        <p>La página se enfoca en lo que realmente vendes hoy: alimentos, moda, pinturas y bisutería. Menos ruido, más venta. 🧩</p>
+      </div>
+      <div class="grid g4">
+        <article class="card"><div class="media"><img src="assets/catalogo-grasita-bw.svg" alt="Grasita de res para venta por kilo" loading="lazy"></div><div class="body"><span class="tag">Alimentos</span><h3>Grasita de res</h3><p>Consulta disponibilidad, estado, cantidad y entrega coordinada.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20comprar%20grasita%20de%20res.%20%C2%BFHay%20disponible%20hoy%20y%20cuanto%20esta%20el%20kilo%3F">Consultar</a></div></div></article>
+        <article class="card"><div class="media"><img src="assets/catalogo-ropa-bw.svg" alt="Poleras americanas disponibles" loading="lazy"></div><div class="body"><span class="tag">Moda</span><h3>Poleras americanas</h3><p>Prendas seleccionadas con fotos, tallas, estado y precios por WhatsApp.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20poleras%20americanas%20disponibles.%20%C2%BFMe%20puedes%20enviar%20fotos%2C%20tallas%20y%20precios%3F">Ver poleras</a></div></div></article>
+        <article class="card"><div class="media"><img src="assets/showcase-marca.svg" alt="Pinturas disponibles por consulta" loading="lazy"></div><div class="body"><span class="tag">Pinturas</span><h3>Pinturas</h3><p>Consulta colores, presentación, precio y entrega previa coordinación.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20pinturas%20disponibles.%20%C2%BFMe%20puedes%20pasar%20fotos%20y%20precios%3F">Consultar</a></div></div></article>
+        <article class="card"><div class="media"><img src="assets/showcase-burger.svg" alt="Bisutería disponible por consulta" loading="lazy"></div><div class="body"><span class="tag">Bisutería</span><h3>Bisutería</h3><p>Modelos, piezas disponibles, fotos reales y precios por WhatsApp.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20bisuteria%20disponible.%20%C2%BFMe%20puedes%20enviar%20fotos%20y%20precios%3F">Ver modelos</a></div></div></article>
       </div>
     </section>
 
@@ -70,41 +90,13 @@
     </section>
 
     <section class="wrap">
-      <div class="head">
-        <div>
-          <span class="tag">Compra rápida</span>
-          <h2>Botones listos para convertir visitas en mensajes.</h2>
-        </div>
-        <p>Estos accesos llevan al cliente directo a WhatsApp, catálogo y coordinación de entrega. Menos vueltas, más acción. ⚡</p>
-      </div>
-      <div class="grid g3">
-        <article class="note"><span class="tag">WhatsApp</span><h3>Pregunta por productos</h3><p>Mensaje general para clientes nuevos.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20ver%20que%20productos%20tienes%20disponibles%20hoy.">💬 Consultar ahora</a></div></article>
-        <article class="note"><span class="tag">Catálogo</span><h3>Productos reales</h3><p>Grasita de res, ropa americana, peluches, pinturas y bisutería.</p><div class="quick"><a class="btn primary" href="catalogo.html">🛒 Abrir catálogo</a></div></article>
-        <article class="note"><span class="tag">Entrega</span><h3>Previa coordinación</h3><p>Se define horario y punto de entrega por WhatsApp según disponibilidad.</p><div class="quick"><a class="btn" href="contacto.html">📦 Coordinar compra</a></div></article>
-      </div>
-    </section>
-
-    <section class="wrap">
-      <div class="head">
-        <h2>Ramificaciones comerciales reales.</h2>
-        <p>La página queda dividida como árbol de ventas: alimentos, ropa americana, peluches, pinturas, bisutería, contenido IA y contacto. Orden primero, venta después. 🧩</p>
-      </div>
-      <div class="grid g4">
-        <article class="card"><div class="media"><img src="assets/catalogo-grasita-bw.svg" alt="Grasita de res para venta por kilo" loading="lazy"></div><div class="body"><span class="tag">Alimentos</span><h3>Grasita de res</h3><p>Consulta disponibilidad, estado, cantidad y entrega coordinada.</p></div></article>
-        <article class="card"><div class="media"><img src="assets/catalogo-ropa-bw.svg" alt="Ropa americana disponible" loading="lazy"></div><div class="body"><span class="tag">Moda</span><h3>Ropa americana</h3><p>Prendas seleccionadas con fotos, tallas y precios por WhatsApp.</p></div></article>
-        <article class="card"><div class="media"><img src="assets/catalogo-peluches-bw.svg" alt="Peluches para regalo" loading="lazy"></div><div class="body"><span class="tag">Regalos</span><h3>Peluches</h3><p>Detalles tiernos para regalo, sujetos a stock disponible.</p></div></article>
-        <article class="card"><div class="media"><img src="assets/showcase-marca.svg" alt="Pinturas y bisutería" loading="lazy"></div><div class="body"><span class="tag">Variedades</span><h3>Pinturas y bisutería</h3><p>Productos por consulta directa, fotos reales y entrega coordinada.</p></div></article>
-      </div>
-    </section>
-
-    <section class="wrap">
       <div class="band">
-        <div class="call"><span class="tag">Sistema avanzado</span><h2>Una página con dirección, no solo decoración.</h2><p>El diseño funciona como ficha comercial: muestra categorías reales, prueba visual, Facebook oficial, botones directos y coordinación por WhatsApp. La casa digital queda lista para crecer con más fotos reales, precios y productos activos.</p></div>
+        <div class="call"><span class="tag">Sistema comercial</span><h2>Una página con dirección, no solo decoración.</h2><p>El diseño funciona como ficha comercial: muestra categorías reales, prueba visual, Facebook oficial, botones directos y coordinación por WhatsApp. La casa digital queda lista para crecer con más fotos reales, precios y productos activos.</p></div>
         <div class="panel"><div class="mark">SCZ<br>TIKIO</div></div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">© 2026 Vendedor SCZ · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a> · Página pública en GitHub Pages</footer>
+  <footer class="footer">© 2026 Vendedor SCZ · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · Sin tienda física activa por el momento · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a> · Página pública en GitHub Pages</footer>
 </body>
 </html>
