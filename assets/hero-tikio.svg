@@ -1,0 +1,16 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#050505"/>
+  <circle cx="930" cy="170" r="260" fill="#CCFF00" opacity="0.18"/>
+  <circle cx="220" cy="730" r="310" fill="#CCFF00" opacity="0.09"/>
+  <path d="M140 190H1060V710H140V190Z" fill="#101010" stroke="#CCFF00" stroke-width="8"/>
+  <path d="M190 245H1010V300H190V245Z" fill="#CCFF00"/>
+  <text x="220" y="285" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" fill="#050505">VENDEDOR SCZ · MARCA DIGITAL</text>
+  <text x="190" y="440" font-family="Arial, Helvetica, sans-serif" font-size="145" font-weight="900" fill="#FFFFFF">TIKIO</text>
+  <text x="198" y="515" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#CCFF00">VENTAS · CONTENIDO · IA</text>
+  <rect x="190" y="580" width="350" height="70" rx="18" fill="#CCFF00"/>
+  <text x="230" y="627" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#050505">WHATSAPP DIRECTO</text>
+  <path d="M720 390L880 300L1040 390V570L880 660L720 570V390Z" fill="#171717" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="4"/>
+  <path d="M875 355L955 405V500L875 555L795 500V405L875 355Z" fill="#CCFF00" opacity="0.95"/>
+  <text x="817" y="485" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="900" fill="#050505">IA</text>
+  <path d="M110 790H1090" stroke="#CCFF00" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+</svg>
