@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Acceso y registro de clientes de Vendedor SCZ. Función preparada para una próxima etapa.">
+  <title>Iniciar Sesión/Registro | Vendedor SCZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="cart-top" href="catalogo.html#catalogo-grid" aria-label="Ver carrito">🛒<span>0</span></a>
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="brand" href="index.html">Vendedor <span>SCZ</span><small>Santa Cruz · Venta online</small></a>
+    <button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+    <div class="links" id="menu-principal">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html">Iniciar Sesión/Registro</a>
+    </div>
+    <div class="nav-tools">
+      <form class="site-search" action="catalogo.html" method="get" role="search">
+        <label class="sr-only" for="buscar-login">Buscar productos</label>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.35-4.35M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="buscar-login" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+  <main>
+    <section class="wrap hero">
+      <div>
+        <span class="eyebrow">🔐 Próxima función</span>
+        <h1>Acceso de clientes.</h1>
+        <p class="lead">Esta pantalla deja preparado el lugar para iniciar sesión o registrarse cuando el sistema tenga cuentas reales. Por ahora, las compras se coordinan directamente por WhatsApp.</p>
+        <div class="actions"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20comprar%20desde%20Vendedor%20SCZ.%20%C2%BFMe%20pasas%20productos%20disponibles%3F">💬 Comprar por WhatsApp</a><a class="btn primary" href="catalogo.html">Ver catálogo</a></div>
+      </div>
+      <aside class="panel"><span class="tag">Estado</span><h3>Registro preparado</h3><p class="small">No guarda datos todavía. Es una vista de estructura para una futura etapa con usuarios, pedidos y carrito real.</p></aside>
+    </section>
+  </main>
+  <footer class="footer">© 2026 <strong>Vendedor SCZ</strong> · Venta online previa coordinación</footer>
+  <script>const nav=document.querySelector('.nav');const menu=document.querySelector('.hamburger');menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});</script>
+</body>
+</html>
