@@ -1,67 +1,39 @@
-# 🚀 TIKIO | Vendedor SCZ
+# 🚀 Vendedor SCZ | TIKIO
 
-**Portafolio público y vitrina digital de TIKIO**, creado para presentar proyectos, productos, contenido y soluciones con inteligencia artificial desde Santa Cruz de la Sierra.
+Página pública tipo vitrina digital para **Vendedor SCZ**, creada para mostrar productos, promociones y contenido visual con inteligencia artificial desde Santa Cruz de la Sierra.
 
-> Marca en construcción con enfoque comercial, creativo y tecnológico: vender mejor, crear más rápido y usar IA como ventaja real.
+## ✅ Mejoras aplicadas
 
----
+- Diseño más elegante, oscuro y comercial.
+- Navegación por páginas: Inicio, Catálogo, Ramificaciones, Contenido IA y Contacto.
+- Imágenes convertidas a código mediante ilustraciones SVG editables.
+- Botones directos a WhatsApp.
+- Estructura lista para crecer con más productos, precios, testimonios y fotos reales.
 
-## 🎯 Objetivo del proyecto
+## 🧭 Páginas del sitio
 
-Este repositorio funciona como una página pública para mostrar:
-
-- Productos y servicios activos.
-- Proyectos con inteligencia artificial.
-- Creación de contenido para redes sociales.
-- Ideas comerciales para ventas, marketing y automatización.
-- Presencia digital profesional bajo la marca **TIKIO / Vendedor SCZ**.
-
----
-
-## 🧩 Áreas principales
-
-| Área | Enfoque |
+| Página | Función |
 |---|---|
-| 🛒 Ventas locales | Productos físicos, promociones y atención directa por WhatsApp |
-| 🎬 Contenido IA | Imágenes, videos cortos, guiones y campañas visuales |
-| 🤖 Automatización | Uso de ChatGPT, Gemini, Sora y herramientas digitales |
-| 📍 Marca personal | Presencia profesional desde Santa Cruz de la Sierra |
+| `index.html` | Portada principal de marca y propuesta comercial |
+| `catalogo.html` | Catálogo por ramas de productos y promociones |
+| `ramificaciones.html` | Mapa de crecimiento de la página |
+| `contenido-ia.html` | Portafolio de diseños, imágenes y campañas con IA |
+| `contacto.html` | Página de contacto directo por WhatsApp |
 
----
+## 🛠️ Tecnologías
 
-## 🛠️ Tecnologías utilizadas
+- HTML5
+- CSS3
+- SVG editable
+- GitHub Pages
+- Diseño responsive
 
-- **HTML5**
-- **CSS3**
-- **Diseño responsive**
-- **GitHub Pages**
-- **Herramientas IA:** ChatGPT, Gemini, Sora, Veo y Canva
+## 📌 Próxima fase recomendada
 
----
-
-## 📌 Secciones de la página
-
-- Inicio con propuesta clara.
-- Presentación de marca.
-- Proyectos y productos destacados.
-- Servicios digitales.
-- Botón directo a WhatsApp.
-- Diseño oscuro, moderno y comercial.
-
----
-
-## 🚧 Próximas mejoras
-
-- Agregar catálogo visual real de productos.
-- Conectar enlaces a Facebook, TikTok y YouTube.
-- Mejorar imágenes de cada producto.
-- Crear sección de testimonios.
-- Integrar formularios o chatbot de atención.
-
----
-
-## 📲 Contacto
-
-Atención directa por WhatsApp desde la página.
+1. Subir fotos reales de cada producto por categoría.
+2. Agregar precios actualizados.
+3. Crear testimonios de clientes.
+4. Añadir enlaces a Facebook, TikTok y YouTube.
+5. Separar productos activos por temporada.
 
 **© 2026 TIKIO | Vendedor SCZ | Santa Cruz de la Sierra**
