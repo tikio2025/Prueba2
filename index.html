@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TIKIO / Vendedor SCZ: portafolio público de ventas, contenido con IA y proyectos digitales desde Santa Cruz de la Sierra." />
-  <title>TIKIO | Vendedor SCZ</title>
+  <meta name="description" content="Vendedor SCZ: grasita de res, peluches americanos usados, ropa americana usada y productos de oportunidad en Santa Cruz de la Sierra." />
+  <title>Vendedor SCZ | TIKIO</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
       --primary: #ffffff;
       --text: #ffffff;
       --muted: #b9b9b9;
-      --line: rgba(255, 255, 255, 0.12);
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --line: rgba(255, 255, 255, 0.14);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
     }
 
     * { box-sizing: border-box; }
@@ -26,8 +26,8 @@
     body {
       margin: 0;
       background:
-        radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 32rem),
-        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.04), transparent 28rem),
+        radial-gradient(circle at top left, rgba(255,255,255,0.06), transparent 30rem),
+        radial-gradient(circle at bottom right, rgba(255,255,255,0.04), transparent 30rem),
         var(--bg);
       color: var(--text);
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -46,17 +46,18 @@
       gap: 1rem;
       padding: 1rem clamp(1rem, 4vw, 4rem);
       backdrop-filter: blur(18px);
-      background: rgba(5, 5, 5, 0.82);
+      background: rgba(5, 5, 5, 0.84);
       border-bottom: 1px solid var(--line);
     }
 
     .brand {
+      font-size: 1.15rem;
       font-weight: 900;
       letter-spacing: -0.04em;
-      font-size: 1.25rem;
+      text-transform: uppercase;
     }
 
-    .brand span { color: var(--primary); }
+    .brand span { color: var(--muted); }
 
     .nav-links {
       display: flex;
@@ -79,20 +80,20 @@
       grid-template-columns: 1.05fr 0.95fr;
       gap: clamp(2rem, 5vw, 5rem);
       align-items: center;
-      padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 4vw, 4rem);
       max-width: 1280px;
       margin: 0 auto;
+      padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 4vw, 4rem);
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 0.55rem;
-      color: var(--primary);
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.22);
       padding: 0.45rem 0.75rem;
+      border: 1px solid rgba(255,255,255,0.22);
       border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      color: var(--primary);
       font-weight: 700;
       font-size: 0.88rem;
     }
@@ -105,10 +106,8 @@
       text-transform: uppercase;
     }
 
-    .accent { color: var(--primary); }
-
     .lead {
-      max-width: 650px;
+      max-width: 660px;
       color: var(--muted);
       font-size: clamp(1rem, 2vw, 1.2rem);
       margin-bottom: 2rem;
@@ -138,30 +137,30 @@
     .btn:hover { transform: translateY(-2px); }
 
     .btn-primary {
-      background: var(--primary);
+      background: #ffffff;
       color: #050505;
-      border-color: var(--primary);
+      border-color: #ffffff;
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255,255,255,0.04);
       color: var(--text);
     }
 
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.09);
-      border-color: rgba(255, 255, 255, 0.24);
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(255,255,255,0.24);
     }
 
     .brand-panel {
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 30px;
-      padding: clamp(1.5rem, 4vw, 2.3rem);
       min-height: 430px;
+      padding: clamp(1.5rem, 4vw, 2.3rem);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 30px;
       background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 45%),
+        linear-gradient(135deg, rgba(255,255,255,0.06), transparent 45%),
         linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
       box-shadow: var(--shadow);
     }
@@ -173,19 +172,19 @@
       height: 320px;
       right: -90px;
       top: -90px;
-      background: rgba(255, 255, 255, 0.10);
-      filter: blur(45px);
       border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      filter: blur(45px);
     }
 
     .panel-inner { position: relative; z-index: 1; }
 
     .panel-title {
+      margin: 0 0 1rem;
       font-size: clamp(3rem, 8vw, 6rem);
       line-height: 0.9;
       font-weight: 900;
       letter-spacing: -0.08em;
-      margin: 0 0 1rem;
       text-transform: uppercase;
     }
 
@@ -197,18 +196,18 @@
     }
 
     .panel-item {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      border-radius: 20px;
       padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.03);
     }
 
     .panel-item strong {
       display: block;
+      margin-bottom: 0.4rem;
       color: var(--primary);
       font-size: 1.6rem;
       line-height: 1;
-      margin-bottom: 0.4rem;
     }
 
     .panel-item span { color: var(--muted); font-size: 0.92rem; }
@@ -230,46 +229,48 @@
     h2 {
       margin: 0;
       font-size: clamp(2rem, 5vw, 3.7rem);
-      letter-spacing: -0.06em;
       line-height: 1;
+      letter-spacing: -0.06em;
     }
 
     .section-title p {
-      max-width: 430px;
-      color: var(--muted);
+      max-width: 450px;
       margin: 0;
+      color: var(--muted);
     }
 
-    .cards {
+    .branches {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
 
-    .card {
-      min-height: 300px;
-      padding: 1.5rem;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: linear-gradient(160deg, rgba(255,255,255,0.055), rgba(255,255,255,0.015));
-      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    .branch-card {
       position: relative;
       overflow: hidden;
+      min-height: 390px;
+      padding: 1.45rem;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 4px;
-      background: var(--primary);
-      opacity: 0.85;
-    }
-
-    .card:hover {
+    .branch-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(255, 255, 255, 0.28);
-      background: linear-gradient(160deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+      border-color: rgba(255,255,255,0.3);
+      background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.025));
+    }
+
+    .branch-number {
+      position: absolute;
+      right: 1.2rem;
+      top: 1rem;
+      color: rgba(255,255,255,0.08);
+      font-size: 5rem;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.08em;
     }
 
     .icon {
@@ -278,9 +279,9 @@
       display: grid;
       place-items: center;
       margin-bottom: 1.2rem;
+      border: 1px solid rgba(255,255,255,0.16);
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255,255,255,0.06);
       font-size: 2rem;
     }
 
@@ -292,26 +293,69 @@
       letter-spacing: 0.1em;
     }
 
-    .card h3 {
+    .branch-card h3 {
+      position: relative;
       margin: 0.35rem 0 0.6rem;
-      font-size: 1.35rem;
-      letter-spacing: -0.03em;
+      font-size: 1.5rem;
+      letter-spacing: -0.04em;
     }
 
-    .card p { color: var(--muted); margin: 0; }
+    .branch-card p { color: var(--muted); margin: 0 0 1.2rem; }
+
+    .mini-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.4rem;
+      color: var(--muted);
+    }
+
+    .mini-list li {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mini-list li::before {
+      content: "✓";
+      margin-right: 0.5rem;
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    .card-link { margin-top: auto; }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .info-box {
+      padding: 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .info-box strong {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+    }
+
+    .info-box span { color: var(--muted); font-size: 0.92rem; }
 
     .strip {
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 28px;
-      padding: clamp(1.4rem, 4vw, 2rem);
-      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
+      padding: clamp(1.4rem, 4vw, 2rem);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
     }
 
-    .strip p { color: var(--muted); max-width: 640px; margin: 0.5rem 0 0; }
+    .strip p { max-width: 640px; margin: 0.5rem 0 0; color: var(--muted); }
 
     footer {
       padding: 2.4rem clamp(1rem, 4vw, 4rem);
@@ -321,142 +365,137 @@
       background: #030303;
     }
 
-    @media (max-width: 850px) {
-      .nav-links { display: none; }
+    @media (max-width: 920px) {
       .hero { grid-template-columns: 1fr; min-height: auto; }
-      .cards { grid-template-columns: 1fr; }
+      .branches { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
       .section-title, .strip { flex-direction: column; align-items: flex-start; }
-      .panel-grid { grid-template-columns: 1fr; }
+      .panel-grid, .info-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <nav class="nav" aria-label="Navegación principal">
-    <div class="brand">TIKIO<span>.</span></div>
+    <div class="brand">Vendedor SCZ <span>| TIKIO</span></div>
     <div class="nav-links">
-      <a href="#sobre-mi">Marca</a>
-      <a href="#proyectos">Productos</a>
-      <a href="#servicios">Servicios</a>
-      <a href="https://wa.me/59175103979">WhatsApp</a>
+      <a href="#ramas">Ramificación</a>
+      <a href="#confianza">Confianza</a>
+      <a href="#contacto">WhatsApp</a>
     </div>
   </nav>
 
   <main>
     <header class="hero">
       <div>
-        <span class="eyebrow">📍 Santa Cruz de la Sierra · Vendedor SCZ</span>
-        <h1>TIKIO <span class="accent">vende</span>, crea y automatiza.</h1>
+        <span class="eyebrow">📍 Santa Cruz de la Sierra · Venta directa</span>
+        <h1>Productos reales, atención directa.</h1>
         <p class="lead">
-          Portafolio público de un emprendedor enfocado en ventas locales, contenido digital e inteligencia artificial aplicada a negocios reales.
+          Soy vendedor en Santa Cruz. Trabajo con líneas separadas para atender mejor: grasita de res, peluches americanos usados y ropa americana usada.
         </p>
         <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/59175103979">💬 Contactar por WhatsApp</a>
-          <a class="btn btn-secondary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-primary" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20tus%20productos%20de%20Vendedor%20SCZ">💬 Consultar por WhatsApp</a>
+          <a class="btn btn-secondary" href="#ramas">Ver líneas de venta</a>
         </div>
       </div>
 
-      <aside class="brand-panel" aria-label="Panel principal de marca TIKIO">
+      <aside class="brand-panel" aria-label="Panel principal de Vendedor SCZ">
         <div class="panel-inner">
-          <span class="tag">Marca digital en crecimiento</span>
-          <p class="panel-title">Vendedor<br><span class="accent">SCZ</span></p>
-          <p class="lead">Ventas reales, contenido visual y tecnología útil para mover productos, captar clientes y construir presencia digital.</p>
+          <span class="tag">Ramificación comercial</span>
+          <p class="panel-title">3 líneas<br>de venta</p>
+          <p class="lead">Una página ordenada para que el cliente encuentre rápido lo que busca y escriba directo por WhatsApp.</p>
           <div class="panel-grid">
-            <div class="panel-item"><strong>SCZ</strong><span>Base comercial</span></div>
-            <div class="panel-item"><strong>IA</strong><span>Contenido y automatización</span></div>
-            <div class="panel-item"><strong>24/7</strong><span>Vitrina online</span></div>
-            <div class="panel-item"><strong>2026</strong><span>Marca en expansión</span></div>
+            <div class="panel-item"><strong>🥩</strong><span>Grasita de res</span></div>
+            <div class="panel-item"><strong>🧸</strong><span>Peluches americanos usados</span></div>
+            <div class="panel-item"><strong>👕</strong><span>Ropa americana usada</span></div>
+            <div class="panel-item"><strong>📲</strong><span>Atención por WhatsApp</span></div>
           </div>
         </div>
       </aside>
     </header>
 
-    <section id="sobre-mi">
+    <section id="ramas">
       <div class="section-title">
-        <h2>Marca con calle y tecnología.</h2>
-        <p>La idea es simple: vender mejor, mostrar mejor y usar herramientas modernas sin perder el toque humano.</p>
+        <h2>Ramificación de productos.</h2>
+        <p>Cada línea tiene su propio enfoque para vender con más claridad y menos confusión.</p>
       </div>
-      <div class="strip">
-        <div>
-          <span class="tag">Propuesta</span>
-          <h3>De producto local a marca digital.</h3>
-          <p>
-            TIKIO combina venta directa, contenido visual y automatización con IA para crear una presencia más profesional en Facebook, WhatsApp, TikTok y GitHub.
-          </p>
-        </div>
-        <a class="btn btn-primary" href="https://wa.me/59175103979">Hablemos</a>
-      </div>
-    </section>
 
-    <section id="proyectos">
-      <div class="section-title">
-        <h2>Productos y proyectos.</h2>
-        <p>Una vitrina compacta para mostrar lo que está activo y lo que puede crecer.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
+      <div class="branches">
+        <article class="branch-card">
+          <div class="branch-number">01</div>
           <div class="icon">🥩</div>
-          <span class="tag">Ventas locales</span>
+          <span class="tag">Alimentos</span>
           <h3>Grasita de res</h3>
-          <p>Producto para clientes que buscan sabor, rendimiento y atención rápida en Santa Cruz.</p>
+          <p>Grasita carnudita para cocina, chicharrón, masaco y preparaciones con sabor camba.</p>
+          <ul class="mini-list">
+            <li>Venta por kilo</li>
+            <li>Producto fresco o congelado según disponibilidad</li>
+            <li>Consulta directa antes de comprar</li>
+          </ul>
+          <a class="btn btn-primary card-link" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20la%20grasita%20de%20res">Consultar grasita</a>
         </article>
 
-        <article class="card">
-          <div class="icon">🛒</div>
-          <span class="tag">Catálogo</span>
-          <h3>Vendedor SCZ</h3>
-          <p>Ropa americana, peluches, detalles para regalo y productos de oportunidad listos para publicar.</p>
+        <article class="branch-card">
+          <div class="branch-number">02</div>
+          <div class="icon">🧸</div>
+          <span class="tag">Detalles y regalos</span>
+          <h3>Peluches americanos usados</h3>
+          <p>Peluches tiernos, seleccionados y en buen estado para regalo, decoración o detalle especial.</p>
+          <ul class="mini-list">
+            <li>Productos únicos y variados</li>
+            <li>Estado visible antes de la compra</li>
+            <li>Ideal para fechas especiales</li>
+          </ul>
+          <a class="btn btn-primary card-link" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20los%20peluches%20americanos%20usados">Ver peluches</a>
         </article>
 
-        <article class="card">
-          <div class="icon">🤖</div>
-          <span class="tag">Contenido IA</span>
-          <h3>Prompts, videos e imágenes</h3>
-          <p>Producción visual para vender más: guiones, anuncios, piezas de Facebook y videos cortos.</p>
+        <article class="branch-card">
+          <div class="branch-number">03</div>
+          <div class="icon">👕</div>
+          <span class="tag">Moda americana</span>
+          <h3>Ropa americana usada</h3>
+          <p>Prendas americanas usadas seleccionadas para quienes buscan estilo, precio y oportunidad.</p>
+          <ul class="mini-list">
+            <li>Ropa por llegada y disponibilidad</li>
+            <li>Variedad de estilos y tallas</li>
+            <li>Consulta por fotos y precio</li>
+          </ul>
+          <a class="btn btn-primary card-link" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20ropa%20americana%20usada">Ver ropa</a>
         </article>
       </div>
     </section>
 
-    <section id="servicios">
+    <section id="confianza">
       <div class="section-title">
-        <h2>Servicios digitales.</h2>
-        <p>Herramientas prácticas para que una idea pase rápido de pensamiento a publicación.</p>
+        <h2>Compra más clara.</h2>
+        <p>La página no promete humo. Muestra líneas concretas y abre conversación directa.</p>
       </div>
-      <div class="cards">
-        <article class="card">
-          <div class="icon">📣</div>
-          <span class="tag">01</span>
-          <h3>Publicidad para redes</h3>
-          <p>Textos, imágenes, prompts y estructura de anuncios para vender productos físicos.</p>
-        </article>
-        <article class="card">
-          <div class="icon">⚙️</div>
-          <span class="tag">02</span>
-          <h3>Automatización con IA</h3>
-          <p>Flujos de trabajo para crear contenido, organizar ideas y mejorar atención al cliente.</p>
-        </article>
-        <article class="card">
-          <div class="icon">💎</div>
-          <span class="tag">03</span>
-          <h3>Marca personal</h3>
-          <p>Diseño de identidad, portadas, catálogos y estilo visual para construir confianza.</p>
-        </article>
+
+      <div class="info-grid">
+        <div class="info-box"><strong>📍 Ubicación</strong><span>Santa Cruz de la Sierra</span></div>
+        <div class="info-box"><strong>📸 Fotos reales</strong><span>Se pueden enviar por WhatsApp</span></div>
+        <div class="info-box"><strong>💬 Consulta directa</strong><span>Preguntas antes de comprar</span></div>
+        <div class="info-box"><strong>🖤 Estilo limpio</strong><span>Negro y blanco, sin distracciones</span></div>
       </div>
     </section>
 
-    <section>
+    <section id="contacto">
       <div class="strip">
         <div>
           <span class="tag">Contacto directo</span>
-          <h3>¿Quieres comprar, cotizar o crear contenido?</h3>
-          <p>Escríbeme por WhatsApp. Respuesta directa, sin vueltas y con enfoque comercial.</p>
+          <h3>¿Qué producto estás buscando?</h3>
+          <p>Escríbeme por WhatsApp y dime si quieres grasita de res, peluches americanos usados o ropa americana usada.</p>
         </div>
-        <a class="btn btn-primary" href="https://wa.me/59175103979">📲 Ir a WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20p%C3%A1gina.%20Quiero%20consultar%20por%20tus%20productos">📲 Ir a WhatsApp</a>
       </div>
     </section>
   </main>
 
   <footer>
-    © 2026 TIKIO · Vendedor SCZ · Santa Cruz de la Sierra
+    © 2026 Vendedor SCZ · TIKIO · Santa Cruz de la Sierra
   </footer>
 </body>
 </html>
