@@ -1,19 +1,25 @@
 # 🚀 Vendedor SCZ | TIKIO
 
-Página pública tipo vitrina digital para **Vendedor SCZ**, creada para mostrar productos, pelucas y extensiones, promociones, ubicación, enlaces rápidos de WhatsApp, Facebook oficial y contenido visual con inteligencia artificial desde Santa Cruz de la Sierra.
+Página pública tipo vitrina digital para **Vendedor SCZ**, creada para mostrar productos reales, recibir consultas por WhatsApp y coordinar ventas online desde Santa Cruz de la Sierra.
 
-## ✅ Mejoras aplicadas
+## ✅ Enfoque actual
 
-- Diseño elegante, oscuro y comercial.
-- Navegación por páginas: Inicio, Catálogo, Pelucas, Ramificaciones, Contenido IA y Contacto.
-- Nueva página `pelucas.html` para pelucas y extensiones por medida.
-- Imágenes SVG provisionales para 43 cm, 65 cm, 85 cm y portada de pelucas.
-- Botones directos a WhatsApp por intención de compra.
-- Facebook oficial agregado como prueba social y canal de confianza.
-- Ubicación referencial agregada: Radial 25, entre 3er y 4to anillo, calle N° 3 Ovidio Santistevan, Santa Cruz de la Sierra.
-- Enlaces a Google Maps y Waze mediante búsqueda de dirección.
-- Sección de noticia comercial para mostrar que la página ya empezó a mover ventas.
-- Estructura lista para crecer con más productos, precios, testimonios, redes oficiales y fotos reales.
+- Venta online, sin tienda física activa por el momento.
+- Atención y entrega previa coordinación por WhatsApp.
+- Menú superior limpio: Inicio, Catálogo y Contacto.
+- Barra de búsqueda con ícono de lupa para encontrar productos rápido.
+- Catálogo enfocado en productos reales.
+- Facebook oficial como canal de confianza.
+- Sin precios inventados: stock, fotos reales, horarios y entrega se confirman por WhatsApp.
+
+## 🛒 Productos principales
+
+| Producto | Función comercial |
+|---|---|
+| Grasita de res | Consulta por kilo, estado, disponibilidad y entrega |
+| Poleras americanas | Fotos, tallas, estado y precios por WhatsApp |
+| Pinturas | Consulta por color, presentación y disponibilidad |
+| Bisutería | Fotos de modelos, piezas disponibles y precios |
 
 ## 🔗 Canales oficiales
 
@@ -26,30 +32,27 @@ Página pública tipo vitrina digital para **Vendedor SCZ**, creada para mostrar
 
 | Página | Función |
 |---|---|
-| `index.html` | Portada principal de marca, noticia comercial, Facebook oficial y accesos rápidos |
-| `catalogo.html` | Catálogo por ramas de productos, pelucas y promociones |
-| `pelucas.html` | Fichas comerciales de pelucas/extensiones por medida y precio |
-| `ramificaciones.html` | Mapa de crecimiento de la página |
-| `contenido-ia.html` | Portafolio de diseños, imágenes y campañas con IA |
-| `contacto.html` | WhatsApp, Facebook oficial, ubicación, Google Maps, Waze y mensajes prediseñados |
+| `index.html` | Portada principal con productos reales, buscador y accesos rápidos |
+| `catalogo.html` | Catálogo de grasita de res, poleras americanas, pinturas y bisutería |
+| `ramificaciones.html` | Mapa de crecimiento comercial por productos reales |
+| `contacto.html` | WhatsApp, Facebook oficial y coordinación de compra online |
 
 ## 🛠️ Tecnologías
 
 - HTML5
 - CSS3
-- SVG editable
 - GitHub Pages
 - Diseño responsive
 - Enlaces prediseñados para WhatsApp
-- Enlaces oficiales de redes sociales
+- Búsqueda simple de productos
 
 ## 📌 Próxima fase recomendada
 
-1. Verificar precios de pelucas y extensiones, especialmente la medida de 85 cm.
-2. Subir fotos reales o imágenes generadas de cada producto por categoría.
-3. Agregar colores disponibles, tipo de cabello/textura y stock.
+1. Subir fotos reales de cada producto activo.
+2. Agregar precios confirmados cuando estén listos.
+3. Separar productos por disponibilidad: disponible, vendido y próximo ingreso.
 4. Crear testimonios de clientes.
-5. Añadir TikTok, YouTube e Instagram si están activos.
-6. Crear una sección de novedades/ofertas de hoy para publicar ofertas recientes.
+5. Añadir redes oficiales activas como TikTok, YouTube o Instagram.
+6. Crear una sección de novedades/ofertas de hoy.
 
 **© 2026 TIKIO | Vendedor SCZ | Santa Cruz de la Sierra**
