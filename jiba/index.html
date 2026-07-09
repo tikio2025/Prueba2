@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pacumuto de Jiba: parrilla, almuerzos, combos y pedidos por WhatsApp en Santa Cruz.">
+  <title>Pacumuto de Jiba | Parrilla y almuerzos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#inicio">Pacumuto <span>de Jiba</span></a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="links" data-menu>Menu</button>
+    <nav id="links" data-links>
+      <a href="#menu">Menu</a>
+      <a href="#promos">Promos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#pedido">Pedido</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="tag">Parrilla camba | Almuerzos completos | Para llevar</span>
+        <h1>Pacumuto de Jiba</h1>
+        <p>Costilla, churrasco, pollo a la parrilla y platos caseros con sabor fuerte, porcion generosa y atencion rapida.</p>
+        <div class="actions">
+          <a class="btn primary" href="#pedido">Pedir ahora</a>
+          <a class="btn" href="#menu">Ver menu</a>
+        </div>
+        <div class="facts" aria-label="Datos principales">
+          <div><strong>Especialidad</strong><span>Costilla a la parrilla</span></div>
+          <div><strong>Servicio</strong><span>Almuerzo y pedidos</span></div>
+          <div><strong>Zona</strong><span>Av. Beni Mamore</span></div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="../assets/showcase-pacumuto.svg" alt="Imagen comercial de pacumuto y parrilla">
+      </div>
+    </section>
+
+    <section class="strip">
+      <strong>Sabor de casa</strong>
+      <span>Almuerzos y parrilla para comer bien, recoger rapido y compartir sin complicarse.</span>
+      <a class="btn dark" href="#pedido">Armar pedido</a>
+    </section>
+
+    <section class="wrap" id="menu">
+      <div class="head">
+        <span class="tag">Menu de venta</span>
+        <h2>Platos principales</h2>
+        <p>Precios editables. Los botones preparan el mensaje para WhatsApp.</p>
+      </div>
+      <div class="filters" role="tablist" aria-label="Filtrar menu">
+        <button class="active" type="button" data-filter="todos">Todos</button>
+        <button type="button" data-filter="parrilla">Parrilla</button>
+        <button type="button" data-filter="almuerzo">Almuerzos</button>
+        <button type="button" data-filter="bebida">Bebidas</button>
+      </div>
+      <div class="grid cards">
+        <article class="card" data-category="parrilla almuerzo">
+          <img src="../assets/showcase-pacumuto.svg" alt="Pacumuto especial">
+          <div><span class="pill">Mas pedido</span><h3>Pacumuto especial</h3><p>Costilla, arroz, yuca y ensalada fresca para un almuerzo completo.</p></div>
+          <footer><strong>Bs 35</strong><button type="button" data-order="Pacumuto especial - Bs 35">Pedir</button></footer>
+        </article>
+        <article class="card" data-category="parrilla">
+          <img src="../assets/showcase-burger.svg" alt="Churrasco completo">
+          <div><span class="pill">Parrilla</span><h3>Churrasco completo</h3><p>Carne a la parrilla con acompanamientos de casa y sabor recien hecho.</p></div>
+          <footer><strong>Bs 32</strong><button type="button" data-order="Churrasco completo - Bs 32">Pedir</button></footer>
+        </article>
+        <article class="card" data-category="parrilla">
+          <img src="../assets/showcase-pacumuto.svg" alt="Costilla a la parrilla">
+          <div><span class="pill">Promo</span><h3>Costilla a la parrilla</h3><p>Porcion fuerte, dorada y lista para acompanar con yuca o arroz.</p></div>
+          <footer><strong>Bs 38</strong><button type="button" data-order="Costilla a la parrilla - Bs 38">Pedir</button></footer>
+        </article>
+        <article class="card" data-category="almuerzo">
+          <img src="../assets/showcase-marca.svg" alt="Almuerzo completo">
+          <div><span class="pill">Diario</span><h3>Almuerzo completo</h3><p>Sopa, segundo, refresco natural y opcion de gaseosa segun disponibilidad.</p></div>
+          <footer><strong>Bs 25</strong><button type="button" data-order="Almuerzo completo - Bs 25">Pedir</button></footer>
+        </article>
+        <article class="card" data-category="bebida">
+          <img src="../assets/showcase-gato.svg" alt="Refresco natural">
+          <div><span class="pill">Bebidas</span><h3>Refresco natural</h3><p>Para acompanar el almuerzo o completar pedidos grandes.</p></div>
+          <footer><strong>Bs 8</strong><button type="button" data-order="Refresco natural - Bs 8">Pedir</button></footer>
+        </article>
+      </div>
+    </section>
+
+    <section class="feature" id="promos">
+      <img src="../assets/showcase-pacumuto.svg" alt="Promocion de Pacumuto de Jiba">
+      <div>
+        <span class="tag">Promos y reservas</span>
+        <h2>Combos para oficina, familia y pedidos de mediodia.</h2>
+        <p>Consulta combos del dia, pedidos por cantidad y reservas para recoger en horario de almuerzo.</p>
+        <a class="btn primary" href="#pedido">Reservar pedido</a>
+      </div>
+    </section>
+
+    <section class="wrap cream" id="galeria">
+      <div class="head">
+        <span class="tag">Imagenes</span>
+        <h2>Galeria lista para crecer</h2>
+        <p>Esta version usa recursos del repo. Cuando subas fotos reales, solo reemplaza las rutas de imagen.</p>
+      </div>
+      <div class="gallery">
+        <img src="../assets/showcase-pacumuto.svg" alt="Pacumuto">
+        <img src="../assets/showcase-burger.svg" alt="Campana de producto">
+        <img src="../assets/showcase-marca.svg" alt="Marca comercial">
+      </div>
+    </section>
+
+    <section class="wrap split" id="pedido">
+      <div>
+        <span class="tag">Pedidos</span>
+        <h2>Arma el mensaje y envialo por WhatsApp.</h2>
+        <p>Completa tus datos y se abrira WhatsApp con el pedido listo para confirmar disponibilidad, horario y entrega.</p>
+      </div>
+      <form data-form>
+        <label>Nombre<input name="nombre" required placeholder="Tu nombre"></label>
+        <label>Telefono<input name="telefono" inputmode="tel" placeholder="Ej. 75103979"></label>
+        <label>Pedido<textarea name="pedido" required rows="5" placeholder="Ej. 2 Pacumuto especial"></textarea></label>
+        <label>Entrega<select name="entrega"><option>Recojo en local</option><option>Delivery</option><option>Coordinar por WhatsApp</option></select></label>
+        <label>Detalles<textarea name="detalles" rows="3" placeholder="Direccion, hora o referencia"></textarea></label>
+        <button class="btn primary full" type="submit">Enviar pedido</button>
+        <p class="status" data-status></p>
+      </form>
+    </section>
+
+    <section class="wrap contact" id="contacto">
+      <div>
+        <span class="tag">Contacto</span>
+        <h2>Listo para recibir clientes.</h2>
+        <p>Visitanos en la zona o escribe por WhatsApp para coordinar tu almuerzo.</p>
+      </div>
+      <address>
+        <span>Direccion</span><strong>Av. Beni Mamore, lado Banco de Desarrollo</strong>
+        <span>WhatsApp</span><strong>+591 75103979</strong>
+        <span>Horario</span><strong>Lunes a sabado, 11:30 - 15:00</strong>
+        <a class="btn dark" href="https://www.google.com/maps/search/?api=1&query=Av.%20Beni%20Mamore%20Banco%20de%20Desarrollo" target="_blank" rel="noopener">Ver ubicacion</a>
+      </address>
+    </section>
+  </main>
+
+  <footer>Pacumuto de Jiba · Parrilla, almuerzos y pedidos · <a href="../index.html">Volver a Vendedor SCZ</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
