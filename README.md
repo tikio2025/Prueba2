@@ -1,32 +1,67 @@
-with open("README.md", "w", encoding="utf-8") as f:
-    f.write("""# 🚀 TIKIO | Portafolio Pro
+# 🚀 TIKIO | Vendedor SCZ
 
-Bienvenido al repositorio oficial de **TIKIO**, un portafolio web personal con un diseño moderno y deportivo de alto contraste. 
+**Portafolio público y vitrina digital de TIKIO**, creado para presentar proyectos, productos, contenido y soluciones con inteligencia artificial desde Santa Cruz de la Sierra.
 
-## 📖 Sobre el Proyecto
-Este proyecto muestra una colección de trabajos e innovaciones en distintas áreas, desde la automatización con IA hasta el desarrollo de aplicaciones web y creación de contenido.
-
-## 🛠 Tecnologías Utilizadas
-- **Lenguajes:** HTML5, CSS3, JavaScript, Python, Flutter
-- **Inteligencia Artificial:** ChatGPT, Gemini, Veo 3.1, Sora
-- **Herramientas de Diseño:** Canva
-- **Plataformas:** GitHub
-
-## 🚀 Proyectos Destacados
-1. 🤖 **Agentes IA** - Automatización inteligente
-2. 💻 **Aplicaciones** - Desarrollo web y móvil
-3. 🎬 **Videos IA** - Producción cinematográfica
-4. 🪵 **Carpintería** - Diseño y construcción
-5. 🍢 **Restaurante** - Gestión comercial
-6. 📖 **Contenido** - Valores y comunidad
-
-## 📈 Próximamente
-- Blog interactivo
-- Galería visual
-- Estadísticas de GitHub
-- Asistente IA
-- Modo oscuro dinámico y animaciones
+> Marca en construcción con enfoque comercial, creativo y tecnológico: vender mejor, crear más rápido y usar IA como ventaja real.
 
 ---
-*© 2026 TIKIO | Santa Cruz de la Sierra*
-""")
+
+## 🎯 Objetivo del proyecto
+
+Este repositorio funciona como una página pública para mostrar:
+
+- Productos y servicios activos.
+- Proyectos con inteligencia artificial.
+- Creación de contenido para redes sociales.
+- Ideas comerciales para ventas, marketing y automatización.
+- Presencia digital profesional bajo la marca **TIKIO / Vendedor SCZ**.
+
+---
+
+## 🧩 Áreas principales
+
+| Área | Enfoque |
+|---|---|
+| 🛒 Ventas locales | Productos físicos, promociones y atención directa por WhatsApp |
+| 🎬 Contenido IA | Imágenes, videos cortos, guiones y campañas visuales |
+| 🤖 Automatización | Uso de ChatGPT, Gemini, Sora y herramientas digitales |
+| 📍 Marca personal | Presencia profesional desde Santa Cruz de la Sierra |
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **HTML5**
+- **CSS3**
+- **Diseño responsive**
+- **GitHub Pages**
+- **Herramientas IA:** ChatGPT, Gemini, Sora, Veo y Canva
+
+---
+
+## 📌 Secciones de la página
+
+- Inicio con propuesta clara.
+- Presentación de marca.
+- Proyectos y productos destacados.
+- Servicios digitales.
+- Botón directo a WhatsApp.
+- Diseño oscuro, moderno y comercial.
+
+---
+
+## 🚧 Próximas mejoras
+
+- Agregar catálogo visual real de productos.
+- Conectar enlaces a Facebook, TikTok y YouTube.
+- Mejorar imágenes de cada producto.
+- Crear sección de testimonios.
+- Integrar formularios o chatbot de atención.
+
+---
+
+## 📲 Contacto
+
+Atención directa por WhatsApp desde la página.
+
+**© 2026 TIKIO | Vendedor SCZ | Santa Cruz de la Sierra**
