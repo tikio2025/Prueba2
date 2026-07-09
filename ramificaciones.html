@@ -11,40 +11,32 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="cart-top" href="catalogo.html#catalogo-grid" aria-label="Ver carrito">🛒<span>0</span></a>
   <nav class="nav" aria-label="Navegación principal">
-    <a class="brand" href="index.html">Vendedor <span>SCZ</span></a>
-    <div class="links">
+    <a class="brand" href="index.html">Vendedor <span>SCZ</span><small>Santa Cruz · Venta online</small></a>
+    <button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+    <div class="links" id="menu-principal">
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
       <a href="contacto.html">Contacto</a>
+      <a href="login.html">Iniciar Sesión/Registro</a>
     </div>
-    <form class="site-search" action="catalogo.html" method="get" role="search">
-      <label class="sr-only" for="buscar-ramas">Buscar productos</label>
-      <span aria-hidden="true">🔎</span>
-      <input id="buscar-ramas" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
-      <button type="submit">Buscar</button>
-    </form>
+    <div class="nav-tools">
+      <form class="site-search" action="catalogo.html" method="get" role="search">
+        <label class="sr-only" for="buscar-ramas">Buscar productos</label>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.35-4.35M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="buscar-ramas" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
   </nav>
 
   <main>
-    <header class="wrap">
-      <span class="eyebrow">🧭 Estructura de crecimiento</span>
-      <h1 class="xl">Ramas claras para vender sin confundir.</h1>
-      <p class="lead">Esta arquitectura mantiene la página enfocada en productos reales, venta online y coordinación por WhatsApp. Cada categoría tiene una función comercial concreta.</p>
-    </header>
-
-    <section class="wrap">
-      <div class="steps">
-        <div class="step"><div class="num">1</div><div><h3>Inicio</h3><p>Presentación clara de Vendedor SCZ, búsqueda superior, catálogo real y botones principales.</p></div></div>
-        <div class="step"><div class="num">2</div><div><h3>Grasita de res</h3><p>Consulta por kilo, estado, disponibilidad, precio y entrega previa coordinación.</p></div></div>
-        <div class="step"><div class="num">3</div><div><h3>Poleras americanas</h3><p>Fotos reales, tallas, estado de prendas y precios confirmados por WhatsApp.</p></div></div>
-        <div class="step"><div class="num">4</div><div><h3>Pinturas</h3><p>Consulta por color, presentación, disponibilidad y precio antes de coordinar entrega.</p></div></div>
-        <div class="step"><div class="num">5</div><div><h3>Bisutería</h3><p>Modelos disponibles, fotos reales y precios por consulta directa.</p></div></div>
-        <div class="step"><div class="num">6</div><div><h3>Contacto</h3><p>WhatsApp directo, atención online y coordinación de horario, punto de entrega y forma de pago.</p></div></div>
-      </div>
-    </section>
+    <header class="wrap"><span class="eyebrow">🧭 Estructura de crecimiento</span><h1 class="xl">Ramas claras para vender sin confundir.</h1><p class="lead">Esta arquitectura mantiene la página enfocada en productos reales, venta online y coordinación por WhatsApp. Cada categoría tiene una función comercial concreta.</p></header>
+    <section class="wrap"><div class="steps"><div class="step"><div class="num">1</div><div><h3>Inicio</h3><p>Presentación clara de Vendedor SCZ, búsqueda superior, catálogo real y botones principales.</p></div></div><div class="step"><div class="num">2</div><div><h3>Grasita de res</h3><p>Consulta por kilo, estado, disponibilidad, precio y entrega previa coordinación.</p></div></div><div class="step"><div class="num">3</div><div><h3>Poleras americanas</h3><p>Fotos reales, tallas, estado de prendas y precios confirmados por WhatsApp.</p></div></div><div class="step"><div class="num">4</div><div><h3>Pintura</h3><p>Consulta por color, presentación, disponibilidad y precio antes de coordinar entrega.</p></div></div><div class="step"><div class="num">5</div><div><h3>Bisutería</h3><p>Modelos disponibles, fotos reales y precios por consulta directa.</p></div></div><div class="step"><div class="num">6</div><div><h3>Contacto</h3><p>WhatsApp directo, atención online y coordinación de horario, punto de entrega y forma de pago.</p></div></div></div></section>
   </main>
 
-  <footer class="footer">© 2026 Vendedor SCZ · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · Sin tienda física activa por el momento</footer>
+  <footer class="footer">© 2026 <strong>Vendedor SCZ</strong> · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · Sin tienda física activa por el momento</footer>
+  <script>const nav=document.querySelector('.nav');const menu=document.querySelector('.hamburger');menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});</script>
 </body>
 </html>
