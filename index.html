@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Vitrina digital profesional de Vendedor SCZ: catálogo, pelucas, promociones, contenido IA, ubicación, Facebook oficial y contacto por WhatsApp.">
-  <title>Vendedor SCZ | TIKIO</title>
+  <meta name="description" content="Vendedor SCZ: vitrina comercial organizada para catálogo, pelucas, alimentos, promociones, Facebook oficial, ubicación y pedidos por WhatsApp en Santa Cruz.">
+  <title>Vendedor SCZ | Ventas, catálogo y pedidos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,98 +12,141 @@
 </head>
 <body>
   <nav class="nav">
-    <a class="brand" href="index.html">Vendedor <span>SCZ</span></a>
-    <div class="links">
-      <a href="index.html">Inicio</a>
+    <a class="brand" href="index.html" aria-label="Vendedor SCZ inicio">Vendedor <span>SCZ</span></a>
+    <div class="links" aria-label="Navegación principal">
+      <a href="#ventas">Ventas</a>
       <a href="catalogo.html">Catálogo</a>
       <a href="pelucas.html">Pelucas</a>
       <a href="ramificaciones.html">Ramificaciones</a>
       <a href="contenido-ia.html">Contenido IA</a>
       <a href="contacto.html">Contacto</a>
     </div>
+    <a class="nav-cta" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20la%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles%20hoy.">WhatsApp</a>
   </nav>
 
   <main>
-    <header class="wrap hero">
-      <section>
-        <span class="eyebrow">📍 Santa Cruz de la Sierra · Marca comercial</span>
-        <h1>Vende claro. Vende bonito. Vende rápido.</h1>
-        <p class="lead">Vitrina digital para productos, pelucas, promociones y contenido con IA. El cliente entra, entiende, verifica la presencia oficial y escribe por WhatsApp sin perderse.</p>
+    <section class="sales-strip" id="ventas" aria-label="Ventas principales">
+      <div class="wrap sales-row">
+        <a class="sale-card sale-card-hot" href="catalogo.html">
+          <span class="tag">Venta principal</span>
+          <strong>Catálogo completo</strong>
+          <small>Productos ordenados por categoría.</small>
+        </a>
+        <a class="sale-card" href="pelucas.html">
+          <span class="tag">Belleza</span>
+          <strong>Pelucas y extensiones</strong>
+          <small>Medidas, precios y pedido directo.</small>
+        </a>
+        <a class="sale-card" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20Pacumuto%20de%20Jiba.%20%C2%BFHay%20disponible%20hoy%3F">
+          <span class="tag">Alimentos</span>
+          <strong>Pacumuto de Jiba</strong>
+          <small>Fotos reales y consulta rápida.</small>
+        </a>
+        <a class="sale-card" href="contacto.html">
+          <span class="tag">Contacto</span>
+          <strong>Ubicación y entrega</strong>
+          <small>Santa Cruz, Radial 25.</small>
+        </a>
+      </div>
+    </section>
+
+    <header class="wrap hero hero-home">
+      <section class="hero-copy-block">
+        <span class="eyebrow">Santa Cruz de la Sierra</span>
+        <h1>Vendedor SCZ</h1>
+        <p class="lead">Una vitrina comercial clara para vender por WhatsApp: catálogo ordenado, fotos visibles, Facebook oficial, ubicación y accesos rápidos para que el cliente no se pierda.</p>
         <div class="actions">
-          <a class="btn primary" href="catalogo.html">🛒 Ver catálogo</a>
-          <a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ%20y%20quiero%20consultar%20por%20tus%20productos.">💬 Pedir por WhatsApp</a>
-          <a class="btn" href="pelucas.html">💇‍♀️ Ver pelucas</a>
-          <a class="btn" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Facebook oficial</a>
-          <a class="btn" href="contacto.html">📍 Ubicación y links rápidos</a>
+          <a class="btn primary" href="catalogo.html">Ver catálogo</a>
+          <a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20ver%20que%20productos%20tienes%20disponibles%20hoy.">Pedir por WhatsApp</a>
+          <a class="btn" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a>
+        </div>
+        <div class="trust-row" aria-label="Datos de confianza">
+          <span>Catálogo por ramas</span>
+          <span>Pedidos en 1 clic</span>
+          <span>Ubicación visible</span>
         </div>
       </section>
-      <aside class="panel">
-        <div class="media"><img src="assets/showcase-pacumuto.svg" alt="Ilustración de pacumuto para catálogo" loading="eager"></div>
-        <div class="stats">
-          <div class="stat"><strong>7</strong><span>ramas de venta</span></div>
-          <div class="stat"><strong>24/7</strong><span>página pública</span></div>
-          <div class="stat"><strong>1 clic</strong><span>a WhatsApp</span></div>
-          <div class="stat"><strong>FB</strong><span>canal oficial</span></div>
-        </div>
+
+      <aside class="hero-board" aria-label="Ventas destacadas">
+        <article class="featured-card featured-main">
+          <img src="data:image/jpeg;base64,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" alt="Foto real de pacumuto con arroz y yuca">
+          <div>
+            <span class="tag">Foto real</span>
+            <h2>Pacumuto y alimentos</h2>
+            <p>Producto visible, consulta directa y venta rápida por WhatsApp.</p>
+            <a class="text-action" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20Pacumuto%20de%20Jiba.%20%C2%BFHay%20disponible%20hoy%3F">Consultar ahora</a>
+          </div>
+        </article>
+        <article class="featured-card">
+          <img src="data:image/jpeg;base64,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" alt="Foto real de churrasco con yuca">
+          <div>
+            <span class="tag">Parrilla</span>
+            <h3>Churrasco y combos</h3>
+            <p>Tarjeta rápida para pedir disponibilidad.</p>
+          </div>
+        </article>
+        <article class="featured-card featured-accent">
+          <span class="tag">Cliente seguro</span>
+          <strong>Facebook + WhatsApp + ubicación</strong>
+          <p>Todo visible desde el inicio para comprar con confianza.</p>
+        </article>
       </aside>
     </header>
 
-    <section class="wrap">
-      <div class="notice">
-        <span class="tag">Noticia comercial</span>
-        <strong>La página ya empezó a mover ventas.</strong>
-        <p>Primera señal positiva: si una persona compró o preguntó por la página, la vitrina funciona. Ahora toca hacerla más directa, más confiable y más rápida para convertir visitantes en clientes.</p>
+    <section class="wrap section-tight">
+      <div class="notice notice-clean">
+        <span class="tag">Orden comercial</span>
+        <strong>La página abre con ventas, después muestra confianza y al final deja el contacto claro.</strong>
+        <p>La estructura está pensada para que cualquier persona entienda qué vendes, dónde consultar y cómo hacer el pedido sin buscar demasiado.</p>
       </div>
     </section>
 
     <section class="wrap">
       <div class="head">
         <div>
-          <span class="tag">Confianza oficial</span>
-          <h2>Antes de comprar, el cliente puede verificar tu presencia real.</h2>
+          <span class="tag">Categorías</span>
+          <h2>Compra por línea de producto.</h2>
         </div>
-        <p>Facebook funciona como vitrina social: publicaciones, movimiento, comentarios y contacto. Eso baja la duda y sube la confianza. 🛡️</p>
-      </div>
-      <div class="grid g3">
-        <article class="note"><span class="tag">Facebook</span><h3>Canal oficial</h3><p>Botón directo para revisar la presencia de Vendedor SCZ en Facebook.</p><div class="quick"><a class="btn primary" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Abrir Facebook</a></div></article>
-        <article class="note"><span class="tag">WhatsApp</span><h3>Atención directa</h3><p>Consulta productos, disponibilidad, precio, entrega y ubicación sin vueltas.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20Facebook%20y%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20por%20tus%20productos.">💬 Consultar ahora</a></div></article>
-        <article class="note"><span class="tag">Compra segura</span><h3>Fotos antes de confirmar</h3><p>El cliente puede pedir foto real, video corto y disponibilidad antes de comprar.</p><div class="quick"><a class="btn" href="contacto.html">📍 Ver contacto</a></div></article>
-      </div>
-    </section>
-
-    <section class="wrap">
-      <div class="head">
-        <div>
-          <span class="tag">Compra rápida</span>
-          <h2>Botones listos para convertir visitas en mensajes.</h2>
-        </div>
-        <p>Estos accesos llevan al cliente directo a WhatsApp, catálogo, pelucas o ubicación. Menos vueltas, más acción. ⚡</p>
-      </div>
-      <div class="grid g3">
-        <article class="note"><span class="tag">WhatsApp</span><h3>Pregunta por productos</h3><p>Mensaje general para clientes nuevos.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20ver%20que%20productos%20tienes%20disponibles%20hoy.">💬 Consultar ahora</a></div></article>
-        <article class="note"><span class="tag">Pelucas</span><h3>Medidas y precios</h3><p>43 cm, 65 cm y 85 cm con pedido directo por WhatsApp.</p><div class="quick"><a class="btn primary" href="pelucas.html">💇‍♀️ Abrir pelucas</a></div></article>
-        <article class="note"><span class="tag">Ubicación</span><h3>Radial 25</h3><p>Entre 3er y 4to anillo, calle N° 3 Ovidio Santistevan.</p><div class="quick"><a class="btn" href="contacto.html">📍 Ver cómo llegar</a></div></article>
-      </div>
-    </section>
-
-    <section class="wrap">
-      <div class="head">
-        <h2>Ramificaciones comerciales.</h2>
-        <p>La página queda dividida como árbol de ventas: alimentos, pelucas, regalos, moda, promociones, contenido IA y contacto. Orden primero, venta después. 🧩</p>
+        <p>Ramas separadas para que el cliente encuentre rápido alimentos, pelucas, regalos, moda, promociones y contenido visual.</p>
       </div>
       <div class="grid g4">
-        <article class="card"><div class="media"><img src="assets/showcase-pacumuto.svg" alt="Pacumuto y alimentos" loading="lazy"></div><div class="body"><span class="tag">Alimentos</span><h3>Pacumuto y grasita</h3><p>Productos con sabor camba, fotos reales y consulta directa.</p></div></article>
-        <article class="card"><div class="media"><img src="assets/peluca-43cm.svg" alt="Pelucas y extensiones" loading="lazy"></div><div class="body"><span class="tag">Belleza</span><h3>Pelucas y extensiones</h3><p>Medidas, precios y pedidos rápidos para cambio de look.</p></div></article>
-        <article class="card"><div class="media"><img src="assets/showcase-gato.svg" alt="Promoción con humor" loading="lazy"></div><div class="body"><span class="tag">Publicidad</span><h3>Promos con humor</h3><p>Creativos que llaman la atención y hacen recordar la marca.</p></div></article>
-        <article class="card"><div class="media"><img src="assets/showcase-burger.svg" alt="Campaña de producto" loading="lazy"></div><div class="body"><span class="tag">Diseño comercial</span><h3>Campañas de producto</h3><p>Afiches de alto impacto para ofertas, combos y temporadas.</p></div></article>
-        <article class="card"><div class="media"><img src="assets/showcase-marca.svg" alt="Marca personal" loading="lazy"></div><div class="body"><span class="tag">Marca personal</span><h3>Imagen profesional</h3><p>Avatar, portada y presencia visual para vender con confianza.</p></div></article>
+        <article class="card"><div class="media"><img src="assets/showcase-pacumuto.svg" alt="Pacumuto y alimentos" loading="lazy"></div><div class="body"><span class="tag">Alimentos</span><h3>Pacumuto de Jiba</h3><p>Fotos reales, pedido directo y mensaje preparado.</p><a class="btn primary" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20Pacumuto%20de%20Jiba.">Consultar</a></div></article>
+        <article class="card"><div class="media"><img src="assets/peluca-65cm.svg" alt="Pelucas y extensiones" loading="lazy"></div><div class="body"><span class="tag">Belleza</span><h3>Pelucas y extensiones</h3><p>Medidas, precios y modelos disponibles.</p><a class="btn primary" href="pelucas.html">Ver pelucas</a></div></article>
+        <article class="card"><div class="media"><img src="assets/catalogo-ropa-bw.svg" alt="Ropa americana" loading="lazy"></div><div class="body"><span class="tag">Moda</span><h3>Ropa americana</h3><p>Consulta por fotos, tallas, estado y precio.</p><a class="btn primary" href="catalogo.html">Abrir catálogo</a></div></article>
+        <article class="card"><div class="media"><img src="assets/showcase-burger.svg" alt="Promociones visuales" loading="lazy"></div><div class="body"><span class="tag">Promos</span><h3>Ofertas visuales</h3><p>Afiches y campañas para mover ventas.</p><a class="btn primary" href="contenido-ia.html">Ver contenido</a></div></article>
       </div>
     </section>
 
     <section class="wrap">
-      <div class="band">
-        <div class="call"><span class="tag">Sistema avanzado</span><h2>Una página con dirección, no solo decoración.</h2><p>El diseño funciona como ficha comercial: muestra ramas, prueba visual, Facebook oficial, ubicación, botones directos y contenido por categorías. La casa digital queda lista para crecer con más productos, precios y fotos reales.</p></div>
-        <div class="panel"><div class="mark">SCZ<br>TIKIO</div></div>
+      <div class="head">
+        <div>
+          <span class="tag">Acciones rápidas</span>
+          <h2>Botones pensados para vender.</h2>
+        </div>
+        <p>Cada tarjeta abre una acción concreta: preguntar disponibilidad, revisar Facebook, ver ubicación o entrar al catálogo.</p>
+      </div>
+      <div class="grid g3">
+        <article class="note"><span class="tag">WhatsApp</span><h3>Pregunta por productos</h3><p>Mensaje general para clientes nuevos que quieren ver disponibilidad.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20ver%20que%20productos%20tienes%20disponibles%20hoy.">Consultar ahora</a></div></article>
+        <article class="note"><span class="tag">Facebook</span><h3>Ver canal oficial</h3><p>Presencia social para revisar publicaciones, actividad y confianza.</p><div class="quick"><a class="btn primary" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Abrir Facebook</a></div></article>
+        <article class="note"><span class="tag">Ubicación</span><h3>Radial 25</h3><p>Entre 3er y 4to anillo, calle N° 3 Ovidio Santistevan.</p><div class="quick"><a class="btn" href="contacto.html">Ver cómo llegar</a></div></article>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="band final-cta">
+        <div class="call">
+          <span class="tag">Vitrina lista</span>
+          <h2>Orden primero, venta después.</h2>
+          <p>La portada ahora se comporta como una página comercial profesional: muestra ventas arriba, separa categorías, enseña fotos reales, da confianza y lleva al cliente al WhatsApp correcto.</p>
+          <div class="actions">
+            <a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20comprar%20desde%20la%20pagina%20Vendedor%20SCZ.%20%C2%BFMe%20pasas%20productos%20disponibles%20y%20precios%3F">Comprar por WhatsApp</a>
+            <a class="btn" href="contacto.html">Contacto y ubicación</a>
+          </div>
+        </div>
+        <div class="panel cta-panel">
+          <div class="mark">SCZ</div>
+          <p>Catálogo, pedidos, fotos y canales oficiales en una sola página.</p>
+        </div>
       </div>
     </section>
   </main>
