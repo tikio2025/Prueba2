@@ -11,15 +11,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" aria-label="Navegación principal">
     <a class="brand" href="index.html">Vendedor <span>SCZ</span></a>
     <div class="links">
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
-      <a href="ramificaciones.html">Ramificaciones</a>
-      <a href="contenido-ia.html">Contenido IA</a>
       <a href="contacto.html">Contacto</a>
     </div>
+    <form class="site-search" action="catalogo.html" method="get" role="search">
+      <label class="sr-only" for="buscar-contacto">Buscar productos</label>
+      <span aria-hidden="true">🔎</span>
+      <input id="buscar-contacto" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
+      <button type="submit">Buscar</button>
+    </form>
   </nav>
 
   <main>
@@ -62,13 +66,7 @@
         </div>
         <p>Estos botones abren WhatsApp con texto preparado. El cliente no piensa demasiado: toca, pregunta y coordina. 🟢</p>
       </div>
-      <div class="grid g3">
-        <article class="note">
-          <span class="tag">Pedido general</span>
-          <h3>Ver productos disponibles</h3>
-          <p>Para clientes que llegan sin saber qué comprar.</p>
-          <div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20ver%20que%20productos%20tienes%20disponibles%20hoy.">Enviar mensaje</a></div>
-        </article>
+      <div class="grid g2">
         <article class="note">
           <span class="tag">Grasita de res</span>
           <h3>Consulta por kilo</h3>
@@ -76,16 +74,10 @@
           <div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20comprar%20grasita%20de%20res.%20%C2%BFHay%20disponible%20hoy%20y%20cuanto%20esta%20el%20kilo%3F">Consultar grasita</a></div>
         </article>
         <article class="note">
-          <span class="tag">Ropa americana</span>
+          <span class="tag">Poleras americanas</span>
           <h3>Consulta por prendas</h3>
           <p>Para pedir fotos, tallas, estado de las prendas y precios.</p>
-          <div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20ropa%20americana%20disponible.%20%C2%BFMe%20puedes%20enviar%20fotos%2C%20tallas%20y%20precios%3F">Ver ropa</a></div>
-        </article>
-        <article class="note">
-          <span class="tag">Peluches</span>
-          <h3>Consulta regalos</h3>
-          <p>Para pedir fotos reales, tamaño, estado y disponibilidad.</p>
-          <div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20peluches%20disponibles.%20%C2%BFMe%20puedes%20enviar%20fotos%20y%20precios%3F">Ver peluches</a></div>
+          <div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20poleras%20americanas%20disponibles.%20%C2%BFMe%20puedes%20enviar%20fotos%2C%20tallas%20y%20precios%3F">Ver poleras</a></div>
         </article>
         <article class="note">
           <span class="tag">Pinturas</span>
@@ -111,6 +103,6 @@
     </section>
   </main>
 
-  <footer class="footer">© 2026 Vendedor SCZ · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a></footer>
+  <footer class="footer">© 2026 Vendedor SCZ · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · Sin tienda física activa por el momento · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a></footer>
 </body>
 </html>
