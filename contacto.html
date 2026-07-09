@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Contacto directo de Vendedor SCZ para venta online, pedidos por WhatsApp y entregas previa coordinación en Santa Cruz.">
+  <meta name="description" content="Contacto directo de Vendedor SCZ para venta online, pedidos por WhatsApp y entregas previa coordinación.">
   <title>Contacto y coordinación | Vendedor SCZ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,19 +11,24 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="cart-top" href="catalogo.html#catalogo-grid" aria-label="Ver carrito">🛒<span>0</span></a>
   <nav class="nav" aria-label="Navegación principal">
-    <a class="brand" href="index.html">Vendedor <span>SCZ</span></a>
-    <div class="links">
+    <a class="brand" href="index.html">Vendedor <span>SCZ</span><small>Santa Cruz · Venta online</small></a>
+    <button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+    <div class="links" id="menu-principal">
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
       <a href="contacto.html">Contacto</a>
+      <a href="login.html">Iniciar Sesión/Registro</a>
     </div>
-    <form class="site-search" action="catalogo.html" method="get" role="search">
-      <label class="sr-only" for="buscar-contacto">Buscar productos</label>
-      <span aria-hidden="true">🔎</span>
-      <input id="buscar-contacto" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
-      <button type="submit">Buscar</button>
-    </form>
+    <div class="nav-tools">
+      <form class="site-search" action="catalogo.html" method="get" role="search">
+        <label class="sr-only" for="buscar-contacto">Buscar productos</label>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.35-4.35M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="buscar-contacto" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
   </nav>
 
   <main>
@@ -33,76 +38,30 @@
         <h1>Compra online y coordina antes de salir.</h1>
         <p class="lead">Vendedor SCZ atiende por WhatsApp. Por el momento no hay tienda física activa: disponibilidad, fotos reales, horario, punto de entrega y forma de pago se confirman previa coordinación.</p>
         <div class="actions">
-          <a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles%20y%20coordinar%20entrega.">💬 Escribir ahora</a>
+          <a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles%20y%20coordinar%20entrega.">💬 Escribir ahora</a>
           <a class="btn primary" href="catalogo.html">🛒 Ver catálogo</a>
-          <a class="btn" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Facebook oficial</a>
+          <a class="btn-contact" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Facebook oficial</a>
         </div>
       </section>
-      <aside class="panel">
-        <span class="tag">Operación actual</span>
-        <h3>Venta 100% online</h3>
-        <div class="address">Atención y entrega previa coordinación por WhatsApp en Santa Cruz de la Sierra.</div>
-        <p class="small">Para evitar confusiones, confirma producto disponible, foto real, precio, horario y punto de entrega antes de movilizarte.</p>
-      </aside>
+      <aside class="panel"><span class="tag">Operación actual</span><h3>Venta 100% online</h3><div class="address">Atención y entrega previa coordinación por WhatsApp.</div><p class="small">Confirma producto disponible, foto real, precio, horario y punto de entrega antes de movilizarte.</p></aside>
     </header>
 
-    <section class="wrap">
-      <div class="notice">
-        <span class="tag">Canales oficiales</span>
-        <strong>Confianza antes de comprar.</strong>
-        <p>El cliente puede revisar Facebook, escribir por WhatsApp y pedir fotos reales antes de confirmar. Eso convierte una visita fría en una compra con respaldo.</p>
-        <div class="actions" style="margin-top:1rem">
-          <a class="btn primary" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Revisar Facebook</a>
-          <a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20Facebook%20y%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles.">💬 Escribir por WhatsApp</a>
-        </div>
-      </div>
-    </section>
+    <section class="wrap"><div class="notice"><span class="tag">Canales oficiales</span><strong>Confianza antes de comprar.</strong><p>El cliente puede revisar Facebook, escribir por WhatsApp y pedir fotos reales antes de confirmar.</p><div class="actions" style="margin-top:1rem"><a class="btn-contact primary" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Revisar Facebook</a><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20Facebook%20y%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles.">💬 Escribir por WhatsApp</a></div></div></section>
 
     <section class="wrap">
-      <div class="head">
-        <div>
-          <span class="tag">Links prediseñados</span>
-          <h2>Mensajes listos para vender más rápido.</h2>
-        </div>
-        <p>Estos botones abren WhatsApp con texto preparado. El cliente no piensa demasiado: toca, pregunta y coordina. 🟢</p>
-      </div>
+      <div class="head"><div><span class="tag">Links prediseñados</span><h2>Mensajes listos para vender más rápido.</h2></div><p>Estos botones abren WhatsApp con texto preparado. El cliente toca, pregunta y coordina. 🟢</p></div>
       <div class="grid g2">
-        <article class="note">
-          <span class="tag">Grasita de res</span>
-          <h3>Consulta por kilo</h3>
-          <p>Mensaje directo para preguntar precio, estado, cantidad y entrega.</p>
-          <div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20comprar%20grasita%20de%20res.%20%C2%BFHay%20disponible%20hoy%20y%20cuanto%20esta%20el%20kilo%3F">Consultar grasita</a></div>
-        </article>
-        <article class="note">
-          <span class="tag">Poleras americanas</span>
-          <h3>Consulta por prendas</h3>
-          <p>Para pedir fotos, tallas, estado de las prendas y precios.</p>
-          <div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20poleras%20americanas%20disponibles.%20%C2%BFMe%20puedes%20enviar%20fotos%2C%20tallas%20y%20precios%3F">Ver poleras</a></div>
-        </article>
-        <article class="note">
-          <span class="tag">Pinturas</span>
-          <h3>Consulta colores</h3>
-          <p>Para confirmar disponibilidad, presentación y precio.</p>
-          <div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20pinturas%20disponibles.%20%C2%BFMe%20puedes%20pasar%20fotos%20y%20precios%3F">Consultar pinturas</a></div>
-        </article>
-        <article class="note">
-          <span class="tag">Bisutería</span>
-          <h3>Consulta modelos</h3>
-          <p>Para ver fotos, precios y piezas disponibles.</p>
-          <div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20bisuteria%20disponible.%20%C2%BFMe%20puedes%20enviar%20fotos%20y%20precios%3F">Ver bisutería</a></div>
-        </article>
+        <article class="note"><span class="tag">Grasita de res</span><h3>Consulta por kilo</h3><p>Mensaje directo para preguntar precio, estado, cantidad y entrega.</p><div class="quick"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20comprar%20grasita%20de%20res.%20%C2%BFHay%20disponible%20hoy%20y%20cuanto%20esta%20el%20kilo%3F">💬 Consultar grasita</a></div></article>
+        <article class="note"><span class="tag">Poleras americanas</span><h3>Consulta por prendas</h3><p>Para pedir fotos, tallas, estado de las prendas y precios.</p><div class="quick"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20poleras%20americanas%20disponibles.%20%C2%BFMe%20puedes%20enviar%20fotos%2C%20tallas%20y%20precios%3F">💬 Ver poleras</a></div></article>
+        <article class="note"><span class="tag">Pintura</span><h3>Consulta colores</h3><p>Para confirmar disponibilidad, presentación y precio.</p><div class="quick"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20pintura%20disponible.%20%C2%BFMe%20puedes%20pasar%20fotos%20y%20precios%3F">💬 Consultar pintura</a></div></article>
+        <article class="note"><span class="tag">Bisutería</span><h3>Consulta modelos</h3><p>Para ver fotos, precios y piezas disponibles.</p><div class="quick"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20bisuteria%20disponible.%20%C2%BFMe%20puedes%20enviar%20fotos%20y%20precios%3F">💬 Ver bisutería</a></div></article>
       </div>
     </section>
 
-    <section class="wrap">
-      <div class="grid g3">
-        <div class="note"><span class="tag">Paso 1</span><h3>Consulta</h3><p>El cliente escribe por WhatsApp y pide el producto que le interesa.</p></div>
-        <div class="note"><span class="tag">Paso 2</span><h3>Confirma</h3><p>Se envía foto real, precio, disponibilidad y condición del producto.</p></div>
-        <div class="note"><span class="tag">Paso 3</span><h3>Coordina</h3><p>Se define horario, punto de entrega y forma de pago según disponibilidad.</p></div>
-      </div>
-    </section>
+    <section class="wrap"><div class="grid g3"><div class="note"><span class="tag">Paso 1</span><h3>Consulta</h3><p>El cliente escribe por WhatsApp y pide el producto que le interesa.</p></div><div class="note"><span class="tag">Paso 2</span><h3>Confirma</h3><p>Se envía foto real, precio, disponibilidad y condición del producto.</p></div><div class="note"><span class="tag">Paso 3</span><h3>Coordina</h3><p>Se define horario, punto de entrega y forma de pago según disponibilidad.</p></div></div></section>
   </main>
 
-  <footer class="footer">© 2026 Vendedor SCZ · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · Sin tienda física activa por el momento · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a></footer>
+  <footer class="footer">© 2026 <strong>Vendedor SCZ</strong> · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · Sin tienda física activa por el momento · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a></footer>
+  <script>const nav=document.querySelector('.nav');const menu=document.querySelector('.hamburger');menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});</script>
 </body>
 </html>
