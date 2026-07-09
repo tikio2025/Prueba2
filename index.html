@@ -12,9 +12,7 @@
     :root {
       --bg: #050505;
       --surface: #101010;
-      --surface-soft: #171717;
       --primary: #ccff00;
-      --primary-dark: #9eca00;
       --text: #ffffff;
       --muted: #b5b5b5;
       --line: rgba(255, 255, 255, 0.12);
@@ -22,7 +20,6 @@
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -78,7 +75,7 @@
     .hero {
       min-height: 86vh;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: clamp(2rem, 5vw, 5rem);
       align-items: center;
       padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 4vw, 4rem);
@@ -147,50 +144,22 @@
 
     .btn-secondary { background: rgba(255, 255, 255, 0.06); }
 
-    .hero-card {
+    .hero-visual {
       border: 1px solid var(--line);
-      border-radius: 28px;
+      border-radius: 30px;
+      padding: 0.75rem;
       background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
       box-shadow: var(--shadow);
-      padding: clamp(1.2rem, 3vw, 2rem);
-      position: relative;
       overflow: hidden;
     }
 
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -20% -30% auto;
-      width: 280px;
-      height: 280px;
-      background: rgba(204, 255, 0, 0.18);
-      filter: blur(55px);
-      border-radius: 999px;
-    }
-
-    .metric-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      position: relative;
-    }
-
-    .metric {
-      background: rgba(0, 0, 0, 0.32);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 1.2rem;
-    }
-
-    .metric strong {
+    .hero-visual img {
+      width: 100%;
       display: block;
-      color: var(--primary);
-      font-size: 2rem;
-      line-height: 1;
-      margin-bottom: 0.45rem;
+      border-radius: 22px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
     }
-
-    .metric span { color: var(--muted); font-size: 0.92rem; }
 
     section {
       max-width: 1180px;
@@ -214,7 +183,7 @@
     }
 
     .section-title p {
-      max-width: 420px;
+      max-width: 430px;
       color: var(--muted);
       margin: 0;
     }
@@ -241,7 +210,7 @@
 
     .card img {
       width: 100%;
-      height: 170px;
+      height: 185px;
       object-fit: cover;
       border-radius: 18px;
       border: 1px solid var(--line);
@@ -291,7 +260,6 @@
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .cards { grid-template-columns: 1fr; }
       .section-title, .strip { flex-direction: column; align-items: flex-start; }
-      .metric-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -320,13 +288,8 @@
         </div>
       </div>
 
-      <aside class="hero-card" aria-label="Datos principales de TIKIO">
-        <div class="metric-grid">
-          <div class="metric"><strong>SCZ</strong><span>Base comercial</span></div>
-          <div class="metric"><strong>IA</strong><span>Contenido y automatización</span></div>
-          <div class="metric"><strong>24/7</strong><span>Presencia digital</span></div>
-          <div class="metric"><strong>2026</strong><span>Marca en expansión</span></div>
-        </div>
+      <aside class="hero-visual" aria-label="Imagen principal de la marca TIKIO">
+        <img src="assets/hero-tikio.svg" alt="Banner de TIKIO Vendedor SCZ con ventas, contenido e inteligencia artificial">
       </aside>
     </header>
 
@@ -354,21 +317,21 @@
       </div>
       <div class="cards">
         <article class="card">
-          <img src="image_0.png" alt="Producto destacado de TIKIO">
+          <img src="assets/grasita-res.svg" alt="Imagen ilustrativa de grasita de res">
           <span class="tag">Ventas locales</span>
           <h3>Grasita de res</h3>
           <p>Producto para clientes que buscan sabor, rendimiento y atención rápida en Santa Cruz.</p>
         </article>
 
         <article class="card">
-          <img src="image_0.png" alt="Productos variados de Vendedor SCZ">
+          <img src="assets/vendedor-scz.svg" alt="Imagen ilustrativa de productos variados de Vendedor SCZ">
           <span class="tag">Catálogo</span>
           <h3>Vendedor SCZ</h3>
           <p>Ropa americana, peluches, detalles para regalo y productos de oportunidad listos para publicar.</p>
         </article>
 
         <article class="card">
-          <img src="image_0.png" alt="Contenido digital con inteligencia artificial">
+          <img src="assets/contenido-ia.svg" alt="Imagen ilustrativa de contenido digital con inteligencia artificial">
           <span class="tag">Contenido IA</span>
           <h3>Prompts, videos e imágenes</h3>
           <p>Producción visual para vender más: guiones, anuncios, piezas de Facebook y videos cortos.</p>
