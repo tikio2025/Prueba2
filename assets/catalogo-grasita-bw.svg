@@ -1,0 +1,15 @@
+<svg width="900" height="640" viewBox="0 0 900 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="640" fill="#050505"/>
+  <rect x="70" y="70" width="760" height="500" rx="38" fill="#111111" stroke="#ffffff" stroke-opacity="0.18" stroke-width="3"/>
+  <circle cx="700" cy="150" r="150" fill="#ffffff" opacity="0.06"/>
+  <ellipse cx="450" cy="390" rx="245" ry="70" fill="#252525"/>
+  <ellipse cx="450" cy="360" rx="225" ry="62" fill="#3a3a3a"/>
+  <path d="M255 345C282 265 390 250 440 315C490 250 628 270 650 350C675 445 520 478 452 414C380 475 220 440 255 345Z" fill="#d7d7d7"/>
+  <path d="M305 350C335 300 410 296 440 340C475 305 565 315 595 358C615 405 510 430 455 392C405 428 280 407 305 350Z" fill="#8d8d8d"/>
+  <path d="M365 322C390 302 417 307 434 338" stroke="#ffffff" stroke-opacity="0.8" stroke-width="14" stroke-linecap="round"/>
+  <rect x="130" y="120" width="210" height="48" rx="24" fill="#ffffff"/>
+  <text x="160" y="153" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="900" fill="#050505">LINEA 01</text>
+  <text x="130" y="245" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="900" fill="#ffffff">GRASITA</text>
+  <text x="130" y="306" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="900" fill="#ffffff">DE RES</text>
+  <text x="132" y="510" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#b9b9b9">Venta por kilo · consulta por WhatsApp</text>
+</svg>
