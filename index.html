@@ -12,6 +12,7 @@
     :root {
       --bg: #050505;
       --surface: #101010;
+      --surface-soft: #171717;
       --primary: #ccff00;
       --text: #ffffff;
       --muted: #b5b5b5;
@@ -144,22 +145,65 @@
 
     .btn-secondary { background: rgba(255, 255, 255, 0.06); }
 
-    .hero-visual {
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      padding: 0.75rem;
-      background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-      box-shadow: var(--shadow);
+    .brand-panel {
+      position: relative;
       overflow: hidden;
+      border: 1px solid rgba(204, 255, 0, 0.25);
+      border-radius: 30px;
+      padding: clamp(1.5rem, 4vw, 2.3rem);
+      min-height: 430px;
+      background:
+        linear-gradient(135deg, rgba(204, 255, 0, 0.12), transparent 45%),
+        linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      box-shadow: var(--shadow);
     }
 
-    .hero-visual img {
-      width: 100%;
-      display: block;
-      border-radius: 22px;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
+    .brand-panel::before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      right: -90px;
+      top: -90px;
+      background: rgba(204, 255, 0, 0.16);
+      filter: blur(45px);
+      border-radius: 999px;
     }
+
+    .panel-inner { position: relative; z-index: 1; }
+
+    .panel-title {
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.9;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      margin: 0 0 1rem;
+      text-transform: uppercase;
+    }
+
+    .panel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    .panel-item {
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.3);
+      border-radius: 20px;
+      padding: 1rem;
+    }
+
+    .panel-item strong {
+      display: block;
+      color: var(--primary);
+      font-size: 1.6rem;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .panel-item span { color: var(--muted); font-size: 0.92rem; }
 
     section {
       max-width: 1180px;
@@ -195,12 +239,23 @@
     }
 
     .card {
-      min-height: 260px;
-      padding: 1.4rem;
+      min-height: 300px;
+      padding: 1.5rem;
       border: 1px solid var(--line);
       border-radius: 24px;
-      background: var(--surface);
+      background: linear-gradient(160deg, rgba(255,255,255,0.055), rgba(255,255,255,0.015));
       transition: transform 0.2s ease, border-color 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: var(--primary);
+      opacity: 0.85;
     }
 
     .card:hover {
@@ -208,14 +263,16 @@
       border-color: rgba(204, 255, 0, 0.55);
     }
 
-    .card img {
-      width: 100%;
-      height: 185px;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: #0b0b0b;
-      margin-bottom: 1rem;
+    .icon {
+      width: 74px;
+      height: 74px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.2rem;
+      border-radius: 22px;
+      background: rgba(204, 255, 0, 0.1);
+      border: 1px solid rgba(204, 255, 0, 0.25);
+      font-size: 2rem;
     }
 
     .tag {
@@ -260,6 +317,7 @@
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .cards { grid-template-columns: 1fr; }
       .section-title, .strip { flex-direction: column; align-items: flex-start; }
+      .panel-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -288,8 +346,18 @@
         </div>
       </div>
 
-      <aside class="hero-visual" aria-label="Imagen principal de la marca TIKIO">
-        <img src="assets/hero-tikio.svg" alt="Banner de TIKIO Vendedor SCZ con ventas, contenido e inteligencia artificial">
+      <aside class="brand-panel" aria-label="Panel principal de marca TIKIO">
+        <div class="panel-inner">
+          <span class="tag">Marca digital en crecimiento</span>
+          <p class="panel-title">Vendedor<br><span class="accent">SCZ</span></p>
+          <p class="lead">Ventas reales, contenido visual y tecnología útil para mover productos, captar clientes y construir presencia digital.</p>
+          <div class="panel-grid">
+            <div class="panel-item"><strong>SCZ</strong><span>Base comercial</span></div>
+            <div class="panel-item"><strong>IA</strong><span>Contenido y automatización</span></div>
+            <div class="panel-item"><strong>24/7</strong><span>Vitrina online</span></div>
+            <div class="panel-item"><strong>2026</strong><span>Marca en expansión</span></div>
+          </div>
+        </div>
       </aside>
     </header>
 
@@ -317,21 +385,21 @@
       </div>
       <div class="cards">
         <article class="card">
-          <img src="assets/grasita-res.svg" alt="Imagen ilustrativa de grasita de res">
+          <div class="icon">🥩</div>
           <span class="tag">Ventas locales</span>
           <h3>Grasita de res</h3>
           <p>Producto para clientes que buscan sabor, rendimiento y atención rápida en Santa Cruz.</p>
         </article>
 
         <article class="card">
-          <img src="assets/vendedor-scz.svg" alt="Imagen ilustrativa de productos variados de Vendedor SCZ">
+          <div class="icon">🛒</div>
           <span class="tag">Catálogo</span>
           <h3>Vendedor SCZ</h3>
           <p>Ropa americana, peluches, detalles para regalo y productos de oportunidad listos para publicar.</p>
         </article>
 
         <article class="card">
-          <img src="assets/contenido-ia.svg" alt="Imagen ilustrativa de contenido digital con inteligencia artificial">
+          <div class="icon">🤖</div>
           <span class="tag">Contenido IA</span>
           <h3>Prompts, videos e imágenes</h3>
           <p>Producción visual para vender más: guiones, anuncios, piezas de Facebook y videos cortos.</p>
@@ -346,16 +414,19 @@
       </div>
       <div class="cards">
         <article class="card">
+          <div class="icon">📣</div>
           <span class="tag">01</span>
           <h3>Publicidad para redes</h3>
           <p>Textos, imágenes, prompts y estructura de anuncios para vender productos físicos.</p>
         </article>
         <article class="card">
+          <div class="icon">⚙️</div>
           <span class="tag">02</span>
           <h3>Automatización con IA</h3>
           <p>Flujos de trabajo para crear contenido, organizar ideas y mejorar atención al cliente.</p>
         </article>
         <article class="card">
+          <div class="icon">💎</div>
           <span class="tag">03</span>
           <h3>Marca personal</h3>
           <p>Diseño de identidad, portadas, catálogos y estilo visual para construir confianza.</p>
