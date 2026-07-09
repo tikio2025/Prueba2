@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Vitrina digital de Vendedor SCZ para venta online de grasita de res, poleras americanas, pinturas y bisutería en Santa Cruz, con atención previa coordinación por WhatsApp.">
+  <meta name="description" content="Vitrina digital de Vendedor SCZ para venta online de grasita de res, poleras americanas, pintura y bisutería, con atención previa coordinación por WhatsApp.">
   <title>Vendedor SCZ | Venta online en Santa Cruz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,32 +11,37 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="cart-top" href="catalogo.html#catalogo-grid" aria-label="Ver carrito">🛒<span>0</span></a>
   <nav class="nav" aria-label="Navegación principal">
-    <a class="brand" href="index.html">Vendedor <span>SCZ</span></a>
-    <div class="links">
+    <a class="brand" href="index.html">Vendedor <span>SCZ</span><small>Santa Cruz · Venta online</small></a>
+    <button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+    <div class="links" id="menu-principal">
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
       <a href="contacto.html">Contacto</a>
+      <a href="login.html">Iniciar Sesión/Registro</a>
     </div>
-    <form class="site-search" action="catalogo.html" method="get" role="search">
-      <label class="sr-only" for="buscar-inicio">Buscar productos</label>
-      <span aria-hidden="true">🔎</span>
-      <input id="buscar-inicio" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
-      <button type="submit">Buscar</button>
-    </form>
+    <div class="nav-tools">
+      <form class="site-search" action="catalogo.html" method="get" role="search">
+        <label class="sr-only" for="buscar-inicio">Buscar productos</label>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.35-4.35M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="buscar-inicio" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
   </nav>
 
   <main>
     <header class="wrap hero">
       <section>
-        <span class="eyebrow">📍 Santa Cruz de la Sierra · Venta online</span>
+        <span class="eyebrow">Venta online · Previa coordinación</span>
         <h1>Vende claro. Coordina fácil. Entrega seguro.</h1>
-        <p class="lead">Vitrina digital para vender grasita de res, poleras americanas, pinturas y bisutería. El cliente entra, busca lo que necesita y escribe por WhatsApp para confirmar disponibilidad, precio, horario y entrega.</p>
+        <p class="lead">Vitrina digital para vender grasita de res, poleras americanas, pintura y bisutería. El cliente entra, busca lo que necesita y escribe por WhatsApp para confirmar disponibilidad, precio, horario y entrega.</p>
         <div class="actions">
           <a class="btn primary" href="catalogo.html">🛒 Ver catálogo real</a>
-          <a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles%20y%20coordinar%20entrega.">💬 Coordinar por WhatsApp</a>
+          <a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles%20y%20coordinar%20entrega."><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.6 20.2 3 21l.8-4.5a8.7 8.7 0 1 1 3.8 3.7Z" stroke="currentColor" stroke-width="2"/><path d="M8.8 8.2c.2-.4.4-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.2.7l-.4.5c.7 1.2 1.6 2.1 2.8 2.7l.5-.4c.2-.2.5-.3.8-.2l1.6.7c.3.1.4.3.4.6v.5c0 .4-.2.7-.5.8-.7.3-1.6.3-2.9-.2-2.4-.9-4.6-3.1-5.5-5.5-.5-1.2-.5-2.1-.1-2.8Z" fill="currentColor"/></svg>Coordinar por WhatsApp</a>
           <a class="btn" href="contacto.html">📦 Cómo comprar</a>
-          <a class="btn" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Facebook oficial</a>
+          <a class="btn-contact" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5h1.7V4.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V11H7.4v3h2.7v8h3.4Z"/></svg>Facebook oficial</a>
         </div>
       </section>
       <aside class="panel">
@@ -51,52 +56,30 @@
     </header>
 
     <section class="wrap">
-      <div class="notice">
-        <span class="tag">Operación actual</span>
-        <strong>Venta solo en línea por el momento.</strong>
-        <p>No hay tienda física activa. Toda consulta, reserva, horario, punto de entrega y disponibilidad se confirma previamente por WhatsApp para evitar vueltas innecesarias.</p>
-      </div>
+      <div class="notice"><span class="tag">Operación actual</span><strong>Venta solo en línea por el momento.</strong><p>No hay tienda física activa. Toda consulta, reserva, horario, punto de entrega y disponibilidad se confirma previamente por WhatsApp para evitar vueltas innecesarias.</p></div>
     </section>
 
     <section class="wrap">
-      <div class="head">
-        <div>
-          <span class="tag">Catálogo real</span>
-          <h2>Productos actuales de Vendedor SCZ.</h2>
-        </div>
-        <p>La página se enfoca en lo que realmente vendes hoy: alimentos, moda, pinturas y bisutería. Menos ruido, más venta. 🧩</p>
-      </div>
+      <div class="head"><div><span class="tag">Catálogo real</span><h2>Productos actuales de Vendedor SCZ.</h2></div><p>La página se enfoca en cuatro líneas comerciales activas, con consulta directa y coordinación antes de la entrega. 🧩</p></div>
       <div class="grid g4">
-        <article class="card"><div class="media"><img src="assets/catalogo-grasita-bw.svg" alt="Grasita de res para venta por kilo" loading="lazy"></div><div class="body"><span class="tag">Alimentos</span><h3>Grasita de res</h3><p>Consulta disponibilidad, estado, cantidad y entrega coordinada.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20comprar%20grasita%20de%20res.%20%C2%BFHay%20disponible%20hoy%20y%20cuanto%20esta%20el%20kilo%3F">Consultar</a></div></div></article>
-        <article class="card"><div class="media"><img src="assets/catalogo-ropa-bw.svg" alt="Poleras americanas disponibles" loading="lazy"></div><div class="body"><span class="tag">Moda</span><h3>Poleras americanas</h3><p>Prendas seleccionadas con fotos, tallas, estado y precios por WhatsApp.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20poleras%20americanas%20disponibles.%20%C2%BFMe%20puedes%20enviar%20fotos%2C%20tallas%20y%20precios%3F">Ver poleras</a></div></div></article>
-        <article class="card"><div class="media"><img src="assets/showcase-marca.svg" alt="Pinturas disponibles por consulta" loading="lazy"></div><div class="body"><span class="tag">Pinturas</span><h3>Pinturas</h3><p>Consulta colores, presentación, precio y entrega previa coordinación.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20pinturas%20disponibles.%20%C2%BFMe%20puedes%20pasar%20fotos%20y%20precios%3F">Consultar</a></div></div></article>
-        <article class="card"><div class="media"><img src="assets/showcase-burger.svg" alt="Bisutería disponible por consulta" loading="lazy"></div><div class="body"><span class="tag">Bisutería</span><h3>Bisutería</h3><p>Modelos, piezas disponibles, fotos reales y precios por WhatsApp.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20bisuteria%20disponible.%20%C2%BFMe%20puedes%20enviar%20fotos%20y%20precios%3F">Ver modelos</a></div></div></article>
+        <article class="card"><div class="media"><img src="assets/catalogo-grasita-bw.svg" alt="Grasita de res para venta por kilo" loading="lazy"></div><div class="body"><span class="tag">Alimentos</span><h3>Grasita de res</h3><p>Consulta disponibilidad, estado, cantidad y entrega coordinada.</p><div class="quick"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20comprar%20grasita%20de%20res.%20%C2%BFHay%20disponible%20hoy%20y%20cuanto%20esta%20el%20kilo%3F">Consultar</a><a href="#" class="link-ficha">Ver ficha técnica (PDF)</a></div></div></article>
+        <article class="card"><div class="media"><img src="assets/catalogo-ropa-bw.svg" alt="Poleras americanas disponibles" loading="lazy"></div><div class="body"><span class="tag">Moda</span><h3>Poleras americanas</h3><p>Prendas seleccionadas con fotos, tallas, estado y precios por WhatsApp.</p><div class="quick"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20poleras%20americanas%20disponibles.%20%C2%BFMe%20puedes%20enviar%20fotos%2C%20tallas%20y%20precios%3F">Ver poleras</a><a href="#" class="link-ficha">Ver ficha técnica (PDF)</a></div></div></article>
+        <article class="card"><div class="media"><img src="assets/showcase-marca.svg" alt="Pintura disponible por consulta" loading="lazy"></div><div class="body"><span class="tag">Pintura</span><h3>Pintura</h3><p>Consulta colores, presentación, precio y entrega previa coordinación.</p><div class="quick"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20consultar%20por%20pintura%20disponible.%20%C2%BFMe%20puedes%20pasar%20fotos%20y%20precios%3F">Consultar</a><a href="#" class="link-ficha">Ver ficha técnica (PDF)</a></div></div></article>
+        <article class="card"><div class="media"><img src="assets/showcase-marca.svg" alt="Bisutería disponible por consulta" loading="lazy"></div><div class="body"><span class="tag">Bisutería</span><h3>Bisutería</h3><p>Modelos, piezas disponibles, fotos reales y precios por WhatsApp.</p><div class="quick"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20quiero%20ver%20bisuteria%20disponible.%20%C2%BFMe%20puedes%20enviar%20fotos%20y%20precios%3F">Ver modelos</a><a href="#" class="link-ficha">Ver ficha técnica (PDF)</a></div></div></article>
       </div>
     </section>
 
     <section class="wrap">
-      <div class="head">
-        <div>
-          <span class="tag">Confianza oficial</span>
-          <h2>Antes de comprar, el cliente puede verificar tu presencia real.</h2>
-        </div>
-        <p>Facebook funciona como vitrina social: publicaciones, movimiento, comentarios y contacto. Eso baja la duda y sube la confianza. 🛡️</p>
-      </div>
+      <div class="head"><div><span class="tag">Confianza oficial</span><h2>Antes de comprar, el cliente puede verificar tu presencia real.</h2></div><p>Facebook funciona como vitrina social: publicaciones, movimiento, comentarios y contacto. Eso baja la duda y sube la confianza. 🛡️</p></div>
       <div class="grid g3">
-        <article class="note"><span class="tag">Facebook</span><h3>Canal oficial</h3><p>Botón directo para revisar la presencia de Vendedor SCZ en Facebook.</p><div class="quick"><a class="btn primary" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Abrir Facebook</a></div></article>
-        <article class="note"><span class="tag">WhatsApp</span><h3>Atención directa</h3><p>Consulta productos, disponibilidad, precio, entrega y horario sin vueltas.</p><div class="quick"><a class="btn green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20Facebook%20y%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles.">💬 Consultar ahora</a></div></article>
+        <article class="note"><span class="tag">Facebook</span><h3>Canal oficial</h3><p>Botón directo para revisar la presencia de Vendedor SCZ en Facebook.</p><div class="quick"><a class="btn-contact primary" href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Abrir Facebook</a></div></article>
+        <article class="note"><span class="tag">WhatsApp</span><h3>Atención directa</h3><p>Consulta productos, disponibilidad, precio, entrega y horario sin vueltas.</p><div class="quick"><a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20de%20Facebook%20y%20de%20tu%20pagina%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles.">💬 Consultar ahora</a></div></article>
         <article class="note"><span class="tag">Compra segura</span><h3>Fotos antes de confirmar</h3><p>El cliente puede pedir foto real, video corto y disponibilidad antes de comprar.</p><div class="quick"><a class="btn" href="contacto.html">📦 Ver cómo comprar</a></div></article>
-      </div>
-    </section>
-
-    <section class="wrap">
-      <div class="band">
-        <div class="call"><span class="tag">Sistema comercial</span><h2>Una página con dirección, no solo decoración.</h2><p>El diseño funciona como ficha comercial: muestra categorías reales, prueba visual, Facebook oficial, botones directos y coordinación por WhatsApp. La casa digital queda lista para crecer con más fotos reales, precios y productos activos.</p></div>
-        <div class="panel"><div class="mark">SCZ<br>TIKIO</div></div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">© 2026 Vendedor SCZ · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · Sin tienda física activa por el momento · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a> · Página pública en GitHub Pages</footer>
+  <footer class="footer">© 2026 <strong>Vendedor SCZ</strong> · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · Sin tienda física activa por el momento · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a></footer>
+  <script>const nav=document.querySelector('.nav');const menu=document.querySelector('.hamburger');menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});</script>
 </body>
 </html>
