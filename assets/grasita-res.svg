@@ -1,0 +1,15 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" fill="#080808"/>
+  <circle cx="690" cy="130" r="180" fill="#CCFF00" opacity="0.16"/>
+  <rect x="85" y="95" width="730" height="430" rx="36" fill="#121212" stroke="#2F2F2F" stroke-width="3"/>
+  <ellipse cx="450" cy="385" rx="260" ry="82" fill="#202020"/>
+  <ellipse cx="450" cy="355" rx="240" ry="70" fill="#2B2B2B"/>
+  <path d="M260 330C300 250 420 245 455 315C500 250 640 270 650 355C660 440 520 470 455 410C395 465 250 440 260 330Z" fill="#F2D2A2"/>
+  <path d="M302 340C335 285 414 288 440 335C475 292 580 308 595 360C610 420 508 435 455 395C405 430 275 410 302 340Z" fill="#C8743A" opacity="0.88"/>
+  <path d="M365 319C390 296 420 300 438 335" stroke="#FFF3D8" stroke-width="15" stroke-linecap="round" opacity="0.7"/>
+  <path d="M493 322C535 302 575 330 580 364" stroke="#FFF3D8" stroke-width="15" stroke-linecap="round" opacity="0.7"/>
+  <rect x="155" y="135" width="250" height="52" rx="26" fill="#CCFF00"/>
+  <text x="184" y="171" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" fill="#050505">PRODUCTO LOCAL</text>
+  <text x="155" y="245" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" fill="#FFFFFF">GRASITA DE RES</text>
+  <text x="157" y="292" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#CCFF00">Sabor, rendimiento y atención rápida</text>
+</svg>
