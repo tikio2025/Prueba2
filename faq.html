@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Preguntas frecuentes sobre Vendedor SCZ: entregas, métodos de pago, productos y coordinación en Santa Cruz de la Sierra.">
+  <title>Preguntas Frecuentes | Vendedor SCZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .faq-container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+    details {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      background: rgba(17,17,15,0.6);
+      cursor: pointer;
+    }
+    summary {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #ffd86b;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::before {
+      content: "▶";
+      display: inline-block;
+      transition: transform 0.3s;
+      width: 1.2rem;
+    }
+    details[open] summary::before { transform: rotate(90deg); }
+    details[open] { background: rgba(34,197,94,0.1); border-color: rgba(34,197,94,0.3); }
+    .faq-answer {
+      margin-top: 1rem;
+      color: #b9b9ad;
+      line-height: 1.8;
+    }
+    .faq-answer strong { color: #fffdf5; }
+    .faq-answer a { color: #f3b431; text-decoration: none; font-weight: 600; }
+    .faq-answer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <a class="cart-top" href="catalogo.html#catalogo-grid" aria-label="Ver carrito">🛒<span>0</span></a>
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="brand" href="index.html">Vendedor <span>SCZ</span><small>Santa Cruz · Venta online</small></a>
+    <button class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+    <div class="links" id="menu-principal">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="faq.html">Preguntas Frecuentes</a>
+      <a href="login.html">Iniciar Sesión/Registro</a>
+    </div>
+    <div class="nav-tools">
+      <form class="site-search" action="catalogo.html" method="get" role="search">
+        <label class="sr-only" for="buscar-faq">Buscar productos</label>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 21-4.35-4.35M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="buscar-faq" name="q" type="search" placeholder="Buscar producto..." autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+
+  <main>
+    <header class="wrap hero">
+      <section>
+        <span class="eyebrow">❓ Preguntas Frecuentes</span>
+        <h1>¿Cómo funciona Vendedor SCZ?</h1>
+        <p class="lead">Aquí encontrarás respuestas sobre entregas en Santa Cruz, métodos de pago, disponibilidad de productos y coordinación de compras. Si tienes más dudas, contacta por WhatsApp.</p>
+        <div class="actions">
+          <a class="btn-contact green" href="https://wa.me/59175103979?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20los%20productos%20de%20Vendedor%20SCZ.">💬 Contactar por WhatsApp</a>
+          <a class="btn primary" href="catalogo.html">🛒 Ver Catálogo</a>
+        </div>
+      </section>
+    </header>
+
+    <section class="wrap faq-container">
+      <h2 style="color:#f3b431;margin-bottom:2rem;">Entregas y Coordinación</h2>
+
+      <details>
+        <summary>¿Cuál es el tiempo de entrega en Santa Cruz de la Sierra?</summary>
+        <div class="faq-answer">
+          <p>Los tiempos de entrega se coordinan <strong>previa consulta por WhatsApp</strong>. Generalmente:</p>
+          <ul class="list">
+            <li><strong>Entregas mismos día:</strong> Si confirmas antes de las 12:00 PM, podemos entregar entre las 2:00 PM y 6:00 PM en el área metropolitana de Santa Cruz.</li>
+            <li><strong>Entregas al siguiente día:</strong> Coordinadas según disponibilidad y punto de entrega.</li>
+            <li><strong>Puntos de entrega:</strong> Centro de Santa Cruz, barrios cercanos, o punto acordado con el cliente.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Dónde se entregan los productos?</summary>
+        <div class="faq-answer">
+          <p>Las entregas se coordinan <strong>según tu conveniencia</strong>:</p>
+          <ul class="list">
+            <li>Centro de Santa Cruz de la Sierra</li>
+            <li>Barrios cercanos (Urbarí, Equipetrol, Avenida Monseñor Rivero)</li>
+            <li>Punto acordado previo (comercio, domicilio, etc.)</li>
+            <li>Horario flexible según disponibilidad de ambas partes</li>
+          </ul>
+          <p>Consulta por WhatsApp tu zona para confirmar cobertura.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Cuál es el costo de envío o entrega?</summary>
+        <div class="faq-answer">
+          <p><strong>No hay costo adicional de envío</strong> si la entrega se realiza en puntos acordados dentro de Santa Cruz. El valor del producto es el que se confirma por WhatsApp.</p>
+          <p>Para entregas a otras ciudades (Cochabamba, La Paz, etc.), se coordina costo de envío según zona.</p>
+        </div>
+      </details>
+
+      <h2 style="color:#f3b431;margin-top:2.5rem;margin-bottom:2rem;">Métodos de Pago</h2>
+
+      <details>
+        <summary>¿Qué métodos de pago aceptan?</summary>
+        <div class="faq-answer">
+          <p>Vendedor SCZ acepta:</p>
+          <ul class="list">
+            <li><strong>Efectivo:</strong> En el momento de la entrega.</li>
+            <li><strong>Transferencia bancaria:</strong> A través de apps bancarias (PIE, Mi Banco, Mercantil, etc.).</li>
+            <li><strong>Billetera digital (QR):</strong> Yodlee u otras billeteras digitales disponibles.</li>
+            <li><strong>Acuerdo especial:</strong> Consulta casos especiales por WhatsApp.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Puedo hacer una compra a crédito?</summary>
+        <div class="faq-answer">
+          <p>Actualmente, <strong>los pagos son al momento de la entrega o previos</strong> (transferencia). No hay sistema de crédito automático, pero puedes <strong>consultar casos especiales por WhatsApp</strong> si tienes alguna situación particular.</p>
+        </div>
+      </details>
+
+      <h2 style="color:#f3b431;margin-top:2.5rem;margin-bottom:2rem;">Productos</h2>
+
+      <details>
+        <summary>¿Puedo verificar la calidad de los productos antes de comprar?</summary>
+        <div class="faq-answer">
+          <p><strong>Sí, siempre.</strong> Vendedor SCZ permite:</p>
+          <ul class="list">
+            <li>Pedir <strong>foto real del producto específico</strong> antes de confirmar.</li>
+            <li>Consultar <strong>disponibilidad actual</strong> por WhatsApp.</li>
+            <li>Coordinar <strong>inspección previa</strong> si es necesario.</li>
+          </ul>
+          <p>Todos los detalles se confirman previa coordinación por WhatsApp.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Qué información me proporcionan sobre las poleras?</summary>
+        <div class="faq-answer">
+          <p>Antes de confirmar cualquier compra, Vendedor SCZ proporciona:</p>
+          <ul class="list">
+            <li><strong>Foto real de la prenda</strong> que estás considerando.</li>
+            <li><strong>Información de talla y condición</strong> del artículo.</li>
+            <li><strong>Descripción clara</strong> de detalles o características especiales.</li>
+          </ul>
+          <p>Consulta disponibilidad actual directamente por WhatsApp.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Qué tipos de pintura venden?</summary>
+        <div class="faq-answer">
+          <p>Vendedor SCZ vende <strong>pintura disponible según stock actual</strong> en Santa Cruz. Consulta por WhatsApp para conocer:</p>
+          <ul class="list">
+            <li>Colores disponibles (mate, satinada, brillante)</li>
+            <li>Presentaciones (1 litro, 5 litros, etc.)</li>
+            <li>Marcas disponibles</li>
+            <li>Precios actualizados</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Tienen bisutería de buena calidad?</summary>
+        <div class="faq-answer">
+          <p><strong>Sí, con detalles y modelos variados.</strong> La bisutería incluye:</p>
+          <ul class="list">
+            <li><strong>Anillos, pulseras, collares, aretes</strong> con diferentes materiales.</li>
+            <li><strong>Fotos reales de cada modelo</strong> disponible.</li>
+            <li><strong>Precios accesibles</strong> según pieza y material.</li>
+          </ul>
+          <p>Perfecto para regalos o uso personal. Consulta stock disponible.</p>
+        </div>
+      </details>
+
+      <h2 style="color:#f3b431;margin-top:2.5rem;margin-bottom:2rem;">Seguridad y Confianza</h2>
+
+      <details>
+        <summary>¿Cómo verifico que Vendedor SCZ es de confianza?</summary>
+        <div class="faq-answer">
+          <p>Puedes verificar la confianza de varias formas:</p>
+          <ul class="list">
+            <li><strong>Facebook oficial:</strong> <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank">Revisa nuestro perfil en Facebook</a> con publicaciones reales y clientes.</li>
+            <li><strong>WhatsApp directo:</strong> Comunícate con nosotros para aclarar dudas antes de comprar.</li>
+            <li><strong>Fotos reales:</strong> Siempre pedimos foto del producto específico antes de confirmar.</li>
+            <li><strong>Coordinación previa:</strong> Todo se confirma y coordina antes de pagar.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Qué pasa si el producto no llega como se acordó?</summary>
+        <div class="faq-answer">
+          <p><strong>Coordinamos solución inmediata.</strong></p>
+          <ul class="list">
+            <li>Si hay discrepancia con lo acordado, lo solucionamos por WhatsApp.</li>
+            <li>Podemos reprogramar entrega, cambiar producto o devolver dinero según corresponda.</li>
+            <li>Nuestro objetivo es tu satisfacción.</li>
+          </ul>
+          <p>Contacta directamente por WhatsApp para reportar cualquier problema.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Hay garantía en los productos?</summary>
+        <div class="faq-answer">
+          <p><strong>Depende del producto:</strong></p>
+          <ul class="list">
+            <li><strong>Productos perecederos (grasita, alimentos):</strong> Se garantiza frescura al momento de entrega. No hay devolución después de recibirlo.</li>
+            <li><strong>Prendas (poleras):</strong> Se coordinan condiciones antes. Si viene defectuosa, se soluciona de inmediato.</li>
+            <li><strong>Pintura y bisutería:</strong> Se verifica estado antes de entrega. Cualquier defecto se reporta al momento.</li>
+          </ul>
+        </div>
+      </details>
+
+      <h2 style="color:#f3b431;margin-top:2.5rem;margin-bottom:2rem;">Más Dudas</h2>
+
+      <details>
+        <summary>¿Cómo inicio una compra?</summary>
+        <div class="faq-answer">
+          <p><strong>Es muy simple:</strong></p>
+          <ol class="list">
+            <li>Explora el catálogo en esta página.</li>
+            <li>Elige el producto que te interesa.</li>
+            <li>Haz clic en el botón "💬 Consultar" o abre <strong><a href="https://wa.me/59175103979">WhatsApp directamente</a></strong>.</li>
+            <li>Coordina disponibilidad, fotos, precio y horario de entrega.</li>
+            <li>Confirma pago y recibe tu pedido.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Puedo consultar sobre productos que no veo en el catálogo?</summary>
+        <div class="faq-answer">
+          <p><strong>¡Claro!</strong> El catálogo muestra nuestras líneas principales, pero vendemos <strong>muchos más productos según stock disponible.</strong></p>
+          <p><a href="https://wa.me/59175103979">Consulta por WhatsApp</a> sobre lo que necesitas y te confirmaremos disponibilidad.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>¿Atienden los fines de semana?</summary>
+        <div class="faq-answer">
+          <p><strong>Sí, parcialmente.</strong></p>
+          <ul class="list">
+            <li>Atendemos consultas por WhatsApp los 7 días (mensajes se leen).</li>
+            <li>Entregas los sábados se coordinan según disponibilidad.</li>
+            <li>Domingos: entregas limitadas, consulta antes.</li>
+          </ul>
+          <p>Horario preferente: Lunes a sábado, 8:00 AM - 7:00 PM.</p>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 <strong>Vendedor SCZ</strong> · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a></footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

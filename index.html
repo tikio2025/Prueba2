@@ -16,6 +16,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OnlineStore",
+    "name": "Vendedor SCZ | TIKIO",
+    "url": "https://tikio2025.github.io/Prueba2/",
+    "image": "https://tikio2025.github.io/Prueba2/assets/vendedor-scz.svg",
+    "description": "Vitrina digital de venta online con atención previa coordinación por WhatsApp en Santa Cruz de la Sierra.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santa Cruz de la Sierra",
+      "addressRegion": "Santa Cruz",
+      "addressCountry": "BO"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "telephone": "+591-7510-3979",
+      "contactOption": "TollFree"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr"
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="cart-top" href="catalogo.html#catalogo-grid" aria-label="Ver carrito">🛒<span>0</span></a>
@@ -26,6 +52,7 @@
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
       <a href="contacto.html">Contacto</a>
+      <a href="faq.html">Preguntas Frecuentes</a>
       <a href="login.html">Iniciar Sesión/Registro</a>
     </div>
     <div class="nav-tools">
@@ -87,6 +114,8 @@
   </main>
 
   <footer class="footer">© 2026 <strong>Vendedor SCZ</strong> · TIKIO · Santa Cruz de la Sierra · Venta online previa coordinación · Sin tienda física activa por el momento · <a href="https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook oficial</a></footer>
-  <script>const nav=document.querySelector('.nav');const menu=document.querySelector('.hamburger');menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});</script>
+
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
 </body>
 </html>
