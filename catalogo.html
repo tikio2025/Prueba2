@@ -48,8 +48,10 @@
   <a class="btn-flotante" href="https://wa.me/59175103979?text=Hola%2C%20vengo%20del%20catalogo%20de%20Vendedor%20SCZ.%20Quiero%20consultar%20productos%20disponibles%20hoy." target="_blank" rel="noopener">💬 Consultar ahora</a>
   <footer class="footer">© 2026 Vendedor SCZ · Venta online previa coordinación · Sin tienda física activa por el momento</footer>
 
+  <script src="js/nav.js"></script>
+  <script src="js/cart.js"></script>
   <script>
-    const nav=document.querySelector('.nav');const menu=document.querySelector('.hamburger');menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+    // Funcionalidad de b\u00fasqueda espec\u00edfica para el cat\u00e1logo
     const buscador=document.getElementById('buscador-productos');const buscadorNav=document.getElementById('buscar-nav');const cards=document.querySelectorAll('.card');const normalizar=(texto)=>texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');const filtrar=(valor)=>{const texto=normalizar(valor||'');cards.forEach(card=>{const contenido=normalizar(card.textContent+' '+(card.dataset.producto||''));card.style.display=contenido.includes(texto)?'flex':'none';});};buscador.addEventListener('input',()=>filtrar(buscador.value));buscadorNav.addEventListener('input',()=>{buscador.value=buscadorNav.value;filtrar(buscadorNav.value);});document.querySelector('.nav-search').addEventListener('submit',(event)=>{event.preventDefault();buscador.scrollIntoView({behavior:'smooth',block:'center'});buscador.focus();filtrar(buscadorNav.value);});const params=new URLSearchParams(window.location.search);const q=params.get('q');if(q){buscador.value=q;buscadorNav.value=q;filtrar(q);}
   </script>
 </body>
