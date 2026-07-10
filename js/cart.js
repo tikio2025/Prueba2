@@ -82,8 +82,8 @@ class ConsultationList {
   }
 }
 
-// Inicializar lista de consulta global
-let consultationList = null;
+// Inicializar lista de consulta global en window para acceso desde otros scripts
+window.consultationList = null;
 document.addEventListener('DOMContentLoaded', () => {
-  consultationList = new ConsultationList();
+  window.consultationList = new ConsultationList();
 });
