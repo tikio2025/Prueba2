@@ -160,7 +160,7 @@
 
     <div class="coord-container">
       <div class="warning-banner">
-        ⚠️ <strong>Página de Desarrollo</strong> - Solo para coordinación entre IAs. No indexada en buscadores. Acceso: Tikio y equipo.
+        ⚠️ <strong>Tablero de Coordinación Interno</strong> - Actualización manual (no en tiempo real). No indexado en buscadores (noindex). Acceso: TIKIO, ChatGPT, Claude, Gemini. Gemini acceso lectura solo.
       </div>
 
       <!-- ESTADO GENERAL DEL PROYECTO -->
@@ -181,23 +181,18 @@
         <div class="ia-header">
           <div class="ia-avatar gemini">🔵</div>
           <div class="ia-info">
-            <h3>Gemini <span class="status-badge status-done">Arquitecto</span></h3>
-            <p class="ia-role">Backend técnico, arquitectura y optimización de código</p>
+            <h3>Gemini <span class="status-badge status-wip">Arquitecto (Lectura)</span></h3>
+            <p class="ia-role">Análisis técnico, arquitectura, auditoría de código. Acceso: Lectura solo</p>
           </div>
         </div>
 
         <div class="note-box gemini-note">
-          <strong>Análisis de TIER 2 completado:</strong> La estructura de directorios ya está lista. FAQ implementado correctamente contextualizado a Santa Cruz. JSON-LD schema es excelente para SEO local.
+          <strong>✅ Validación de Estructura de Permisos:</strong> La matriz de roles propuesta por TIKIO es impecable. Limitar acceso de Gemini a SOLO LECTURA elimina riesgo de conflictos en GitHub. El flujo "Una IA modifica por fase" sigue estándar DevOps profesional.
           <br><br>
-          <strong>Recomendación para TIER 3:</strong> Priorizar Google Analytics + Pixel de Facebook. El carrito con localStorage está funcional pero podría optimizarse aún más con debounce en actualización de UI.
+          <strong>Recomendación técnica:</strong> Dar luz verde a esta estructura. El flujo garantiza desarrollo estable mientras TIER 3 progresa en paralelo.
           <br><br>
-          <strong>Punto técnico:</strong> Consolidación de CSS de catalogo.html debe ser siguiente fase. Ahorraría 70% tamaño del archivo.
-          <div class="timestamp">📅 10 de julio, 2026 - Actualización post TIER 2</div>
-        </div>
-
-        <div class="note-box gemini-note">
-          <strong>Nota de arquitectura:</strong> El menú hamburguesa en js/nav.js está limpio. La búsqueda en catalogo.html es robusta (normalización de acentos). Sugiero crear js/search.js para centralizar lógica de búsqueda en futuras iteraciones.
-          <div class="timestamp">📅 10 de julio, 2026</div>
+          <strong>Auditoría de código actual:</strong> HTML5 semántico ✅ | CSS responsive ✅ | JavaScript modular ✅ | JSON-LD corregido (OnlineStore) ✅
+          <div class="timestamp">📅 10 de julio, 2026 - Validación de estructura</div>
         </div>
       </div>
 
@@ -206,27 +201,23 @@
         <div class="ia-header">
           <div class="ia-avatar chatgpt">✨</div>
           <div class="ia-info">
-            <h3>ChatGPT <span class="status-badge status-wip">Contenido</span></h3>
-            <p class="ia-role">Copywriting, UX, contenido y mensajería</p>
+            <h3>ChatGPT <span class="status-badge status-wip">Coordinador</span></h3>
+            <p class="ia-role">Auditor de contenido, coordinación entre equipos, integrador</p>
           </div>
         </div>
 
         <div class="note-box chatgpt-note">
-          <strong>Feedback sobre FAQ:</strong> Claude implementó excelentemente el contenido que coordinamos. Las 20+ preguntas cubren bien los casos de uso reales. Sugerencias para mejorar:
+          <strong>✅ Auditoría de Contenido:</strong>
+          <br>• FAQ.html corregido: Datos comerciales no confirmados removidos ✅
+          <br>• Descripción de productos ahora genérica y verificable ✅
+          <br>• Enlaces PDF deshabilitados correctamente ✅
           <br><br>
-          ✓ Agregar "¿Cómo reportar problemas?" en Seguridad<br>
-          ✓ Crear versión en inglés para turistas (no es prioridad ahora)<br>
-          ✓ Testimonios de clientes reales en próxima fase
-          <div class="timestamp">📅 10 de julio, 2026</div>
+          <strong>Estado de Carrito:</strong> localStorage funciona, pero sin UI completa para agregar productos ni finalizar consulta. Marcar como "en desarrollo".
+          <div class="timestamp">📅 10 de julio, 2026 - Auditoría de calidad</div>
         </div>
 
         <div class="note-box chatgpt-note">
-          <strong>Sugerencia de contenido para TIER 3:</strong> Crear sección "Blog/Novedades" con:
-          - "Grasita fresca recibida hoy"
-          - "Nuevas poleras americanas en stock"
-          - "Ofertas especiales del mes"
-          <br><br>
-          Esto aumenta engagement y SEO. Recomiendo implementar después de TIER 3.
+          <strong>Propuesta para futuro (no TIER 3):</strong> Evaluar blog/novedades y versión en inglés en fases posteriores cuando haya fotos y datos confirmados de productos.
           <div class="timestamp">📅 10 de julio, 2026</div>
         </div>
       </div>
@@ -236,28 +227,26 @@
         <div class="ia-header">
           <div class="ia-avatar claude">🟡</div>
           <div class="ia-info">
-            <h3>Claude <span class="status-badge status-done">Constructor</span></h3>
-            <p class="ia-role">Implementación, commits, testing y deployment</p>
+            <h3>Claude <span class="status-badge status-done">Implementador</span></h3>
+            <p class="ia-role">Ejecución, commits, testing. Autorizado en esta fase</p>
           </div>
         </div>
 
         <div class="note-box claude-note">
-          <strong>Reporte de ejecución TIER 1 + TIER 2:</strong>
-          <br>✅ 4 commits exitosos sin errores<br>
-          ✅ Código limpio y funcional<br>
-          ✅ Todos los archivos en GitHub<br>
-          ✅ Rama listo para merge a main cuando se indique
-          <br><br>
-          <strong>Observaciones técnicas:</strong> El js/cart.js está bien estructurado pero la UI del carrito en catalogo.html es minimalista. Para TIER 3, podría crear modal o panel expandible para ver carrito completo.
+          <strong>📋 Reporte de Correcciones (10 jul):</strong>
+          <br>✅ Rama sincronizada con main (merge: convencion-imagenes.md)
+          <br>✅ FAQ.html: Datos comerciales no confirmados removidos
+          <br>✅ index.html: JSON-LD cambiado de LocalBusiness a OnlineStore
+          <br>✅ Precios inventados (Bs 0-5000) eliminados
+          <br>✅ Enlaces PDF inexistentes deshabilitados
+          <br>✅ Centro de Coordinación aclarado: "Tablero interno, actualización manual"
           <div class="timestamp">📅 10 de julio, 2026</div>
         </div>
 
         <div class="note-box claude-note">
-          <strong>Propuesta para próximos pasos:</strong>
-          <br>1. Esperar aprobación de TIER 2 (visto bueno de Tikio)<br>
-          2. Decidir si hacer TIER 3 o mergear a main<br>
-          3. Si TIER 3: Analytics + Logo + Favicon (1 hora máximo)<br>
-          4. Deploy a GitHub Pages automático
+          <strong>⚠️ Estado del Carrito:</strong> localStorage ✅ | Guardado de datos ✅ | UI para agregar productos ❌ | Generador de consulta WhatsApp ❌
+          <br><br>
+          <strong>Próximo paso autorizado:</strong> Abrir Pull Request. No mergear hasta aprobación de TIKIO.
           <div class="timestamp">📅 10 de julio, 2026</div>
         </div>
       </div>
@@ -267,21 +256,21 @@
         <div class="ia-header">
           <div class="ia-avatar" style="background: rgba(243,180,49,0.2); border-color: #f3b431;">👤</div>
           <div class="ia-info">
-            <h3>TIKIO <span class="status-badge status-pending">Coordinador</span></h3>
-            <p class="ia-role">Decisiones finales, visión del proyecto y aprobación</p>
+            <h3>TIKIO <span class="status-badge status-done">Director</span></h3>
+            <p class="ia-role">Decisiones finales, visión del proyecto, aprobación</p>
           </div>
         </div>
 
         <div class="note-box" style="border-left-color: #f3b431;">
-          <strong>Decisión pendiente de TIKIO:</strong>
+          <strong>✅ Autorización Actual (10 jul):</strong>
           <br><br>
-          Opciones:<br>
-          A) ✅ <strong>Hacer MERGE a main ahora</strong> - Los cambios están listos y funcionales<br>
-          B) 🚀 <strong>Continuar TIER 3</strong> - Agregar Analytics, logo, favicon (30 minutos extra)<br>
-          C) 📦 <strong>Deployar a producción</strong> - Publicar cambios en GitHub Pages ahora
+          • Actualizar Centro de Coordinación: ✅ APROBADO
+          <br>• Abrir Pull Request: ✅ APROBADO
+          <br>• Mergear a main: ❌ NO APROBADO YET
+          <br>• Iniciar TIER 3: ❌ NO APROBADO YET
           <br><br>
-          <strong>Recomendación del equipo:</strong> Opción A + C. Mergear ahora y deployar. TIER 3 puede ser posterior cuando tengas imágenes reales.
-          <div class="timestamp">⏳ Esperando tu confirmación, Tikio</div>
+          <strong>Estado esperado:</strong> Claude abrirá Pull Request #15 con resumen de correcciones. Pendiente revisión y autorización final de TIKIO para merge.
+          <div class="timestamp">📅 10 de julio, 2026 - Disciplina de quirófano activa</div>
         </div>
       </div>
 
