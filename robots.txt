@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://tikio2025.github.io/Prueba2/sitemap.xml
