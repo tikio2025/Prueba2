@@ -154,7 +154,7 @@
       <section>
         <span class="eyebrow">🤖 Coordinación de Desarrollo</span>
         <h1>Centro de Coordinación IA</h1>
-        <p class="lead">Espacio de colaboración entre Gemini, ChatGPT y Claude para coordinar decisiones, feedback y desarrollo del proyecto Vendedor SCZ en tiempo real.</p>
+        <p class="lead">Espacio de colaboración entre Gemini, ChatGPT y Claude para coordinar decisiones, feedback y desarrollo del proyecto Vendedor SCZ.</p>
       </section>
     </header>
 
@@ -166,13 +166,14 @@
       <!-- ESTADO GENERAL DEL PROYECTO -->
       <div class="decision-box">
         <h3>📊 Estado General del Proyecto</h3>
-        <p><strong>Fase Actual:</strong> TIER 2 Completado, evaluando TIER 3</p>
+        <p><strong>Fase Actual:</strong> PR #16 en auditoría - Correcciones en progreso</p>
         <ul class="action-list">
-          <li><strong>TIER 1 (Estructura):</strong> ✅ Completado - 2 commits</li>
-          <li><strong>TIER 2 (FAQ + SEO):</strong> ✅ Completado - 2 commits</li>
-          <li><strong>TIER 3 (Opcional):</strong> ⏳ Pendiente decisión</li>
-          <li><strong>Total de commits:</strong> 4 commits en rama</li>
-          <li><strong>Rama de desarrollo:</strong> claude/repository-connection-pgvs1f</li>
+          <li><strong>TIER 1 (Estructura):</strong> ✅ Completado - Fusionado a main</li>
+          <li><strong>TIER 2 (FAQ + SEO):</strong> ✅ Completado - PR #15 fusionado a main</li>
+          <li><strong>Limpieza Post-Merge:</strong> 🔧 En progreso - PR #16 abierto</li>
+          <li><strong>TIER 3 (Opcional):</strong> ❌ Bloqueado - Pendiente autorización de TIKIO</li>
+          <li><strong>Rama actual:</strong> fix/limpieza-post-merge-001 (desde main)</li>
+          <li><strong>Auditorías completadas:</strong> Gemini ✅ | ChatGPT ✅ (cambios solicitados)</li>
         </ul>
       </div>
 
@@ -187,12 +188,14 @@
         </div>
 
         <div class="note-box gemini-note">
-          <strong>✅ Validación de Estructura de Permisos:</strong> La matriz de roles propuesta por TIKIO es impecable. Limitar acceso de Gemini a SOLO LECTURA elimina riesgo de conflictos en GitHub. El flujo "Una IA modifica por fase" sigue estándar DevOps profesional.
+          <strong>🔍 Rol de Gemini (Lectura Solo):</strong>
+          <br>• Revisión técnica de arquitectura y código
+          <br>• Validación de estándares HTML5, CSS y JavaScript
+          <br>• Análisis de structured data y SEO
+          <br>• Sin acceso de escritura en repositorio
           <br><br>
-          <strong>Recomendación técnica:</strong> Dar luz verde a esta estructura. El flujo garantiza desarrollo estable mientras TIER 3 progresa en paralelo.
-          <br><br>
-          <strong>Auditoría de código actual:</strong> HTML5 semántico ✅ | CSS responsive ✅ | JavaScript modular ✅ | JSON-LD corregido (OnlineStore) ✅
-          <div class="timestamp">📅 10 de julio, 2026 - Validación de estructura</div>
+          <strong>Estado en Fase de Limpieza:</strong> En espera de reporte de Claude para auditoría técnica del código generado.
+          <div class="timestamp">📅 10 de julio, 2026 - Definición de rol</div>
         </div>
       </div>
 
@@ -207,18 +210,14 @@
         </div>
 
         <div class="note-box chatgpt-note">
-          <strong>✅ Auditoría de Contenido:</strong>
-          <br>• FAQ.html corregido: Datos comerciales no confirmados removidos ✅
-          <br>• Descripción de productos ahora genérica y verificable ✅
-          <br>• Enlaces PDF deshabilitados correctamente ✅
+          <strong>🎯 Rol de ChatGPT (Coordinador):</strong>
+          <br>• Auditoría de contenido comercial y precisión de datos
+          <br>• Validación de lenguaje y claridad en comunicación
+          <br>• Revisión de experiencia de usuario
+          <br>• Coordinación entre equipos
           <br><br>
-          <strong>Estado de Carrito:</strong> localStorage funciona, pero sin UI completa para agregar productos ni finalizar consulta. Marcar como "en desarrollo".
-          <div class="timestamp">📅 10 de julio, 2026 - Auditoría de calidad</div>
-        </div>
-
-        <div class="note-box chatgpt-note">
-          <strong>Propuesta para futuro (no TIER 3):</strong> Evaluar blog/novedades y versión en inglés en fases posteriores cuando haya fotos y datos confirmados de productos.
-          <div class="timestamp">📅 10 de julio, 2026</div>
+          <strong>Estado en Fase de Limpieza:</strong> Pendiente de revisión de los cambios en FAQ y nueva lógica de "Lista de Consulta".
+          <div class="timestamp">📅 10 de julio, 2026 - Definición de rol</div>
         </div>
       </div>
 
@@ -233,20 +232,16 @@
         </div>
 
         <div class="note-box claude-note">
-          <strong>📋 Reporte de Correcciones (10 jul):</strong>
-          <br>✅ Rama sincronizada con main (merge: convencion-imagenes.md)
-          <br>✅ FAQ.html: Datos comerciales no confirmados removidos
-          <br>✅ index.html: JSON-LD cambiado de LocalBusiness a OnlineStore
-          <br>✅ Precios inventados (Bs 0-5000) eliminados
-          <br>✅ Enlaces PDF inexistentes deshabilitados
-          <br>✅ Centro de Coordinación aclarado: "Tablero interno, actualización manual"
-          <div class="timestamp">📅 10 de julio, 2026</div>
-        </div>
-
-        <div class="note-box claude-note">
-          <strong>⚠️ Estado del Carrito:</strong> localStorage ✅ | Guardado de datos ✅ | UI para agregar productos ❌ | Generador de consulta WhatsApp ❌
+          <strong>🔧 Fase de Limpieza Post-Merge (Implementada):</strong>
+          <br>✅ PR #16 abierto desde fix/limpieza-post-merge-001
+          <br>✅ CSS catálogo: Extraído a css/catalogo.css
+          <br>✅ Búsqueda: Migrada a js/catalogo.js
+          <br>✅ SEO: og:image absoluta, TollFree removido
+          <br>✅ FAQ: Limpieza completa de datos no confirmados
+          <br>✅ Lista de Consulta: Interfaz UI completada (panel, botones, interactividad)
+          <br>✅ Centro: Actualizado con estado real
           <br><br>
-          <strong>Próximo paso autorizado:</strong> Abrir Pull Request. No mergear hasta aprobación de TIKIO.
+          <strong>Estado:</strong> PR #16 implementado, pendiente aprobación de ChatGPT y TIKIO.
           <div class="timestamp">📅 10 de julio, 2026</div>
         </div>
       </div>
@@ -262,27 +257,29 @@
         </div>
 
         <div class="note-box" style="border-left-color: #f3b431;">
-          <strong>✅ Autorización Actual (10 jul):</strong>
+          <strong>✅ Autorización Actual (Fase de Limpieza):</strong>
           <br><br>
-          • Actualizar Centro de Coordinación: ✅ APROBADO
+          • Crear rama fix/limpieza-post-merge-001: ✅ APROBADO
+          <br>• Corregir FAQ (datos no confirmados): ✅ APROBADO
+          <br>• Extraer CSS y scripts: ✅ APROBADO
+          <br>• Convertir carrito a Lista de Consulta: ✅ APROBADO
           <br>• Abrir Pull Request: ✅ APROBADO
-          <br>• Mergear a main: ❌ NO APROBADO YET
-          <br>• Iniciar TIER 3: ❌ NO APROBADO YET
+          <br>• Mergear a main: ❌ ESPERA REVISIÓN
+          <br>• Iniciar TIER 3: ❌ BLOQUEADO
           <br><br>
-          <strong>Estado esperado:</strong> Claude abrirá Pull Request #15 con resumen de correcciones. Pendiente revisión y autorización final de TIKIO para merge.
-          <div class="timestamp">📅 10 de julio, 2026 - Disciplina de quirófano activa</div>
+          <strong>Disciplina de Quirófano:</strong> Claude implementa → Gemini revisa código → ChatGPT audita contenido → TIKIO autoriza merge.
+          <div class="timestamp">📅 10 de julio, 2026 - Post-merge cleanup cycle</div>
         </div>
       </div>
 
       <!-- PRÓXIMAS ACCIONES -->
       <div class="decision-box">
-        <h3>🎯 Próximas Acciones Confirmadas</h3>
+        <h3>🎯 Próximas Acciones - Fase de Auditoría</h3>
         <ul class="action-list">
-          <li><strong>Claude:</strong> Esperar aprobación de TIER 2 ✅</li>
-          <li><strong>Tikio:</strong> Decidir TIER 3 o MERGE ⏳</li>
-          <li><strong>Gemini:</strong> Revisar code quality si hay TIER 3</li>
-          <li><strong>ChatGPT:</strong> Preparar contenido de blog para futuro</li>
-          <li><strong>Todos:</strong> Documentar decisiones en esta página</li>
+          <li><strong>ChatGPT:</strong> Validar Lista de Consulta UI e implementación ⏳</li>
+          <li><strong>Gemini:</strong> Prueba de estrés del código nuevo de consulta ⏳</li>
+          <li><strong>TIKIO:</strong> Revisión final y autorización de merge</li>
+          <li><strong>Siguiente:</strong> Decidir TIER 3 (pendiente)</li>
         </ul>
       </div>
 
@@ -290,10 +287,16 @@
       <div class="decision-box" style="margin-top: 2rem;">
         <h3>📜 Historial de Decisiones</h3>
         <ul class="action-list">
-          <li><strong>10 julio 2026:</strong> Creación de Centro de Coordinación - Idea de Tikio ✨</li>
-          <li><strong>10 julio 2026:</strong> TIER 2 completado (FAQ + SEO)</li>
           <li><strong>10 julio 2026:</strong> TIER 1 completado (Estructura + Scripts)</li>
-          <li><strong>Próximo:</strong> Aguardando decisión final de Tikio</li>
+          <li><strong>10 julio 2026:</strong> TIER 2 completado (FAQ + SEO) - PR #15 abierto</li>
+          <li><strong>10 julio 2026:</strong> PR #15 fusionado a main</li>
+          <li><strong>10 julio 2026:</strong> ChatGPT análisis: 6.5/10 completitud, solicita correcciones</li>
+          <li><strong>10 julio 2026:</strong> Fase de Limpieza AUTORIZADA por TIKIO</li>
+          <li><strong>10 julio 2026:</strong> PR #16 abierto - Implementación de correcciones</li>
+          <li><strong>10 julio 2026:</strong> Gemini valida arquitectura ✅</li>
+          <li><strong>10 julio 2026:</strong> ChatGPT solicita UI de Lista de Consulta completa</li>
+          <li><strong>10 julio 2026:</strong> Claude implementa correcciones en PR #16</li>
+          <li><strong>Próximo:</strong> Revisión final de Gemini y aprobación de TIKIO</li>
         </ul>
       </div>
     </div>
