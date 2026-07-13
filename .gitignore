@@ -1,0 +1,14 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+docs/evidence/lighthouse-lhr.json
+blob-report/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+desktop.ini

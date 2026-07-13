@@ -1,0 +1,11 @@
+{
+  "url": "http://127.0.0.1:4174/Prueba2/",
+  "generatedAt": "2026-07-13T12:24:37.076Z",
+  "lighthouseVersion": "12.6.1",
+  "scores": {
+    "performance": 94,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  }
+}
