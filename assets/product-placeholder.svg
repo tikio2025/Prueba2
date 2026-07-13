@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Imagen por confirmar</title>
+  <desc id="desc">Ilustración neutra de una caja abierta</desc>
+  <rect width="800" height="600" fill="#f3ecdf"/>
+  <circle cx="675" cy="100" r="180" fill="#e3c98f" opacity=".55"/>
+  <circle cx="110" cy="540" r="230" fill="#1d211f" opacity=".06"/>
+  <path d="m250 250 150-75 150 75-150 75-150-75Z" fill="#fffdf8" stroke="#70430b" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M250 250v160l150 75 150-75V250M400 325v160" fill="none" stroke="#70430b" stroke-width="14" stroke-linejoin="round"/>
+  <path d="m250 250-70 70 145 75 75-70-150-75Zm300 0 70 70-145 75-75-70 150-75Z" fill="#e3c98f" stroke="#70430b" stroke-width="14" stroke-linejoin="round"/>
+</svg>

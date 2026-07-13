@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tikio2025.github.io/Prueba2/</loc>
+    <lastmod>2026-07-13</lastmod>
   </url>
   <url>
     <loc>https://tikio2025.github.io/Prueba2/catalogo.html</loc>
+    <lastmod>2026-07-13</lastmod>
   </url>
   <url>
     <loc>https://tikio2025.github.io/Prueba2/contacto.html</loc>
+    <lastmod>2026-07-13</lastmod>
   </url>
   <url>
-    <loc>https://tikio2025.github.io/Prueba2/ramificaciones.html</loc>
+    <loc>https://tikio2025.github.io/Prueba2/faq.html</loc>
+    <lastmod>2026-07-13</lastmod>
   </url>
   <url>
-    <loc>https://tikio2025.github.io/Prueba2/login.html</loc>
+    <loc>https://tikio2025.github.io/Prueba2/privacidad.html</loc>
+    <lastmod>2026-07-13</lastmod>
   </url>
 </urlset>
