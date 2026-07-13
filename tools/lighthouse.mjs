@@ -49,15 +49,26 @@ const server = spawn(process.execPath, [
   "/Prueba2/"
 ], { cwd: projectRoot, stdio: "ignore", windowsHide: true });
 
-const chrome = spawn(chromium.executablePath(), [
+const chromeArguments = [
   "--headless=new",
   `--remote-debugging-port=${debugPort}`,
+  "--remote-debugging-address=127.0.0.1",
   `--user-data-dir=${profile}`,
   "--no-first-run",
   "--disable-background-networking",
+  "--disable-dev-shm-usage",
   "--disable-gpu",
   "about:blank"
-], { stdio: "ignore", windowsHide: true });
+];
+
+if (process.env.CI) {
+  chromeArguments.splice(-1, 0, "--no-sandbox", "--disable-setuid-sandbox");
+}
+
+const chrome = spawn(chromium.executablePath(), chromeArguments, {
+  stdio: "ignore",
+  windowsHide: true
+});
 
 try {
   await Promise.all([
