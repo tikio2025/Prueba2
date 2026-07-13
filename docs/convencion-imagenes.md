@@ -18,10 +18,10 @@ Usar siempre:
 ## Ejemplos correctos
 
 ```txt
-grasita-res-corte.jpg
-polera-americana-estampada.jpg
-pintura-disponible.jpg
-bisuteria-modelos.jpg
+producto-carnico-confirmado.webp
+ropa-americana-frente.webp
+peluche-rosado.webp
+bisuteria-modelos.webp
 ```
 
 ## Evitar
@@ -41,7 +41,7 @@ producto (1).png
 4. Usar rutas relativas limpias, por ejemplo:
 
 ```html
-<img src="assets/productos/grasita-res-corte.jpg" alt="Grasita de res para cocina">
+<img src="assets/productos/producto-confirmado.webp" width="800" height="600" alt="Descripción fiel de lo que muestra la foto">
 ```
 
 ## Resultado esperado

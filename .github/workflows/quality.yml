@@ -1,0 +1,51 @@
+name: Calidad
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - "codex/**"
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Lint, contenido y navegador
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.18.0
+          cache: npm
+
+      - name: Instalar dependencias exactas
+        run: npm ci
+
+      - name: Instalar Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Ejecutar controles
+        run: npm run check
+
+      - name: Conservar evidencia si falla una prueba
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidencia-playwright-${{ github.run_id }}
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 7

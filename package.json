@@ -1,0 +1,40 @@
+{
+  "name": "vendedor-scz-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vitrina comercial estática de Vendedor SCZ para GitHub Pages.",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "assets:og": "node tools/render-og.mjs",
+    "audit:lighthouse": "npm run build --silent && node tools/lighthouse.mjs",
+    "audit:deps": "npm audit --audit-level=moderate",
+    "evidence:screenshots": "npm run build --silent && node tools/capture-evidence.mjs",
+    "dev": "node tools/server.mjs --root . --port 4173 --base /Prueba2/",
+    "build": "node tools/build.mjs",
+    "preview": "npm run build --silent && node tools/server.mjs --root dist --port 4173 --base /Prueba2/",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint \"styles.css\"",
+    "lint:html": "npm run build --silent && html-validate \"dist/**/*.html\"",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "check:content": "npm run build --silent && node tools/check-content.mjs dist",
+    "test:unit": "node --test \"tests/unit/*.test.js\"",
+    "test:e2e": "npm run build --silent && playwright test",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:ui": "npm run build --silent && playwright test --ui",
+    "check": "npm run build --silent && npm run lint:js && npm run lint:css && html-validate \"dist/**/*.html\" && node tools/check-content.mjs dist && node --test \"tests/unit/*.test.js\" && playwright test && npm run audit:lighthouse && npm run audit:deps"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.61.1",
+    "eslint": "10.7.0",
+    "globals": "17.7.0",
+    "html-validate": "11.5.6",
+    "lighthouse": "12.6.1",
+    "stylelint": "17.14.0",
+    "stylelint-config-standard": "40.0.0"
+  }
+}

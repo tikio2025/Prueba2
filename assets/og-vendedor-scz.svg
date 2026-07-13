@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Vendedor SCZ</title>
+  <desc id="desc">Vitrina multiproducto en Santa Cruz de la Sierra</desc>
+  <rect width="1200" height="630" fill="#f7f2e8"/>
+  <circle cx="1110" cy="90" r="270" fill="#e3c98f" opacity=".7"/>
+  <circle cx="1040" cy="590" r="340" fill="#1d211f" opacity=".06"/>
+  <rect x="72" y="68" width="94" height="94" rx="25" fill="#1d211f"/>
+  <path d="M90 92h15l14 40 15-40h15l-23 53h-14L90 92Z" fill="#f3e0b7"/>
+  <path d="M133 130c5 0 8-2 8-5 0-4-4-5-9-7-8-2-13-7-13-14 0-9 8-14 19-14 7 0 12 2 17 5l-6 9c-3-2-7-3-11-3s-6 1-6 4 3 4 8 6c9 3 15 7 15 15 0 10-8 16-21 16-6 0-11-1-15-4l5-10c3 1 6 2 9 2Z" fill="#b7791f"/>
+  <text x="190" y="126" fill="#1e1b16" font-family="Arial, sans-serif" font-size="43" font-weight="800">VENDEDOR SCZ</text>
+  <text x="76" y="285" fill="#1e1b16" font-family="Georgia, serif" font-size="76" font-weight="700">Productos para consultar.</text>
+  <text x="76" y="375" fill="#1e1b16" font-family="Georgia, serif" font-size="76" font-weight="700">Todo más claro.</text>
+  <text x="80" y="463" fill="#5d574e" font-family="Arial, sans-serif" font-size="31">Vitrina multiproducto en Santa Cruz de la Sierra</text>
+  <rect x="78" y="517" width="382" height="3" fill="#9a6115"/>
+  <text x="80" y="565" fill="#70430b" font-family="Arial, sans-serif" font-size="24" font-weight="700">Consulta precio, disponibilidad y entrega</text>
+</svg>

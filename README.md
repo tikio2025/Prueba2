@@ -1,63 +1,141 @@
-# 🚀 Vendedor SCZ | TIKIO
+# Vendedor SCZ | TIKIO
 
-Página pública tipo vitrina digital para **Vendedor SCZ**, creada para mostrar productos reales, recibir consultas por WhatsApp y coordinar ventas online desde Santa Cruz de la Sierra.
+Vendedor SCZ es una vitrina comercial en línea para organizar líneas de producto y preparar consultas que continúan por WhatsApp. Está pensada para Santa Cruz de la Sierra y no se presenta como una tienda física, un checkout ni una pasarela de pago.
 
-## ✅ Enfoque actual
+El sitio usa HTML, CSS y JavaScript liviano. Los productos y datos de contacto se administran desde archivos JSON centrales para evitar repetir información y facilitar el mantenimiento.
 
-- Venta online, sin tienda física activa por el momento.
-- Atención y entrega previa coordinación por WhatsApp.
-- Header móvil con menú hamburguesa.
-- Menú principal: Inicio, Catálogo, Contacto e Iniciar Sesión/Registro.
-- Barra de búsqueda con ícono de lupa para encontrar productos rápido.
-- Carrito visible como acceso superior fijo.
-- Catálogo enfocado en productos reales.
-- Facebook oficial como canal de confianza.
-- Sin precios inventados: stock, fotos reales, horarios y entrega se confirman por WhatsApp.
+## Qué puede hacer el cliente
 
-## 🛒 Productos principales
+- Explorar, buscar y filtrar productos.
+- Ver la información confirmada de cada producto.
+- Agregar productos a una Lista de consulta.
+- Cambiar cantidades, eliminar productos y escribir una nota.
+- Conservar la lista en el mismo navegador mediante `localStorage`.
+- Preparar un mensaje legible para consultar disponibilidad, precio y entrega por WhatsApp.
 
-| Producto | Función comercial |
+La lista no cobra, no reserva stock y no confirma una venta. TIKIO debe confirmar cada dato antes de cerrar la operación.
+
+## Estructura principal
+
+| Ruta | Uso |
 |---|---|
-| Grasita de res | Consulta por kilo, estado, disponibilidad y entrega |
-| Poleras americanas | Fotos, tallas, estado y precios por WhatsApp |
-| Pintura | Consulta por color, presentación y disponibilidad |
-| Bisutería | Fotos de modelos, piezas disponibles y precios |
+| `index.html` | Inicio público |
+| `catalogo.html` | Catálogo, buscador, filtros y fichas |
+| `contacto.html` | Cómo comprar y canales de contacto |
+| `faq.html` | Preguntas frecuentes verificadas |
+| `privacidad.html` | Uso de `localStorage` y continuidad en WhatsApp |
+| `data/site.json` | Marca, contacto, ciudad, mensajes y SEO |
+| `data/categories.json` | Categorías del catálogo |
+| `data/products.json` | Productos y su información comercial |
+| `assets/` | Imágenes e identidad visual pública |
+| `js/` | Comportamiento compartido, catálogo y lista |
+| `docs/` | Auditoría, decisiones y guías internas |
+| `internal/` | Material histórico o experimental no público |
+| `dist/` | Resultado público generado por el build |
 
-## 🔗 Canales oficiales
+No edites `dist/` manualmente: se vuelve a crear con `npm run build`.
 
-| Canal | Enlace |
-|---|---|
-| Facebook oficial | https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr |
-| WhatsApp | https://wa.me/59175103979 |
+## Uso local
 
-## 🧭 Páginas del sitio
+Requisitos: Node.js 24 LTS y npm.
 
-| Página | Función |
-|---|---|
-| `index.html` | Portada principal con productos reales, buscador, carrito y accesos rápidos |
-| `catalogo.html` | Catálogo de grasita de res, poleras americanas, pintura y bisutería |
-| `ramificaciones.html` | Mapa de crecimiento comercial por productos reales |
-| `contacto.html` | WhatsApp, Facebook oficial y coordinación de compra online |
-| `login.html` | Vista preparada para futura función de acceso y registro |
+```bash
+npm ci
+npm run dev
+```
 
-## 🛠️ Tecnologías
+Abre en el navegador la dirección que muestre la terminal. Para detener el servidor, presiona `Ctrl + C`.
 
-- HTML5
-- CSS3
-- GitHub Pages
-- Diseño responsive
-- Menú hamburguesa con JavaScript liviano
-- Enlaces prediseñados para WhatsApp
-- Búsqueda simple de productos
-- Enlaces de ficha técnica por producto
+La primera vez que se ejecuten las pruebas de navegador puede ser necesario instalar Chromium:
 
-## 📌 Próxima fase recomendada
+```bash
+npx playwright install chromium
+```
 
-1. Subir fotos reales de cada producto activo.
-2. Agregar precios confirmados cuando estén listos.
-3. Crear PDFs reales para las fichas técnicas.
-4. Separar productos por disponibilidad: disponible, vendido y próximo ingreso.
-5. Crear testimonios de clientes.
-6. Crear una sección de novedades/ofertas de hoy.
+## Editar un producto
 
-**© 2026 TIKIO | Vendedor SCZ | Santa Cruz de la Sierra**
+1. Abre `data/products.json`.
+2. Busca el producto por `id` o `slug`.
+3. Cambia únicamente datos confirmados por el propietario.
+4. Conserva las comillas, comas y corchetes del formato JSON.
+5. Ejecuta `npm run check` antes de publicar.
+
+Los campos principales admiten nombre, categoría, descripciones, imágenes, precio, moneda, modalidad de precio, estado, stock, variantes, etiquetas y fecha de verificación. Usa un producto existente como modelo para no alterar la estructura.
+
+Si precio o stock todavía no están confirmados, mantenlos en `null`, usa el modo `consult` y muestra “Consultar”. No uses un número de ejemplo en producción.
+
+## Agregar una foto
+
+1. Confirma que sea una foto real y autorizada del producto.
+2. Optimízala en WebP o AVIF cuando sea posible.
+3. Usa un nombre claro en minúsculas y con guiones, por ejemplo `peluche-rosado.webp`.
+4. Guárdala dentro de la carpeta pública correspondiente en `assets/`.
+5. Añade su ruta y un texto alternativo fiel en el producto de `data/products.json`.
+6. Ejecuta el sitio y confirma que no aparece un recurso 404.
+
+Una imagen generada puede usarse como ilustración si se identifica como tal, pero nunca debe presentarse como fotografía real, prueba de stock o testimonio.
+
+## Actualizar precio o stock
+
+- Precio confirmado: registra el importe exacto, la moneda confirmada y el modo previsto por la estructura (`fixed` o `from`).
+- Precio no confirmado: usa `price: null` y `priceMode: "consult"`.
+- Stock confirmado: registra la cantidad exacta y ajusta el estado de forma coherente.
+- Stock no confirmado: usa `stock: null` y conserva el estado de consulta.
+- Producto vendido o próximo: usa el estado correspondiente sin afirmar disponibilidad.
+
+Después del cambio, revisa la tarjeta, la ficha y el mensaje de WhatsApp.
+
+## Cambiar WhatsApp
+
+El contacto se centraliza en `data/site.json`. Cambia el valor solo cuando TIKIO confirme el número definitivo y revisa todos los mensajes generados. No vuelvas a escribir el número directamente en cada HTML.
+
+El número que existía en versiones anteriores sigue pendiente de confirmación en `docs/OWNER_INPUTS.md`. Un dato público anterior no debe marcarse automáticamente como verificado.
+
+## Comandos de calidad
+
+```bash
+npm run build   # genera únicamente los archivos públicos en dist/
+npm run lint    # revisa HTML, CSS y JavaScript
+npm run test    # ejecuta pruebas funcionales y de navegador
+npm run check   # ejecuta la revisión completa antes de un PR
+npm run audit:lighthouse      # mide rendimiento, accesibilidad, buenas prácticas y SEO
+npm run evidence:screenshots  # actualiza las capturas internas del PR
+```
+
+No publiques si `npm run check` falla.
+
+## Publicación segura
+
+1. Trabaja en una rama nueva; nunca directamente en `main`.
+2. Realiza cambios pequeños y revisables.
+3. Ejecuta `npm run check`.
+4. Sube la rama y abre un Pull Request.
+5. Revisa la vista previa, los archivos modificados y los controles automáticos.
+6. Fusiona a `main` únicamente con autorización de TIKIO.
+
+GitHub Actions construye el proyecto y publica solo `dist/` en GitHub Pages. `docs/`, pruebas, herramientas, borradores y archivos internos no forman parte del sitio para clientes.
+
+## Regla de veracidad
+
+Nunca inventes precios, stock, fotos, tallas, materiales, horarios, zonas o costos de entrega, medios de pago, garantías, devoluciones, testimonios ni características. Cuando falte información:
+
+- usa `null`, `consult` o `pending_owner_input`;
+- muestra “Consultar” u oculta el campo;
+- registra la decisión en [`docs/OWNER_INPUTS.md`](docs/OWNER_INPUTS.md).
+
+“Pintura” continúa pendiente de aclaración y no debe publicarse como pintura de pared ni como producto activo por suposición. Tampoco se deben mezclar JIBA Riberalta, La Jibería de Santa Cruz u otras marcas con Vendedor SCZ.
+
+## Recuperar una versión anterior
+
+Git conserva el historial. Desde GitHub se puede abrir **Commits**, elegir una versión estable y crear una rama desde ese punto; también se puede revertir un Pull Request ya fusionado. Haz la recuperación mediante una rama y otro PR.
+
+No uses `push --force`, `git reset --hard` ni borres el historial para recuperar una versión. La guía detallada está en [`docs/GUIA_TIKIO.md`](docs/GUIA_TIKIO.md).
+
+## Documentación
+
+- [`AGENTS.md`](AGENTS.md): reglas obligatorias para personas y agentes de IA.
+- [`docs/AUDIT.md`](docs/AUDIT.md): diagnóstico priorizado.
+- [`docs/DECISIONS.md`](docs/DECISIONS.md): decisiones técnicas y comerciales.
+- [`docs/OWNER_INPUTS.md`](docs/OWNER_INPUTS.md): datos que debe confirmar TIKIO.
+- [`docs/GUIA_TIKIO.md`](docs/GUIA_TIKIO.md): manual paso a paso para mantener y publicar.
+- [`docs/QUALITY_REPORT.md`](docs/QUALITY_REPORT.md): pruebas, métricas y evidencia de esta versión.
