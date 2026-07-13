@@ -56,4 +56,4 @@ Convertir el avance actual en una vitrina comercial ligera, coherente y verifica
 - [x] Comparar todo contra `main`.
 - [x] Buscar regresiones, rutas, falsedades, seguridad, SEO, accesibilidad y rendimiento.
 - [x] Confirmar mediante tres revisiones independientes que no quedan P0/P1 técnicos; aplicar además los endurecimientos P2 accionables.
-- [ ] Abrir PR en borrador; no fusionar.
+- [x] Abrir PR en borrador (#18); no fusionar.
