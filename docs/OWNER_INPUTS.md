@@ -1,37 +1,40 @@
 # Información pendiente de TIKIO
 
-El sitio funciona en modo “Consultar” mientras se completan estos datos. Ninguna casilla pendiente debe rellenarse por suposición.
+El sitio publica únicamente datos confirmados. Ninguna casilla pendiente debe rellenarse por suposición.
 
-## Confirmado mediante uso real
+## Confirmado mediante uso real y aprobación del propietario
 
 - [x] La grasa de res es un producto activo y ya tuvo ventas reales.
 - [x] La unidad comercial utilizada es el kilogramo (`kg`).
+- [x] El precio público confirmado es **Bs 15 por kg**.
 - [x] El flujo real termina en conversación y coordinación por WhatsApp.
+- [x] El WhatsApp definitivo para consultas es `+591 75103979`.
 - [x] Existen ventas pagadas y ventas con saldo pendiente; la cobranza se controla en TIKIO OS, no en la web pública.
+- [x] Se observaron pagos por efectivo, QR y transferencia en operaciones reales.
+- [x] TIKIO autorizó mejorar los textos públicos con enfoque de venta por kilo y coordinación directa.
 
-## Bloqueadores de lanzamiento
+## Bloqueadores que todavía permanecen
 
-- [ ] Confirmar que `+591 75103979` es el destinatario correcto de todas las consultas. La rama lo usa para probar el recorrido, pero no debe lanzarse comercialmente sin esta confirmación.
-- [ ] Confirmar cuáles de las líneas mostradas están activas actualmente.
-- [ ] Revisar y aprobar los textos públicos y la forma real de coordinación.
+- [ ] Confirmar cuáles de las líneas mostradas, además de grasa de res, están activas actualmente.
+- [ ] Subir las piezas, fotografías y recursos que ya fueron preparados fuera del repositorio.
 
 Facebook permanece oculto hasta confirmar su URL. La marca `VS` es temporal y no sustituye el logo oficial.
 
 ## Marca y contacto
 
 - [ ] Logo oficial de Vendedor SCZ.
-- [ ] Número definitivo de WhatsApp. Valor publicado actualmente a confirmar: `+591 75103979`.
+- [x] Número definitivo de WhatsApp: `+591 75103979`.
 - [ ] URL definitiva de Facebook. Enlace heredado a confirmar: `https://www.facebook.com/share/19ByTkuVba/?mibextid=wwXIfr`.
 - [ ] Datos legales que se deseen publicar.
 - [ ] Dominio propio futuro.
 
 ## Catálogo
 
-- [ ] Lista exacta de categorías activas.
+- [ ] Lista exacta de categorías activas además de productos cárnicos.
 - [ ] Confirmar qué significa “pintura”; no está publicada como producto.
 - [ ] Productos activos actuales además de grasa de res.
 - [ ] Fotografías reales autorizadas y optimizadas.
-- [ ] Decidir si el precio operativo de Bs 15/kg de grasa de res puede publicarse o debe seguir como “Consultar”.
+- [x] Publicar grasa de res a Bs 15/kg.
 - [ ] Stock o disponibilidad aproximada.
 - [ ] Tallas.
 - [ ] Estado/condición de la ropa.
@@ -39,7 +42,8 @@ Facebook permanece oculto hasta confirmar su URL. La marca `VS` es temporal y no
 
 ## Operación comercial
 
-- [ ] Medios de pago que pueden anunciarse públicamente.
+- [x] Métodos observados en ventas reales: efectivo, QR y transferencia.
+- [ ] Decidir si los tres métodos se anunciarán siempre o se confirmarán en cada pedido.
 - [ ] Costos y zonas de entrega.
 - [ ] Horarios de atención.
 - [ ] Política de cambios o devoluciones.
