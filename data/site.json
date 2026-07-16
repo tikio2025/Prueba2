@@ -36,14 +36,14 @@
     }
   },
   "messages": {
-    "generalConsultation": "Hola, vengo de Vendedor SCZ. Quiero consultar productos del catálogo.",
-    "consultationHeading": "Hola, vengo de Vendedor SCZ. Quiero consultar estos productos:",
-    "consultationClosing": "¿Me confirma disponibilidad, precio y forma de entrega?"
+    "generalConsultation": "Hola, vengo de Vendedor SCZ. Quiero consultar un producto y coordinar la compra.",
+    "consultationHeading": "Hola, vengo de Vendedor SCZ. Quiero consultar estos productos y cantidades:",
+    "consultationClosing": "¿Me confirma disponibilidad, precio final, forma de pago y entrega?"
   },
   "seo": {
     "canonicalBaseUrl": "https://tikio2025.github.io/Prueba2/",
-    "defaultTitle": "Vendedor SCZ | Catálogo para consultar por WhatsApp",
-    "defaultDescription": "Vitrina en línea de Vendedor SCZ. Consulta productos y coordina los detalles por WhatsApp.",
+    "defaultTitle": "Vendedor SCZ | Productos y pedidos por WhatsApp",
+    "defaultDescription": "Vitrina de ventas en Santa Cruz. Elige productos, indica cantidades por kilo o unidad y coordina la compra por WhatsApp.",
     "socialImage": "assets/og-vendedor-scz.png"
   }
 }
