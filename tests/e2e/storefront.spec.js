@@ -34,7 +34,10 @@ test("buscador, filtros, orden y estado sin resultados", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Ropa americana" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Ropa para niños" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Peluches" })).toBeVisible();
-  await expect(page.locator(".product-card__price").first()).toHaveText("Bs 15 / kg");
+  const grasaCard = page.locator(".product-card").filter({
+    has: page.getByRole("heading", { name: "Grasa de res" })
+  });
+  await expect(grasaCard.locator(".product-card__price")).toHaveText("Bs 15 / kg");
 
   await page.getByRole("button", { name: /Quitar filtro Disponible/u }).click();
   await page.locator("#catalog-search").fill("producto inexistente");
