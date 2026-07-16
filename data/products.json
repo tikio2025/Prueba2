@@ -4,12 +4,12 @@
     "slug": "grasa-de-res",
     "name": "Grasa de res",
     "category": "productos-carnicos",
-    "shortDescription": "Venta por kilogramo con coordinación directa por WhatsApp.",
-    "description": "Indica cuántos kilogramos necesitas y confirma disponibilidad, precio final, forma de pago y entrega por WhatsApp.",
+    "shortDescription": "Bs 15 por kilogramo. Pedido y entrega coordinados por WhatsApp.",
+    "description": "Indica cuántos kilogramos necesitas. El precio público es Bs 15 por kg; confirma disponibilidad, monto final, forma de pago y entrega por WhatsApp.",
     "images": [],
-    "price": null,
-    "currency": null,
-    "priceMode": "consult",
+    "price": 15,
+    "currency": "BOB",
+    "priceMode": "fixed",
     "status": "available",
     "stock": null,
     "featured": true,
@@ -18,8 +18,14 @@
     "unit": "kg",
     "quantityStep": 1,
     "minimumQuantity": 1,
-    "tags": ["grasa de res", "producto cárnico", "venta por kilo", "Santa Cruz"],
-    "whatsappMessage": "Hola, quiero consultar grasa de res por kilogramo.",
+    "tags": [
+      "grasa de res",
+      "producto cárnico",
+      "venta por kilo",
+      "Santa Cruz",
+      "Bs 15 por kg"
+    ],
+    "whatsappMessage": "Hola, quiero consultar grasa de res a Bs 15 por kilogramo.",
     "verified": true,
     "updatedAt": "2026-07-16"
   },
@@ -39,7 +45,9 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["ropa americana"],
+    "tags": [
+      "ropa americana"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -60,7 +68,9 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["ropa para mujer"],
+    "tags": [
+      "ropa para mujer"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -81,7 +91,9 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["ropa para niños"],
+    "tags": [
+      "ropa para niños"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -102,7 +114,9 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["ropa mixta"],
+    "tags": [
+      "ropa mixta"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -123,7 +137,9 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["peluches"],
+    "tags": [
+      "peluches"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -144,7 +160,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["bisutería", "accesorios"],
+    "tags": [
+      "bisutería",
+      "accesorios"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -165,7 +184,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["extensiones", "pelucas"],
+    "tags": [
+      "extensiones",
+      "pelucas"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -186,7 +208,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["belleza", "maquillaje"],
+    "tags": [
+      "belleza",
+      "maquillaje"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -207,7 +232,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["limpiadores para tenis", "cuidado del calzado"],
+    "tags": [
+      "limpiadores para tenis",
+      "cuidado del calzado"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -228,7 +256,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["reventa", "productos de oportunidad"],
+    "tags": [
+      "reventa",
+      "productos de oportunidad"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
