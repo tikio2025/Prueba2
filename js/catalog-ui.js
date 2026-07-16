@@ -47,6 +47,27 @@ export function getStatusLabel(status) {
   return labels[status] ?? "Consultar";
 }
 
+function formatCurrencyAmount(value, currency) {
+  const amount = new Intl.NumberFormat("es-BO", {
+    minimumFractionDigits: Number.isInteger(value) ? 0 : 2,
+    maximumFractionDigits: 2
+  }).format(value);
+
+  if (currency === "BOB") {
+    return `Bs ${amount}`;
+  }
+
+  try {
+    return new Intl.NumberFormat("es-BO", {
+      style: "currency",
+      currency,
+      maximumFractionDigits: 2
+    }).format(value);
+  } catch {
+    return `${currency} ${amount}`;
+  }
+}
+
 export function formatProductPrice(product) {
   if (
     !["fixed", "from"].includes(product.priceMode)
@@ -56,16 +77,12 @@ export function formatProductPrice(product) {
     return "Consultar";
   }
 
-  try {
-    const formatted = new Intl.NumberFormat("es-BO", {
-      style: "currency",
-      currency: product.currency,
-      maximumFractionDigits: 2
-    }).format(product.price);
-    return product.priceMode === "from" ? `Desde ${formatted}` : formatted;
-  } catch {
-    return "Consultar";
-  }
+  const formatted = formatCurrencyAmount(product.price, product.currency);
+  const prefix = product.priceMode === "from" ? "Desde " : "";
+  const unit = typeof product.unit === "string" && product.unit.trim()
+    ? ` / ${product.unit.trim()}`
+    : "";
+  return `${prefix}${formatted}${unit}`;
 }
 
 function createIcon(symbol) {
