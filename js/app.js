@@ -215,6 +215,14 @@ function buildConsultationDialog() {
   return dialogElements;
 }
 
+function formatQuantity(value) {
+  return new Intl.NumberFormat("es-BO", { maximumFractionDigits: 3 }).format(value);
+}
+
+function formatUnit(unit, quantity) {
+  return unit === "unidad" && quantity !== 1 ? "unidades" : unit;
+}
+
 function renderConsultationItem(item) {
   const listItem = document.createElement("li");
   listItem.className = "consult-item";
@@ -224,7 +232,9 @@ function renderConsultationItem(item) {
   const heading = document.createElement("h3");
   heading.textContent = item.name;
   const copy = document.createElement("p");
-  copy.textContent = "Precio y disponibilidad por confirmar.";
+  copy.textContent = item.unit === "unidad"
+    ? "Precio y disponibilidad por confirmar."
+    : `Venta por ${item.unit}. Precio y disponibilidad por confirmar.`;
   const quantity = document.createElement("div");
   quantity.className = "quantity-control";
   quantity.setAttribute("aria-label", `Cantidad de ${item.name}`);
@@ -235,16 +245,17 @@ function renderConsultationItem(item) {
   decrease.append(createIcon("minus"));
   const output = document.createElement("output");
   output.value = String(item.quantity);
-  output.textContent = String(item.quantity);
-  output.setAttribute("aria-label", `${item.quantity} unidades`);
+  output.textContent = `${formatQuantity(item.quantity)} ${formatUnit(item.unit, item.quantity)}`;
+  output.setAttribute("aria-label", output.textContent);
   const increase = document.createElement("button");
   increase.type = "button";
   increase.dataset.quantityAction = "increase";
   increase.setAttribute("aria-label", `Aumentar cantidad de ${item.name}`);
   increase.append(createIcon("plus"));
-  decrease.addEventListener("click", () => changeQuantity(item.id, -1));
-  increase.disabled = item.quantity >= 999;
-  increase.addEventListener("click", () => changeQuantity(item.id, 1));
+  const step = Number(item.step) > 0 ? Number(item.step) : 1;
+  decrease.addEventListener("click", () => changeQuantity(item.id, -step));
+  increase.disabled = item.quantity + step > 999;
+  increase.addEventListener("click", () => changeQuantity(item.id, step));
   quantity.append(decrease, output, increase);
   information.append(heading, copy, quantity);
 
@@ -273,7 +284,8 @@ function changeQuantity(itemId, delta) {
   if (!current) {
     return;
   }
-  if (current.quantity + delta <= 0) {
+  const nextQuantity = Math.round((current.quantity + delta + Number.EPSILON) * 1000) / 1000;
+  if (nextQuantity <= 0) {
     const state = consultationStore.getState();
     const position = state.items.findIndex((item) => item.id === itemId);
     const fallback = state.items[position + 1] || state.items[position - 1];
@@ -284,7 +296,7 @@ function changeQuantity(itemId, delta) {
     pendingListFocus = { id: itemId, action: delta > 0 ? "increase" : "decrease" };
   }
   try {
-    consultationStore.setQuantity(itemId, current.quantity + delta);
+    consultationStore.setQuantity(itemId, nextQuantity);
   } catch {
     showToast("No se pudo cambiar esa cantidad.");
   }
@@ -292,18 +304,18 @@ function changeQuantity(itemId, delta) {
 
 async function renderConsultation(state) {
   const elements = dialogElements ?? buildConsultationDialog();
-  const totalQuantity = state.items.reduce((sum, item) => sum + item.quantity, 0);
+  const lineCount = state.items.length;
   document.querySelectorAll("[data-consult-count]").forEach((counter) => {
-    counter.textContent = String(totalQuantity);
-    counter.setAttribute("aria-label", `${totalQuantity} productos en la lista`);
+    counter.textContent = String(lineCount);
+    counter.setAttribute("aria-label", `${lineCount} ${lineCount === 1 ? "producto" : "productos"} en la lista`);
   });
 
   elements.list.replaceChildren(...state.items.map(renderConsultationItem));
   elements.empty.hidden = state.items.length > 0;
   elements.list.hidden = state.items.length === 0;
-  elements.summary.textContent = state.items.length === 1
-    ? `1 línea · ${totalQuantity} ${totalQuantity === 1 ? "unidad" : "unidades"}`
-    : `${state.items.length} líneas · ${totalQuantity} unidades`;
+  elements.summary.textContent = lineCount === 1
+    ? "1 línea en la lista"
+    : `${lineCount} líneas en la lista`;
   elements.clearButton.disabled = state.items.length === 0 && !state.note;
   if (document.activeElement !== elements.note) {
     elements.note.value = state.note;
@@ -355,7 +367,12 @@ export function openConsultation() {
 
 export function addToConsultation(product, { open = false } = {}) {
   try {
-    consultationStore.add({ id: product.id, name: product.name });
+    consultationStore.add({
+      id: product.id,
+      name: product.name,
+      unit: product.unit,
+      quantityStep: product.quantityStep
+    });
   } catch (error) {
     const message = error instanceof RangeError
       ? "Alcanzaste la cantidad máxima para este producto."

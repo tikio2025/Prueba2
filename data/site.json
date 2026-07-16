@@ -15,7 +15,7 @@
   "operation": {
     "salesModel": "online_coordination",
     "hasPublicPhysicalStore": false,
-    "paymentMethods": null,
+    "paymentMethods": ["Efectivo", "QR", "Transferencia"],
     "deliveryAreas": null,
     "deliveryCosts": null,
     "businessHours": null,
@@ -26,8 +26,8 @@
       "display": "+591 75103979",
       "phone": "59175103979",
       "url": "https://wa.me/59175103979",
-      "status": "pending_owner_confirmation",
-      "verified": false
+      "status": "confirmed_by_owner",
+      "verified": true
     },
     "facebook": {
       "url": null,
@@ -36,14 +36,14 @@
     }
   },
   "messages": {
-    "generalConsultation": "Hola, vengo de Vendedor SCZ. Quiero consultar productos del catálogo.",
-    "consultationHeading": "Hola, vengo de Vendedor SCZ. Quiero consultar estos productos:",
-    "consultationClosing": "¿Me confirma disponibilidad, precio y forma de entrega?"
+    "generalConsultation": "Hola, vengo de Vendedor SCZ. Quiero consultar un producto y coordinar la compra.",
+    "consultationHeading": "Hola, vengo de Vendedor SCZ. Quiero consultar estos productos y cantidades:",
+    "consultationClosing": "¿Me confirma disponibilidad, precio final, forma de pago y entrega?"
   },
   "seo": {
     "canonicalBaseUrl": "https://tikio2025.github.io/Prueba2/",
-    "defaultTitle": "Vendedor SCZ | Catálogo para consultar por WhatsApp",
-    "defaultDescription": "Vitrina en línea de Vendedor SCZ. Consulta productos y coordina los detalles por WhatsApp.",
+    "defaultTitle": "Vendedor SCZ | Grasa de res y productos por WhatsApp",
+    "defaultDescription": "Compra grasa de res a Bs 15 por kg y consulta otras líneas de producto en Santa Cruz. Indica cantidades y coordina pago y entrega por WhatsApp.",
     "socialImage": "assets/og-vendedor-scz.png"
   }
 }

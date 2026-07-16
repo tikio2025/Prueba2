@@ -4,42 +4,58 @@
     "slug": "grasa-de-res",
     "name": "Grasa de res",
     "category": "productos-carnicos",
-    "shortDescription": "Producto cárnico obtenido del procesamiento de carne de vaca.",
-    "description": null,
+    "shortDescription": "Bs 15 por kilogramo. Pedido y entrega coordinados por WhatsApp.",
+    "description": "Indica cuántos kilogramos necesitas. El precio público es Bs 15 por kg; confirma disponibilidad, monto final, forma de pago y entrega por WhatsApp.",
     "images": [],
-    "price": null,
-    "currency": null,
-    "priceMode": "consult",
-    "status": "consult",
+    "price": 15,
+    "currency": "BOB",
+    "priceMode": "fixed",
+    "status": "available",
     "stock": null,
-    "featured": false,
+    "featured": true,
     "condition": null,
     "variants": [],
-    "tags": ["grasa de res", "producto cárnico"],
-    "whatsappMessage": null,
-    "verified": false,
-    "updatedAt": null
+    "unit": "kg",
+    "quantityStep": 1,
+    "minimumQuantity": 1,
+    "tags": [
+      "grasa de res",
+      "producto cárnico",
+      "venta por kilo",
+      "Santa Cruz",
+      "Bs 15 por kg"
+    ],
+    "whatsappMessage": "Hola, quiero consultar grasa de res a Bs 15 por kilogramo.",
+    "verified": true,
+    "updatedAt": "2026-07-16"
   },
   {
     "id": "ropa-americana",
     "slug": "ropa-americana",
     "name": "Ropa americana",
     "category": "ropa",
-    "shortDescription": null,
-    "description": null,
+    "shortDescription": "Prendas activas para consultar por WhatsApp.",
+    "description": "Indica cuántas prendas deseas consultar. Los modelos, tallas, condición, precio final y entrega se confirman por WhatsApp antes de comprar.",
     "images": [],
     "price": null,
     "currency": null,
     "priceMode": "consult",
-    "status": "consult",
+    "status": "available",
     "stock": null,
-    "featured": false,
+    "featured": true,
     "condition": null,
     "variants": [],
-    "tags": ["ropa americana"],
-    "whatsappMessage": null,
-    "verified": false,
-    "updatedAt": null
+    "unit": "unidad",
+    "quantityStep": 1,
+    "minimumQuantity": 1,
+    "tags": [
+      "ropa americana",
+      "ropa activa",
+      "Santa Cruz"
+    ],
+    "whatsappMessage": "Hola, quiero consultar la ropa americana disponible.",
+    "verified": true,
+    "updatedAt": "2026-07-16"
   },
   {
     "id": "ropa-para-mujer",
@@ -57,7 +73,9 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["ropa para mujer"],
+    "tags": [
+      "ropa para mujer"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -67,21 +85,28 @@
     "slug": "ropa-para-ninos",
     "name": "Ropa para niños",
     "category": "ropa",
-    "shortDescription": null,
-    "description": null,
+    "shortDescription": "Ropa infantil activa para consultar por WhatsApp.",
+    "description": "Indica cuántas prendas necesitas. Las tallas, modelos, condición, precio final y entrega se confirman por WhatsApp antes de comprar.",
     "images": [],
     "price": null,
     "currency": null,
     "priceMode": "consult",
-    "status": "consult",
+    "status": "available",
     "stock": null,
-    "featured": false,
+    "featured": true,
     "condition": null,
     "variants": [],
-    "tags": ["ropa para niños"],
-    "whatsappMessage": null,
-    "verified": false,
-    "updatedAt": null
+    "unit": "unidad",
+    "quantityStep": 1,
+    "minimumQuantity": 1,
+    "tags": [
+      "ropa para niños",
+      "ropa infantil",
+      "Santa Cruz"
+    ],
+    "whatsappMessage": "Hola, quiero consultar la ropa para niños disponible.",
+    "verified": true,
+    "updatedAt": "2026-07-16"
   },
   {
     "id": "ropa-mixta",
@@ -99,7 +124,9 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["ropa mixta"],
+    "tags": [
+      "ropa mixta"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -109,21 +136,28 @@
     "slug": "peluches",
     "name": "Peluches",
     "category": "peluches",
-    "shortDescription": null,
-    "description": null,
+    "shortDescription": "Peluches activos para consultar por WhatsApp.",
+    "description": "Indica cuántos peluches deseas consultar. Los modelos, tamaños, condición, precio final y entrega se confirman por WhatsApp antes de comprar.",
     "images": [],
     "price": null,
     "currency": null,
     "priceMode": "consult",
-    "status": "consult",
+    "status": "available",
     "stock": null,
-    "featured": false,
+    "featured": true,
     "condition": null,
     "variants": [],
-    "tags": ["peluches"],
-    "whatsappMessage": null,
-    "verified": false,
-    "updatedAt": null
+    "unit": "unidad",
+    "quantityStep": 1,
+    "minimumQuantity": 1,
+    "tags": [
+      "peluches",
+      "regalos",
+      "Santa Cruz"
+    ],
+    "whatsappMessage": "Hola, quiero consultar los peluches disponibles.",
+    "verified": true,
+    "updatedAt": "2026-07-16"
   },
   {
     "id": "bisuteria",
@@ -141,7 +175,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["bisutería", "accesorios"],
+    "tags": [
+      "bisutería",
+      "accesorios"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -162,7 +199,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["extensiones", "pelucas"],
+    "tags": [
+      "extensiones",
+      "pelucas"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -183,7 +223,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["belleza", "maquillaje"],
+    "tags": [
+      "belleza",
+      "maquillaje"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -204,7 +247,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["limpiadores para tenis", "cuidado del calzado"],
+    "tags": [
+      "limpiadores para tenis",
+      "cuidado del calzado"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null
@@ -225,7 +271,10 @@
     "featured": false,
     "condition": null,
     "variants": [],
-    "tags": ["reventa", "productos de oportunidad"],
+    "tags": [
+      "reventa",
+      "productos de oportunidad"
+    ],
     "whatsappMessage": null,
     "verified": false,
     "updatedAt": null

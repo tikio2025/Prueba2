@@ -1,15 +1,17 @@
-export const SCHEMA_VERSION = 1;
+export const SCHEMA_VERSION = 2;
 export const STORAGE_KEY = `vendedor-scz:consultation:v${SCHEMA_VERSION}`;
 
 const MAX_ID_LENGTH = 120;
 const MAX_NAME_LENGTH = 180;
+const MAX_UNIT_LENGTH = 40;
 const MAX_NOTE_LENGTH = 500;
 const MAX_QUANTITY = 999;
+const MAX_DECIMALS = 3;
 
 export const DEFAULT_MESSAGE_COPY = Object.freeze({
-  general: "Hola, vengo de Vendedor SCZ. Quiero consultar productos del catálogo.",
-  heading: "Hola, vengo de Vendedor SCZ. Quiero consultar estos productos:",
-  closing: "¿Me confirma disponibilidad, precio y forma de entrega?"
+  general: "Hola, vengo de Vendedor SCZ. Quiero consultar un producto y coordinar la compra.",
+  heading: "Hola, vengo de Vendedor SCZ. Quiero consultar estos productos y cantidades:",
+  closing: "¿Me confirma disponibilidad, precio final, forma de pago y entrega?"
 });
 
 function emptyState() {
@@ -44,6 +46,23 @@ function cleanNote(value) {
     .slice(0, MAX_NOTE_LENGTH);
 }
 
+function roundQuantity(value) {
+  const factor = 10 ** MAX_DECIMALS;
+  return Math.round((value + Number.EPSILON) * factor) / factor;
+}
+
+function normalizeStep(value) {
+  const step = Number(value);
+  if (!Number.isFinite(step) || step <= 0 || step > MAX_QUANTITY) {
+    return 1;
+  }
+  return roundQuantity(step);
+}
+
+function normalizeUnit(value) {
+  return cleanSingleLine(value, MAX_UNIT_LENGTH) || "unidad";
+}
+
 function normalizeProduct(product) {
   if (!product || typeof product !== "object" || Array.isArray(product)) {
     return null;
@@ -52,7 +71,14 @@ function normalizeProduct(product) {
   const id = cleanSingleLine(product.id, MAX_ID_LENGTH);
   const name = cleanSingleLine(product.name, MAX_NAME_LENGTH);
 
-  return id && name ? { id, name } : null;
+  return id && name
+    ? {
+      id,
+      name,
+      unit: normalizeUnit(product.unit),
+      step: normalizeStep(product.quantityStep)
+    }
+    : null;
 }
 
 function parseQuantity(value, { allowZero = false } = {}) {
@@ -60,19 +86,20 @@ function parseQuantity(value, { allowZero = false } = {}) {
     ? Number(value)
     : value;
 
-  if (!Number.isSafeInteger(quantity)) {
-    throw new TypeError("La cantidad debe ser un número entero.");
+  if (!Number.isFinite(quantity)) {
+    throw new TypeError("La cantidad debe ser un número válido.");
   }
 
-  if (allowZero && quantity === 0) {
+  const rounded = roundQuantity(quantity);
+  if (allowZero && rounded === 0) {
     return 0;
   }
 
-  if (quantity < 1 || quantity > MAX_QUANTITY) {
-    throw new RangeError(`La cantidad debe estar entre 1 y ${MAX_QUANTITY}.`);
+  if (rounded <= 0 || rounded > MAX_QUANTITY) {
+    throw new RangeError(`La cantidad debe ser mayor a 0 y no superar ${MAX_QUANTITY}.`);
   }
 
-  return quantity;
+  return rounded;
 }
 
 function normalizeStoredItems(items) {
@@ -104,10 +131,14 @@ function normalizeStoredItems(items) {
       continue;
     }
 
-    normalized[existingPosition].quantity = Math.min(
+    const existing = normalized[existingPosition];
+    existing.quantity = Math.min(
       MAX_QUANTITY,
-      normalized[existingPosition].quantity + quantity
+      roundQuantity(existing.quantity + quantity)
     );
+    existing.name = product.name;
+    existing.unit = product.unit;
+    existing.step = product.step;
   }
 
   return normalized;
@@ -129,9 +160,17 @@ function normalizeCopy(copy = {}) {
   };
 }
 
+function formatQuantity(item) {
+  const quantity = new Intl.NumberFormat("es-BO", {
+    maximumFractionDigits: MAX_DECIMALS
+  }).format(item.quantity);
+  const unit = item.unit === "unidad" && item.quantity !== 1 ? "unidades" : item.unit;
+  return `${quantity} ${unit}`;
+}
+
 /**
- * Genera texto plano para WhatsApp. Los nombres y la nota nunca se interpretan
- * como HTML; la URL se codifica por separado en buildWhatsAppUrl.
+ * Genera texto plano para WhatsApp. Los nombres, unidades y la nota nunca se
+ * interpretan como HTML; la URL se codifica por separado en buildWhatsAppUrl.
  */
 export function buildConsultationMessage(state, copy) {
   const safeCopy = normalizeCopy(copy);
@@ -144,7 +183,7 @@ export function buildConsultationMessage(state, copy) {
 
   const lines = [safeCopy.heading];
   items.forEach((item, index) => {
-    lines.push(`${index + 1}. ${item.name} — cantidad ${item.quantity}`);
+    lines.push(`${index + 1}. ${item.name} — ${formatQuantity(item)}`);
   });
 
   if (note) {
@@ -160,7 +199,6 @@ export function buildWhatsAppUrl(phone, message) {
   if (!/^[1-9]\d{7,14}$/u.test(digits)) {
     throw new TypeError("El número de WhatsApp no tiene un formato válido.");
   }
-
   if (typeof message !== "string" || message.trim() === "") {
     throw new TypeError("El mensaje de WhatsApp no puede estar vacío.");
   }
@@ -250,7 +288,7 @@ export class ConsultationStore {
   }
 
   getTotalQuantity() {
-    return this.state.items.reduce((total, item) => total + item.quantity, 0);
+    return roundQuantity(this.state.items.reduce((total, item) => total + item.quantity, 0));
   }
 
   add(product, quantity = 1) {
@@ -262,13 +300,14 @@ export class ConsultationStore {
     const amount = parseQuantity(quantity);
     const items = this.state.items.map((item) => ({ ...item }));
     const existing = items.find((item) => item.id === normalizedProduct.id);
-
     if (existing) {
       if (existing.quantity + amount > MAX_QUANTITY) {
         throw new RangeError(`La cantidad total no puede superar ${MAX_QUANTITY}.`);
       }
-      existing.quantity += amount;
+      existing.quantity = roundQuantity(existing.quantity + amount);
       existing.name = normalizedProduct.name;
+      existing.unit = normalizedProduct.unit;
+      existing.step = normalizedProduct.step;
     } else {
       items.push({ ...normalizedProduct, quantity: amount });
     }
