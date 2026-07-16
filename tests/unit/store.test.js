@@ -37,8 +37,8 @@ test("agrega productos, acumula cantidades y devuelve copias del estado", () => 
 
   const state = store.getState();
   assert.deepEqual(state.items, [
-    { id: "peluches", name: "Peluches", quantity: 3 },
-    { id: "bisuteria", name: "Bisutería", quantity: 1 }
+    { id: "peluches", name: "Peluches", unit: "unidad", step: 1, quantity: 3 },
+    { id: "bisuteria", name: "Bisutería", unit: "unidad", step: 1, quantity: 1 }
   ]);
   assert.equal(store.getTotalQuantity(), 4);
 
@@ -46,7 +46,7 @@ test("agrega productos, acumula cantidades y devuelve copias del estado", () => 
   assert.equal(store.getState().items[0].quantity, 3);
 });
 
-test("persiste cantidad y nota, permite eliminar y vaciar", () => {
+test("persiste cantidad, unidad y nota; permite eliminar y vaciar", () => {
   const storage = new MemoryStorage();
   const store = new ConsultationStore({ storage });
 
@@ -56,12 +56,13 @@ test("persiste cantidad y nota, permite eliminar y vaciar", () => {
 
   const restored = new ConsultationStore({ storage });
   assert.equal(restored.getState().items[0].quantity, 4);
+  assert.equal(restored.getState().items[0].unit, "unidad");
   assert.equal(restored.getState().note, "Consultar tallas\nGracias");
 
   restored.setQuantity("ropa", 0);
   assert.deepEqual(restored.getState().items, []);
 
-  restored.add({ id: "grasa-de-res", name: "Grasa de res" });
+  restored.add({ id: "grasa-de-res", name: "Grasa de res", unit: "kg", quantityStep: 0.5 });
   restored.clear();
   assert.deepEqual(restored.getState(), {
     schemaVersion: SCHEMA_VERSION,
@@ -77,7 +78,7 @@ test("descarta JSON corrupto o versiones incompatibles", () => {
   assert.equal(malformed.getItem(STORAGE_KEY), null);
 
   const incompatible = new MemoryStorage({
-    [STORAGE_KEY]: JSON.stringify({ schemaVersion: 99, items: [], note: "" })
+    [STORAGE_KEY]: JSON.stringify({ schemaVersion: 1, items: [], note: "" })
   });
   const incompatibleStore = new ConsultationStore({ storage: incompatible });
   assert.deepEqual(incompatibleStore.getState().items, []);
@@ -101,7 +102,7 @@ test("sanea elementos almacenados sin perder los válidos", () => {
   const store = new ConsultationStore({ storage });
   assert.deepEqual(store.getState(), {
     schemaVersion: SCHEMA_VERSION,
-    items: [{ id: "peluches", name: "Peluches", quantity: 3 }],
+    items: [{ id: "peluches", name: "Peluches", unit: "unidad", step: 1, quantity: 3 }],
     note: "Nota segura"
   });
 });
@@ -121,7 +122,7 @@ test("funciona en memoria si localStorage está bloqueado", () => {
   assert.equal(store.getTotalQuantity(), 1);
 });
 
-test("genera el mensaje de consulta con el formato acordado", () => {
+test("genera el mensaje de consulta con unidades comerciales", () => {
   const message = buildConsultationMessage({
     items: [
       { id: "peluches", name: "Peluches", quantity: 2 },
@@ -132,12 +133,27 @@ test("genera el mensaje de consulta con el formato acordado", () => {
 
   assert.equal(
     message,
-    "Hola, vengo de Vendedor SCZ. Quiero consultar estos productos:\n"
-      + "1. Peluches — cantidad 2\n"
-      + "2. Bisutería — cantidad 1\n"
+    "Hola, vengo de Vendedor SCZ. Quiero consultar estos productos y cantidades:\n"
+      + "1. Peluches — 2 unidades\n"
+      + "2. Bisutería — 1 unidad\n"
       + "Nota: Para regalo\n"
-      + "¿Me confirma disponibilidad, precio y forma de entrega?"
+      + "¿Me confirma disponibilidad, precio final, forma de pago y entrega?"
   );
+});
+
+test("genera pedidos por peso y conserva cantidades decimales", () => {
+  const store = new ConsultationStore({ storage: new MemoryStorage() });
+  store.add({ id: "grasa-de-res", name: "Grasa de res", unit: "kg", quantityStep: 0.5 }, 2.5);
+  store.setQuantity("grasa-de-res", 10.5);
+
+  assert.deepEqual(store.getState().items[0], {
+    id: "grasa-de-res",
+    name: "Grasa de res",
+    unit: "kg",
+    step: 0.5,
+    quantity: 10.5
+  });
+  assert.match(store.buildMessage(), /1\. Grasa de res — 10,5 kg/u);
 });
 
 test("crea una URL wa.me codificada y rechaza entradas inseguras", () => {
@@ -156,7 +172,8 @@ test("valida productos y cantidades antes de guardar", () => {
   const store = new ConsultationStore({ storage: new MemoryStorage() });
 
   assert.throws(() => store.add({ id: "", name: "Sin id" }), TypeError);
-  assert.throws(() => store.add({ id: "x", name: "Producto" }, 1.5), TypeError);
-  assert.throws(() => store.add({ id: "x", name: "Producto" }, -1), RangeError);
+  assert.doesNotThrow(() => store.add({ id: "x", name: "Producto" }, 1.5));
+  assert.equal(store.getState().items[0].quantity, 1.5);
+  assert.throws(() => store.add({ id: "y", name: "Producto" }, -1), RangeError);
   assert.throws(() => store.setQuantity("x", 1000), RangeError);
 });
