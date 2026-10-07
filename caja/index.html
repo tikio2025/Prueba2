@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Ventas — Versión Básica</title>
+<style>
+  :root {
+    --azul: #2563eb;
+    --azul-oscuro: #1d4ed8;
+    --verde: #16a34a;
+    --rojo: #dc2626;
+    --gris-fondo: #f1f5f9;
+    --gris-borde: #e2e8f0;
+    --texto: #0f172a;
+    --texto-suave: #64748b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--gris-fondo);
+    color: var(--texto);
+    min-height: 100vh;
+  }
+  header {
+    background: var(--azul);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  header h1 { font-size: 1.2rem; }
+  header .fecha { font-size: 0.85rem; opacity: 0.9; }
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 700px) {
+    main { grid-template-columns: 1fr; }
+  }
+  .tarjeta {
+    background: white;
+    border: 1px solid var(--gris-borde);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .tarjeta h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  /* ---- Resumen del día ---- */
+  .resumen {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  .stat {
+    background: white;
+    border: 1px solid var(--gris-borde);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .stat .etiqueta { font-size: 0.78rem; color: var(--texto-suave); }
+  .stat .valor { font-size: 1.5rem; font-weight: 700; margin-top: 4px; }
+  .stat .valor.verde { color: var(--verde); }
+  /* ---- Formularios ---- */
+  form { display: flex; gap: 8px; flex-wrap: wrap; }
+  input {
+    flex: 1;
+    min-width: 90px;
+    padding: 10px 12px;
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+  input:focus { outline: 2px solid var(--azul); border-color: transparent; }
+  button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--azul);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button:hover { background: var(--azul-oscuro); }
+  button.verde { background: var(--verde); width: 100%; margin-top: 10px; font-size: 1.05rem; padding: 12px; }
+  button.verde:hover { background: #15803d; }
+  button.chico {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    background: transparent;
+    color: var(--rojo);
+    border: 1px solid var(--gris-borde);
+  }
+  button.chico:hover { background: #fef2f2; }
+  /* ---- Lista de productos ---- */
+  .producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .producto:hover { background: #eff6ff; border-color: var(--azul); }
+  .producto .nombre { font-weight: 600; }
+  .producto .precio { color: var(--texto-suave); font-size: 0.9rem; }
+  .producto .acciones { display: flex; align-items: center; gap: 10px; }
+  .pista { font-size: 0.8rem; color: var(--texto-suave); margin-top: 10px; }
+  /* ---- Carrito ---- */
+  .linea-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--gris-borde);
+    font-size: 0.95rem;
+  }
+  .linea-carrito .cant { color: var(--texto-suave); }
+  .total-carrito {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding-top: 12px;
+  }
+  /* ---- Historial ---- */
+  .venta {
+    padding: 10px 12px;
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+  .venta .encabezado {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+  .venta .detalle { color: var(--texto-suave); margin-top: 4px; }
+  .vacio { color: var(--texto-suave); font-size: 0.9rem; padding: 12px 0; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🛒 Sistema de Ventas</h1>
+  <span class="fecha" id="fecha-hoy"></span>
+</header>
+
+<main>
+  <!-- Resumen del día -->
+  <section class="resumen">
+    <div class="stat">
+      <div class="etiqueta">Ventas de hoy</div>
+      <div class="valor" id="stat-ventas">0</div>
+    </div>
+    <div class="stat">
+      <div class="etiqueta">Total vendido hoy</div>
+      <div class="valor verde" id="stat-total">$0.00</div>
+    </div>
+    <div class="stat">
+      <div class="etiqueta">Productos registrados</div>
+      <div class="valor" id="stat-productos">0</div>
+    </div>
+  </section>
+
+  <!-- Columna izquierda: productos -->
+  <section class="tarjeta">
+    <h2>📦 Productos</h2>
+    <form id="form-producto">
+      <input type="text" id="nombre-producto" placeholder="Nombre del producto" required>
+      <input type="number" id="precio-producto" placeholder="Precio" min="0.01" step="0.01" required>
+      <button type="submit">Agregar</button>
+    </form>
+    <div id="lista-productos"></div>
+    <p class="pista">💡 Toca un producto para agregarlo a la venta.</p>
+  </section>
+
+  <!-- Columna derecha: venta actual e historial -->
+  <section>
+    <div class="tarjeta">
+      <h2>🧾 Venta actual</h2>
+      <div id="carrito"></div>
+      <div class="total-carrito"><span>Total</span><span id="total-carrito">$0.00</span></div>
+      <button class="verde" id="btn-cobrar">✓ Cobrar venta</button>
+    </div>
+    <div class="tarjeta" style="margin-top:16px">
+      <h2>📋 Ventas de hoy</h2>
+      <div id="historial"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+// Los datos se guardan en el navegador (localStorage): siguen ahí aunque cierres la página.
+let productos = JSON.parse(localStorage.getItem('productos') || '[]');
+let ventas = JSON.parse(localStorage.getItem('ventas') || '[]');
+let carrito = [];
+
+const $ = id => document.getElementById(id);
+const dinero = n => '$' + n.toFixed(2);
+const hoy = () => new Date().toLocaleDateString('es-MX');
+
+function guardar() {
+  localStorage.setItem('productos', JSON.stringify(productos));
+  localStorage.setItem('ventas', JSON.stringify(ventas));
+}
+
+// ---- Productos ----
+$('form-producto').addEventListener('submit', e => {
+  e.preventDefault();
+  productos.push({
+    id: Date.now(),
+    nombre: $('nombre-producto').value.trim(),
+    precio: parseFloat($('precio-producto').value)
+  });
+  guardar();
+  e.target.reset();
+  $('nombre-producto').focus();
+  pintarTodo();
+});
+
+function eliminarProducto(id) {
+  productos = productos.filter(p => p.id !== id);
+  guardar();
+  pintarTodo();
+}
+
+function pintarProductos() {
+  const cont = $('lista-productos');
+  if (!productos.length) {
+    cont.innerHTML = '<p class="vacio">Aún no hay productos. Agrega el primero arriba. ⬆️</p>';
+    return;
+  }
+  cont.innerHTML = productos.map(p => `
+    <div class="producto" onclick="agregarAlCarrito(${p.id})">
+      <span class="nombre">${p.nombre}</span>
+      <span class="acciones">
+        <span class="precio">${dinero(p.precio)}</span>
+        <button class="chico" onclick="event.stopPropagation(); eliminarProducto(${p.id})">✕</button>
+      </span>
+    </div>`).join('');
+}
+
+// ---- Carrito ----
+function agregarAlCarrito(id) {
+  const producto = productos.find(p => p.id === id);
+  const linea = carrito.find(l => l.id === id);
+  if (linea) linea.cantidad++;
+  else carrito.push({ ...producto, cantidad: 1 });
+  pintarCarrito();
+}
+
+function quitarDelCarrito(id) {
+  const linea = carrito.find(l => l.id === id);
+  linea.cantidad--;
+  if (linea.cantidad <= 0) carrito = carrito.filter(l => l.id !== id);
+  pintarCarrito();
+}
+
+function totalCarrito() {
+  return carrito.reduce((suma, l) => suma + l.precio * l.cantidad, 0);
+}
+
+function pintarCarrito() {
+  const cont = $('carrito');
+  if (!carrito.length) {
+    cont.innerHTML = '<p class="vacio">Toca productos de la izquierda para empezar una venta.</p>';
+  } else {
+    cont.innerHTML = carrito.map(l => `
+      <div class="linea-carrito">
+        <span>${l.nombre} <span class="cant">× ${l.cantidad}</span></span>
+        <span>
+          ${dinero(l.precio * l.cantidad)}
+          <button class="chico" onclick="quitarDelCarrito(${l.id})">−</button>
+        </span>
+      </div>`).join('');
+  }
+  $('total-carrito').textContent = dinero(totalCarrito());
+}
+
+// ---- Cobrar ----
+$('btn-cobrar').addEventListener('click', () => {
+  if (!carrito.length) { alert('El carrito está vacío. Agrega productos primero.'); return; }
+  ventas.push({
+    fecha: hoy(),
+    hora: new Date().toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' }),
+    articulos: carrito.map(l => `${l.nombre} ×${l.cantidad}`).join(', '),
+    total: totalCarrito()
+  });
+  guardar();
+  carrito = [];
+  pintarTodo();
+});
+
+// ---- Historial y resumen ----
+function pintarHistorial() {
+  const ventasHoy = ventas.filter(v => v.fecha === hoy());
+  const cont = $('historial');
+  if (!ventasHoy.length) {
+    cont.innerHTML = '<p class="vacio">Todavía no hay ventas hoy.</p>';
+  } else {
+    cont.innerHTML = [...ventasHoy].reverse().map(v => `
+      <div class="venta">
+        <div class="encabezado"><span>🕐 ${v.hora}</span><span>${dinero(v.total)}</span></div>
+        <div class="detalle">${v.articulos}</div>
+      </div>`).join('');
+  }
+  $('stat-ventas').textContent = ventasHoy.length;
+  $('stat-total').textContent = dinero(ventasHoy.reduce((s, v) => s + v.total, 0));
+  $('stat-productos').textContent = productos.length;
+}
+
+function pintarTodo() {
+  pintarProductos();
+  pintarCarrito();
+  pintarHistorial();
+}
+
+$('fecha-hoy').textContent = new Date().toLocaleDateString('es-MX', {
+  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+});
+pintarTodo();
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<section id="categories" class="categories" aria-labelledby="categories-title">
+  <div class="container">
+    <h2 id="categories-title">Categorías</h2>
+
+    <!-- Opcional: botones de filtro -->
+    <div class="filters" role="tablist" aria-label="Filtrar categorías">
+      <button class="filter active" data-filter="all" role="tab" aria-selected="true">Todas</button>
+      <button class="filter" data-filter="grasita" role="tab" aria-selected="false">Grasita de res</button>
+      <button class="filter" data-filter="ropa" role="tab" aria-selected="false">Ropa y poleras</button>
+      <button class="filter" data-filter="pinturas" role="tab" aria-selected="false">Pinturas y bisutería</button>
+    </div>
+
+    <div class="grid" role="list">
+      <article class="card" role="listitem" data-category="grasita" tabindex="0" aria-label="Grasita de res — Ver productos">
+        <div class="media" aria-hidden="true">
+          <img src="images/grasita.jpg" alt="Producto representativo de Grasita de res">
+        </div>
+        <div class="card-body">
+          <h3>Grasita de res</h3>
+          <p class="muted">Productos y complementos deliciosos para tu cocina.</p>
+          <div class="card-actions">
+            <a class="btn" href="/categoria/grasita">Ver productos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-category="ropa" tabindex="0" aria-label="Ropa y poleras — Ver productos">
+        <div class="media" aria-hidden="true">
+          <img src="images/ropa-poleras.jpg" alt="Ropa y poleras en exhibición">
+        </div>
+        <div class="card-body">
+          <h3>Ropa y poleras</h3>
+          <p class="muted">Moda cómoda y diseños exclusivos.</p>
+          <div class="card-actions">
+            <a class="btn" href="/categoria/ropa">Ver productos</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-category="pinturas" tabindex="0" aria-label="Pinturas y bisutería — Ver productos">
+        <div class="media" aria-hidden="true">
+          <img src="images/pinturas-bisuteria.jpg" alt="Pinturas y piezas de bisutería">
+        </div>
+        <div class="card-body">
+          <h3>Pinturas y bisutería</h3>
+          <p class="muted">Color y creatividad para tus proyectos y accesorios.</p>
+          <div class="card-actions">
+            <a class="btn" href="/categoria/pinturas">Ver productos</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

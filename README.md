@@ -61,3 +61,8 @@ Página pública tipo vitrina digital para **Vendedor SCZ**, creada para mostrar
 6. Crear una sección de novedades/ofertas de hoy.
 
 **© 2026 TIKIO | Vendedor SCZ | Santa Cruz de la Sierra**
+
+## 🗂️ Repos unidos aquí (2026-10-07)
+
+- [`caja/`](caja/): sistema de ventas básico en el navegador (antes `tikimer/sistema-de-ventas`).
+- [`archivo/chatgpt2026/`](archivo/chatgpt2026/): primera vitrina de una página (antes `tikimer/chatgpt2026`), solo como referencia.
